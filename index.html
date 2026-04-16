@@ -282,26 +282,6 @@ footer{background:#141517;padding:72px 56px 36px;}
 /* ─── SCROLL PROGRESS BAR ─── */
 #fp-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--red));z-index:99999;width:0%;pointer-events:none;}
 
-/* ─── USP BENTO GRID ─── */
-.usp-bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:48px;}
-.ub{background:var(--white);border-radius:16px;padding:28px 28px 32px;border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;}
-.ub:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.07);}
-.ub.s7{grid-column:span 7;}.ub.s5{grid-column:span 5;}.ub.s4{grid-column:span 4;}.ub.s6{grid-column:span 6;}
-.ub.dark{background:var(--charcoal);border-color:var(--charcoal);}
-.ub.gold-fill{background:linear-gradient(135deg,#f9f0e0,#fdfaf3);border-color:rgba(196,154,60,.3);}
-.ub.red-fill{background:linear-gradient(135deg,#faeae8,#fdf5f4);border-color:rgba(192,68,42,.2);}
-.ub.green-fill{background:linear-gradient(135deg,#edf5e8,#f5fbf2);border-color:rgba(74,110,82,.2);}
-.ub-eye{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
-.ub.dark .ub-eye{color:rgba(196,154,60,.75);}
-.ub-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--charcoal);line-height:1.1;margin-bottom:6px;}
-.ub.dark .ub-t{color:var(--white);}
-.ub-d{font-size:13px;color:var(--grey);line-height:1.65;}
-.ub.dark .ub-d{color:rgba(255,255,255,.5);}
-.ub-big{font-family:'Cormorant Garamond',serif;font-size:100px;font-weight:700;line-height:1;position:absolute;bottom:-14px;right:14px;opacity:.055;pointer-events:none;color:var(--charcoal);}
-.ub.dark .ub-big{opacity:.14;color:var(--white);}
-@media(max-width:900px){.usp-bento{grid-template-columns:1fr 1fr;}.ub{grid-column:span 1!important;}.ub.s7{grid-column:span 2!important;}}
-@media(max-width:500px){.usp-bento{grid-template-columns:1fr;}.ub.s7{grid-column:span 1!important;}}
-
 /* ─── REVIEW SLIDER ─── */
 .rev-rail-wrap{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden;mask-image:linear-gradient(to right,transparent 0%,black 5%,black 95%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 5%,black 95%,transparent 100%);margin-top:32px;}
 .rev-rail{display:flex;align-items:stretch;gap:0;padding:12px 0 28px;overflow-x:auto;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch;user-select:none;}
@@ -376,56 +356,6 @@ footer{background:#141517;padding:72px 56px 36px;}
     <div><div class="hstat-n">∞</div><div class="hstat-l">Výsledků</div></div>
   </div>
 </section>
-
-<!-- USP BENTO GRID -->
-<div style="padding:80px 0;background:var(--cream);">
-  <div class="wrap" style="padding:0 56px;">
-    <div class="rv" style="text-align:center;margin-bottom:0;">
-      <div class="tag" style="justify-content:center;">Proč Fit Pilates</div>
-      <h2 style="text-align:center;">Vše, co potřebujete<br><em>pod jednou střechou</em></h2>
-    </div>
-    <div class="usp-bento" style="margin-top:40px;">
-      <!-- HLAVNÍ USP – plná šířka vlevo -->
-      <div class="ub s7 fly-l">
-        <span class="ub-eye">Unikátní kombinace</span>
-        <div class="ub-t">Pilates · Fitness · Box</div>
-        <div class="ub-d">Žádné jiné studio v okolí tuto kombinaci nenabízí pod jednou střechou. Přicházíte s jedním cílem – odcházíte se třemi výsledky.</div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;">
-          <span style="padding:5px 13px;border-radius:100px;font-size:11px;font-weight:600;background:rgba(196,154,60,.1);color:var(--gold);border:1px solid rgba(196,154,60,.2);">Reformer Pilates</span>
-          <span style="padding:5px 13px;border-radius:100px;font-size:11px;font-weight:600;background:rgba(192,68,42,.08);color:var(--red);border:1px solid rgba(192,68,42,.15);">Silový trénink</span>
-          <span style="padding:5px 13px;border-radius:100px;font-size:11px;font-weight:600;background:rgba(74,110,82,.08);color:#4a6e52;border:1px solid rgba(74,110,82,.15);">Kondiční box</span>
-        </div>
-        <div class="ub-big">3</div>
-      </div>
-      <!-- ŠTEFAN -->
-      <div class="ub s5 dark fly-r">
-        <span class="ub-eye">Váš lektor</span>
-        <div class="ub-t">Štefan Bitto</div>
-        <div class="ub-d">Certifikovaný instruktor pilates · ACI Trenér I. třídy · Kondiční box. Osobní trenér od roku 2001.</div>
-        <div class="ub-big">24</div>
-      </div>
-      <!-- PRVNÍ LEKCE -->
-      <div class="ub s4 gold-fill fly-l" style="transition-delay:.1s;">
-        <span class="ub-eye">Vstupní lekce</span>
-        <div class="ub-t" style="font-size:36px;color:var(--gold);">590 Kč</div>
-        <div class="ub-d">Vyzkoušejte bez závazků. Lektor se vám plně věnuje celých 60 minut.</div>
-      </div>
-      <!-- SKUPINOVÁ -->
-      <div class="ub s4 rv" style="transition-delay:.15s;">
-        <span class="ub-eye">Skupinová lekce</span>
-        <div class="ub-t">Max 3 osoby</div>
-        <div class="ub-d">Semi-privátní přístup. Lektor zná každého z vás, každý pohyb opraví.</div>
-        <div class="ub-big">3</div>
-      </div>
-      <!-- HEXAGONÁLNÍ STROP / STUDIO -->
-      <div class="ub s4 fly-r" style="transition-delay:.2s;">
-        <span class="ub-eye">Vybavení</span>
-        <div class="ub-t">Balanced Body Allegro</div>
-        <div class="ub-d">Reformery světové třídy. Hexagonální LED strop. Kompletní silová zóna. Everlast boxing corner.</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- REVIEW SLIDER -->
 <div style="padding:72px 0;background:var(--white);">
