@@ -146,11 +146,15 @@ h2 em{font-style:italic;color:var(--gold);font-weight:300;}
 
 /* ─── FOR WHOM ─── */
 .fw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;}
-.fw{padding:36px 32px;border:1.5px solid var(--border);border-radius:4px;background:var(--white);transition:all .3s;cursor:default;}
+.fw{padding:36px 32px;border-radius:4px;background:var(--charcoal);background-size:cover;background-position:center;position:relative;overflow:hidden;transition:all .3s;cursor:default;}
+.fw::before{content:'';position:absolute;inset:0;background:rgba(20,20,22,.62);transition:background .3s;z-index:0;}
+.fw:hover::before{background:rgba(20,20,22,.45);}
+.fw>*{position:relative;z-index:1;}
+.fw:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.25);}
 .fw:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 16px 40px rgba(196,154,60,.1);}
 .fw-em{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--gold);margin-bottom:14px;display:block;line-height:1;}
-.fw-t{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--charcoal);margin-bottom:8px;}
-.fw-d{font-size:13px;color:var(--grey);line-height:1.75;}
+.fw-t{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--white);margin-bottom:8px;}
+.fw-d{font-size:13px;color:rgba(255,255,255,.75);line-height:1.75;}
 
 /* ─── MILESTONES ─── */
 .ms-bg{background:var(--charcoal);}
@@ -436,12 +440,12 @@ footer{background:#141517;padding:72px 56px 36px;}
     <p class="lead" style="margin-top:12px;">Neprodáváme jen lekce. Vytváříme vaši osobní cestu k výsledku.</p>
   </div>
   <div class="fw-grid">
-    <div class="fw rv"><span class="fw-em">01</span><div class="fw-t">Bolí mě záda z kanceláře</div><p class="fw-d">Pilates cílí na hluboké stabilizátory páteře. Uvolníte zkrácené svaly a opravíte nevhodné držení těla. První výsledky po 5 lekcích.</p></div>
-    <div class="fw rv d1"><span class="fw-em">02</span><div class="fw-t">Chci být fyzicky výkonnější</div><p class="fw-d">Funkční trénink kombinovaný s pilates je cesta k reálné výkonnosti. Síla, rychlost, koordinace – vše pod jednou střechou.</p></div>
-    <div class="fw rv d2"><span class="fw-em">03</span><div class="fw-t">Uvolnit stres, načerpat energii</div><p class="fw-d">Kondiční box je nejlepší antistres. Přidejte pilates a odcházíte naprosto nabití – tělem i myslí. Každý trénink.</p></div>
-    <div class="fw rv"><span class="fw-em">04</span><div class="fw-t">Chci tvarovat postavu elegantně</div><p class="fw-d">Pilates formuje tělo bez přetížení kloubů. Výsledkem je pevná, štíhlá a funkčně silná postava.</p></div>
-    <div class="fw rv d1"><span class="fw-em">05</span><div class="fw-t">Těhotenství nebo po porodu</div><p class="fw-d">Specializované lekce pro těhotné ženy a maminky. Bezpečné, šetrné cvičení pod odborným vedením.</p></div>
-    <div class="fw rv d2"><span class="fw-em">06</span><div class="fw-t">Začínám úplně od nuly</div><p class="fw-d">Vstupní lekce je navržena pro absolutní začátečníky. Lektor je s vámi celou dobu. Bez strachu, s výsledky.</p></div>
+    <div class="fw rv" style="background-image:url('images/trainer-pilates.jpg')"><div class="fw-t">Bolí mě záda z kanceláře</div><p class="fw-d">Pilates cílí na hluboké stabilizátory páteře. Uvolníte zkrácené svaly a opravíte nevhodné držení těla. První výsledky po 5 lekcích.</p></div>
+    <div class="fw rv d1" style="background-image:url('images/trainer-fitness.jpg')"><div class="fw-t">Chci být fyzicky výkonnější</div><p class="fw-d">Funkční trénink kombinovaný s pilates je cesta k reálné výkonnosti. Síla, rychlost, koordinace – vše pod jednou střechou.</p></div>
+    <div class="fw rv d2" style="background-image:url('images/boxing-studio.jpg')"><div class="fw-t">Uvolnit stres, načerpat energii</div><p class="fw-d">Kondiční box je nejlepší antistres. Přidejte pilates a odcházíte naprosto nabití – tělem i myslí. Každý trénink.</p></div>
+    <div class="fw rv" style="background-image:url('images/pilates.jpg')"><div class="fw-t">Chci tvarovat postavu elegantně</div><p class="fw-d">Pilates formuje tělo bez přetížení kloubů. Výsledkem je pevná, štíhlá a funkčně silná postava.</p></div>
+    <div class="fw rv d1" style="background-image:url('images/trainer-action.jpg')"><div class="fw-t">Těhotenství nebo po porodu</div><p class="fw-d">Specializované lekce pro těhotné ženy a maminky. Bezpečné, šetrné cvičení pod odborným vedením.</p></div>
+    <div class="fw rv d2" style="background-image:url('images/trainer-door.jpg')"><div class="fw-t">Začínám úplně od nuly</div><p class="fw-d">Vstupní lekce je navržena pro absolutní začátečníky. Lektor je s vámi celou dobu. Bez strachu, s výsledky.</p></div>
   </div>
 </div>
 
