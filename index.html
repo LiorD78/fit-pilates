@@ -270,10 +270,51 @@ footer{background:#141517;padding:72px 56px 36px;}
 .f-links a:hover{color:var(--white);}
 .f-bot{display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.18);}
 
-/* ─── REVEAL ─── */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+/* ─── REVEAL & FLY ANIMACE ─── */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
 .rv.vis{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+.fly-l{opacity:0;transform:translateX(-60px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
+.fly-r{opacity:0;transform:translateX(60px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
+.fly-l.vis,.fly-r.vis{opacity:1;transform:translateX(0);}
+@media(prefers-reduced-motion:reduce){.rv,.fly-l,.fly-r{transition:none!important;opacity:1!important;transform:none!important;}}
+
+/* ─── SCROLL PROGRESS BAR ─── */
+#fp-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--red));z-index:99999;width:0%;pointer-events:none;}
+
+/* ─── USP BENTO GRID ─── */
+.usp-bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:48px;}
+.ub{background:var(--white);border-radius:16px;padding:28px 28px 32px;border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;}
+.ub:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.07);}
+.ub.s7{grid-column:span 7;}.ub.s5{grid-column:span 5;}.ub.s4{grid-column:span 4;}.ub.s6{grid-column:span 6;}
+.ub.dark{background:var(--charcoal);border-color:var(--charcoal);}
+.ub.gold-fill{background:linear-gradient(135deg,#f9f0e0,#fdfaf3);border-color:rgba(196,154,60,.3);}
+.ub.red-fill{background:linear-gradient(135deg,#faeae8,#fdf5f4);border-color:rgba(192,68,42,.2);}
+.ub.green-fill{background:linear-gradient(135deg,#edf5e8,#f5fbf2);border-color:rgba(74,110,82,.2);}
+.ub-eye{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+.ub.dark .ub-eye{color:rgba(196,154,60,.75);}
+.ub-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--charcoal);line-height:1.1;margin-bottom:6px;}
+.ub.dark .ub-t{color:var(--white);}
+.ub-d{font-size:13px;color:var(--grey);line-height:1.65;}
+.ub.dark .ub-d{color:rgba(255,255,255,.5);}
+.ub-big{font-family:'Cormorant Garamond',serif;font-size:100px;font-weight:700;line-height:1;position:absolute;bottom:-14px;right:14px;opacity:.055;pointer-events:none;color:var(--charcoal);}
+.ub.dark .ub-big{opacity:.14;color:var(--white);}
+@media(max-width:900px){.usp-bento{grid-template-columns:1fr 1fr;}.ub{grid-column:span 1!important;}.ub.s7{grid-column:span 2!important;}}
+@media(max-width:500px){.usp-bento{grid-template-columns:1fr;}.ub.s7{grid-column:span 1!important;}}
+
+/* ─── REVIEW SLIDER ─── */
+.rev-rail-wrap{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden;mask-image:linear-gradient(to right,transparent 0%,black 5%,black 95%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 5%,black 95%,transparent 100%);margin-top:32px;}
+.rev-rail{display:flex;align-items:stretch;gap:0;padding:12px 0 28px;overflow-x:auto;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch;user-select:none;}
+.rev-rail::-webkit-scrollbar{display:none;}
+.rev-rail:active{cursor:grabbing;}
+.rev-card{flex:0 0 clamp(260px,28vw,380px);background:var(--cream);border-radius:16px;border:1px solid var(--border);padding:24px;display:flex;flex-direction:column;min-height:170px;margin-right:16px;}
+.rev-stars{color:var(--gold);font-size:15px;letter-spacing:3px;margin-bottom:10px;}
+.rev-txt{font-size:14px;line-height:1.65;color:var(--charcoal);flex:1;font-style:italic;}
+.rev-meta{font-size:12px;color:var(--lgrey);margin-top:12px;font-style:normal;font-weight:500;}
+
+/* ─── ZOOM STAGE ─── */
+.zoom-stage{position:relative;width:100%;line-height:0;border-radius:12px;overflow:hidden;}
+.zoom-stage img{width:100%;height:auto;display:block;transform:scale(1);transform-origin:center center;will-change:transform;}
 
 /* ─── MOBILE ─── */
 @media(max-width:900px){
@@ -291,6 +332,7 @@ footer{background:#141517;padding:72px 56px 36px;}
 </style>
 </head>
 <body>
+<div id="fp-progress"></div>
 <div class="cur" id="cur"></div>
 <div class="cur-r" id="curR"></div>
 
@@ -334,6 +376,76 @@ footer{background:#141517;padding:72px 56px 36px;}
     <div><div class="hstat-n">∞</div><div class="hstat-l">Výsledků</div></div>
   </div>
 </section>
+
+<!-- USP BENTO GRID -->
+<div style="padding:80px 0;background:var(--cream);">
+  <div class="wrap" style="padding:0 56px;">
+    <div class="rv" style="text-align:center;margin-bottom:0;">
+      <div class="tag" style="justify-content:center;">Proč Fit Pilates</div>
+      <h2 style="text-align:center;">Vše, co potřebujete<br><em>pod jednou střechou</em></h2>
+    </div>
+    <div class="usp-bento" style="margin-top:40px;">
+      <!-- HLAVNÍ USP – plná šířka vlevo -->
+      <div class="ub s7 fly-l">
+        <span class="ub-eye">Unikátní kombinace</span>
+        <div class="ub-t">Pilates · Fitness · Box</div>
+        <div class="ub-d">Žádné jiné studio v okolí tuto kombinaci nenabízí pod jednou střechou. Přicházíte s jedním cílem – odcházíte se třemi výsledky.</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;">
+          <span style="padding:5px 13px;border-radius:100px;font-size:11px;font-weight:600;background:rgba(196,154,60,.1);color:var(--gold);border:1px solid rgba(196,154,60,.2);">Reformer Pilates</span>
+          <span style="padding:5px 13px;border-radius:100px;font-size:11px;font-weight:600;background:rgba(192,68,42,.08);color:var(--red);border:1px solid rgba(192,68,42,.15);">Silový trénink</span>
+          <span style="padding:5px 13px;border-radius:100px;font-size:11px;font-weight:600;background:rgba(74,110,82,.08);color:#4a6e52;border:1px solid rgba(74,110,82,.15);">Kondiční box</span>
+        </div>
+        <div class="ub-big">3</div>
+      </div>
+      <!-- ŠTEFAN -->
+      <div class="ub s5 dark fly-r">
+        <span class="ub-eye">Váš lektor</span>
+        <div class="ub-t">Štefan Bitto</div>
+        <div class="ub-d">Certifikovaný instruktor pilates · ACI Trenér I. třídy · Kondiční box. Osobní trenér od roku 2001.</div>
+        <div class="ub-big">24</div>
+      </div>
+      <!-- PRVNÍ LEKCE -->
+      <div class="ub s4 gold-fill fly-l" style="transition-delay:.1s;">
+        <span class="ub-eye">Vstupní lekce</span>
+        <div class="ub-t" style="font-size:36px;color:var(--gold);">590 Kč</div>
+        <div class="ub-d">Vyzkoušejte bez závazků. Lektor se vám plně věnuje celých 60 minut.</div>
+      </div>
+      <!-- SKUPINOVÁ -->
+      <div class="ub s4 rv" style="transition-delay:.15s;">
+        <span class="ub-eye">Skupinová lekce</span>
+        <div class="ub-t">Max 3 osoby</div>
+        <div class="ub-d">Semi-privátní přístup. Lektor zná každého z vás, každý pohyb opraví.</div>
+        <div class="ub-big">3</div>
+      </div>
+      <!-- HEXAGONÁLNÍ STROP / STUDIO -->
+      <div class="ub s4 fly-r" style="transition-delay:.2s;">
+        <span class="ub-eye">Vybavení</span>
+        <div class="ub-t">Balanced Body Allegro</div>
+        <div class="ub-d">Reformery světové třídy. Hexagonální LED strop. Kompletní silová zóna. Everlast boxing corner.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEW SLIDER -->
+<div style="padding:72px 0;background:var(--white);">
+  <div class="wrap" style="padding:0 56px;">
+    <div class="rv">
+      <div class="tag">Co říkají klienti</div>
+      <h2>Výsledky mluví<br><em>za vše</em></h2>
+    </div>
+  </div>
+  <div class="rev-rail-wrap">
+    <div class="rev-rail" id="fp-rev-rail">
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">„Nikdy jsem nepochopila pilates, dokud jsem nepřišla sem. Kombinace s funkčním tréninkem mě naprosto dostala. Záda přestala bolet po třetí lekci."</p><p class="rev-meta">Markéta V. · Pilates + Fitness</p></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">„Kondiční box je záchrana mého psychického zdraví. Přijdu, vybiju stres a odejdu naprosto v klidu. A to říká člověk, který box nikdy nezkoušel."</p><p class="rev-meta">Tomáš K. · Box + Fitness</p></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">„Po porodu jsem hledala studio, které mi rozumí. Vedli mě od základů, šetrně ale efektivně. Po 20 lekcích lepší kondice než před těhotenstvím."</p><p class="rev-meta">Jana M. · Postnatální pilates</p></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">„Štefan je naprosto skvělý lektor. Přizpůsobí každou lekci přesně mým potřebám. Záda mě přestala trápit a navíc jsem mnohem silnější."</p><p class="rev-meta">Petra H. · Individuální lekce</p></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">„Hexagonální strop, profesionální reformery, Everlast pytle – tohle studio je na jiné úrovni než cokoliv, co jsem dosud zkoušel. A výsledky jsou vidět."</p><p class="rev-meta">Martin D. · Silový trénink</p></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">„Max 3 osoby ve skupince – to je teprve skutečný přístup. Štefan opraví každý pohyb, zná moje limity a posouvá mě přesně tak, jak to potřebuji."</p><p class="rev-meta">Lucie S. · Skupinové lekce</p></div>
+    </div>
+  </div>
+</div>
 
 <!-- PROGRAMS -->
 <div class="progs-bg" id="programy">
@@ -445,7 +557,7 @@ footer{background:#141517;padding:72px 56px 36px;}
     </div>
     <div class="gallery-grid rv" style="margin-top:40px;">
       <div class="g-item tall"><img src="images/trainer-action.jpg" alt="Lektor ve studiu" loading="lazy"></div>
-      <div class="g-item wide"><img src="images/studio-main.jpg" alt="Hlavní sál Fit Pilates" loading="lazy"></div>
+      <div class="g-item wide"><div class="zoom-stage"><img id="fp-zoom-img" src="images/studio-main.jpg" alt="Hlavní sál Fit Pilates" loading="lazy"></div></div>
       <div class="g-item"><img src="images/detail-gloves.jpg" alt="Boxovací rukavice Windy" loading="lazy"></div>
       <div class="g-item"><img src="images/detail-kettlebells.jpg" alt="Kettlebelly Jordan" loading="lazy"></div>
       <div class="g-item"><img src="images/detail-springs.jpg" alt="Pružiny reformeru" loading="lazy"></div>
@@ -661,39 +773,173 @@ footer{background:#141517;padding:72px 56px 36px;}
 </footer>
 
 <script>
-// CURSOR
-const cur=document.getElementById('cur'),curR=document.getElementById('curR');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function a(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(a);})();
-document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';});
-  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';});
+(function(){
+
+/* ── 0. SCROLL PROGRESS BAR ── */
+var prog = document.getElementById('fp-progress');
+if(prog){
+  window.addEventListener('scroll', function(){
+    var ws = document.body.scrollTop || document.documentElement.scrollTop;
+    var h  = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    prog.style.width = ((ws/h)*100) + '%';
+  }, {passive:true});
+}
+
+/* ── 1. CUSTOM CURSOR ── */
+var cur=document.getElementById('cur'), curR=document.getElementById('curR');
+if(cur && curR){
+  var mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',function(e){
+    mx=e.clientX; my=e.clientY;
+    cur.style.left=mx+'px'; cur.style.top=my+'px';
+  },{passive:true});
+  (function loop(){
+    rx+=(mx-rx)*.13; ry+=(my-ry)*.13;
+    curR.style.left=rx+'px'; curR.style.top=ry+'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a,button').forEach(function(el){
+    el.addEventListener('mouseenter',function(){cur.style.width='18px';cur.style.height='18px';});
+    el.addEventListener('mouseleave',function(){cur.style.width='10px';cur.style.height='10px';});
+  });
+}
+
+/* ── 2. NAV SCROLL + LOGO SWITCH ── */
+var nav=document.getElementById('nav');
+var logoLight=document.querySelector('.logo-light-img');
+var logoDark=document.querySelector('.logo-dark-img');
+window.addEventListener('scroll',function(){
+  var scrolled=window.scrollY>80;
+  if(nav) nav.classList.toggle('s',scrolled);
+  if(logoLight) logoLight.style.display=scrolled?'none':'block';
+  if(logoDark)  logoDark.style.display =scrolled?'block':'none';
+},{passive:true});
+
+/* ── 3. INTERSECTION OBSERVER: rv + fly-l + fly-r ── */
+if('IntersectionObserver' in window){
+  var animObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(x){
+      if(x.isIntersecting){
+        x.target.classList.add('vis');
+        animObs.unobserve(x.target);
+      }
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('.rv,.fly-l,.fly-r').forEach(function(el){
+    animObs.observe(el);
+  });
+}
+
+/* ── 4. MILESTONES COUNTER ── */
+function animCount(el,target){
+  var start=0, dur=1600;
+  var step=function(ts){
+    if(!start) start=ts;
+    var p=Math.min((ts-start)/dur,1);
+    var e=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(e*target);
+    if(p<1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+var msGrid=document.querySelector('.ms-grid');
+if(msGrid){
+  new IntersectionObserver(function(entries){
+    entries.forEach(function(x){
+      if(x.isIntersecting){
+        x.target.querySelectorAll('.ms-n').forEach(function(n){
+          var t=parseInt(n.dataset.t);
+          if(t) animCount(n,t);
+        });
+      }
+    });
+  },{threshold:0.3}).observe(msGrid);
+}
+
+/* ── 5. REVIEW SLIDER – TAGRA LOOP ── */
+var rail = document.getElementById('fp-rev-rail');
+if(rail){
+  // Triple content for seamless loop
+  var content = rail.innerHTML;
+  rail.innerHTML = content + content + content;
+
+  var speed=0.8, isInteracting=false, resumeTO, scrollPos=0;
+  var isDown=false, startX, scrollLeft;
+
+  function sliderStep(){
+    if(!isInteracting){
+      scrollPos += speed;
+      if(scrollPos >= 1){
+        rail.scrollLeft += Math.floor(scrollPos);
+        scrollPos -= Math.floor(scrollPos);
+      }
+      // Seamless loop: reset to middle third
+      if(rail.scrollLeft >= rail.scrollWidth / 3){
+        rail.scrollLeft = 0;
+      }
+    }
+    requestAnimationFrame(sliderStep);
+  }
+
+  function stopSlider(){ isInteracting=true; clearTimeout(resumeTO); }
+  function resumeSlider(){ resumeTO=setTimeout(function(){ isInteracting=false; },2000); }
+
+  // Mouse drag
+  rail.addEventListener('mousedown',function(e){
+    isDown=true; stopSlider();
+    startX=e.pageX-rail.offsetLeft; scrollLeft=rail.scrollLeft;
+  });
+  rail.addEventListener('mouseleave',function(){ isDown=false; resumeSlider(); });
+  rail.addEventListener('mouseup',function(){ isDown=false; resumeSlider(); });
+  rail.addEventListener('mousemove',function(e){
+    if(!isDown) return;
+    e.preventDefault();
+    var walk=(e.pageX-rail.offsetLeft-startX)*1.5;
+    rail.scrollLeft=scrollLeft-walk;
+  });
+  // Touch
+  rail.addEventListener('touchstart',stopSlider,{passive:true});
+  rail.addEventListener('touchend',resumeSlider,{passive:true});
+
+  sliderStep();
+}
+
+/* ── 6. ZOOM STAGE (MAC STAGE EFFECT) ── */
+var zoomImg = document.getElementById('fp-zoom-img');
+if(zoomImg){
+  var zTicking=false;
+  function updateZoom(){
+    var rect=zoomImg.getBoundingClientRect();
+    var winH=window.innerHeight;
+    var imgCenter=rect.top+(rect.height/2);
+    var dist=Math.abs((winH/2)-imgCenter);
+    var maxDist=winH*0.7;
+    var progress=1-(dist/maxDist);
+    if(progress<0) progress=0;
+    var eased=Math.sin(progress*(Math.PI/2));
+    var minS=1.0, maxS=window.innerWidth<768?1.15:1.28;
+    var s=minS+(eased*(maxS-minS));
+    zoomImg.style.transform='scale('+s.toFixed(3)+')';
+    zTicking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!zTicking){ requestAnimationFrame(updateZoom); zTicking=true; }
+  },{passive:true});
+  window.addEventListener('resize',function(){
+    if(!zTicking){ requestAnimationFrame(updateZoom); zTicking=true; }
+  },{passive:true});
+  setTimeout(updateZoom,150);
+}
+
+/* ── 7. SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+  });
 });
 
-// NAV SCROLL + logo switch
-const nav=document.getElementById('nav');
-const logoLight=document.querySelector('.logo-light-img');
-const logoDark=document.querySelector('.logo-dark-img');
-window.addEventListener('scroll',()=>{
-  const scrolled = scrollY>80;
-  nav.classList.toggle('s', scrolled);
-  if(logoLight) logoLight.style.display = scrolled ? 'none' : 'block';
-  if(logoDark)  logoDark.style.display  = scrolled ? 'block' : 'none';
-});
-
-// REVEAL
-const rvEls=document.querySelectorAll('.rv');
-new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1}).observe||0;
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1});
-rvEls.forEach(el=>obs.observe(el));
-
-// COUNTER
-function cnt(el,t){let s=0;const d=1600,st=ts=>{if(!s)s=ts;const p=Math.min((ts-s)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t);if(p<1)requestAnimationFrame(st);};requestAnimationFrame(st);}
-new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.ms-n').forEach(n=>{const t=parseInt(n.dataset.t);if(t)cnt(n,t);});}});},{threshold:.3}).observe(document.querySelector('.ms-grid')||document.body);
-
-// SMOOTH SCROLL
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+})();
 </script>
 </body>
 </html>
