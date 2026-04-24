@@ -317,6 +317,28 @@ footer{background:#141517;padding:72px 56px 36px;}
   .ms-grid{grid-template-columns:1fr 1fr;}
   .cta-strip{padding:60px 20px;}
 }
+
+/* ── COOKIE BANNER ── */
+#cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+  background: rgba(26,27,30,.97); backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(196,154,60,.3);
+  padding: 16px 56px; display: flex; align-items: center;
+  justify-content: space-between; gap: 24px;
+}
+#cookie-banner p { color: rgba(255,255,255,.75); font-size: .82rem; line-height: 1.5; }
+#cookie-banner a { color: var(--gold); text-decoration: none; }
+#cookie-banner a:hover { text-decoration: underline; }
+.cookie-btn {
+  background: var(--gold); color: var(--black);
+  border: none; padding: 9px 22px; border-radius: 3px;
+  font-size: .82rem; font-weight: 600; cursor: pointer;
+  white-space: nowrap; transition: background .2s;
+}
+.cookie-btn:hover { background: var(--gold-l); }
+@media (max-width: 768px) {
+  #cookie-banner { flex-direction: column; padding: 16px 24px; text-align: center; }
+}
 </style>
 </head>
 <body>
@@ -866,5 +888,12 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 
 })();
 </script>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner">
+  <p>Tento web používá cookies nezbytné pro zobrazení mapy (Google Maps). Používáním webu s tím souhlasíte. <a href="/gdpr.html">Více informací</a></p>
+  <button class="cookie-btn" onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookies-ok','1')">Rozumím</button>
+</div>
+<script>if(localStorage.getItem('cookies-ok'))document.getElementById('cookie-banner').style.display='none';</script>
 </body>
 </html>
