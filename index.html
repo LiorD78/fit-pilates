@@ -42,8 +42,8 @@
 <meta name="geo.position" content="50.0708;14.4719">
 <meta name="ICBM" content="50.0708, 14.4719">
 
-<!-- Performance: preload hero -->
-<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
+<!-- Performance: preload hero (responsive) -->
+<link rel="preload" as="image" href="images/hero-w800.jpg" imagesrcset="images/hero-w800.jpg 800w, images/hero-w1200.jpg 1200w, images/hero.jpg 1728w" imagesizes="100vw" fetchpriority="high">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,6 +119,19 @@
       "priceCurrency": "CZK",
       "category": "Trial Class"
     }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/stefanbitto",
+    "https://www.facebook.com/share/1Hs5UmhdH9/"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+420604925249",
+      "contactType": "customer service",
+      "availableLanguage": ["Czech", "Slovak"],
+      "contactOption": "TollFree"
+    }
   ]
 }
 </script>
@@ -135,7 +148,11 @@
   "telephone": "+420604925249",
   "email": "stefanbitto@seznam.cz",
   "image": "https://fitpilates.cz/images/trainer-hero.jpg",
-  "url": "https://fitpilates.cz/#o-nas"
+  "url": "https://fitpilates.cz/#o-nas",
+  "sameAs": [
+    "https://www.instagram.com/stefanbitto",
+    "https://www.facebook.com/share/1Hs5UmhdH9/"
+  ]
 }
 </script>
 
@@ -217,7 +234,9 @@ nav:not(.s) .nav-cta:hover{background:var(--gold-l)!important;}
 
 /* ─── HERO ─── */
 .hero{height:100vh;min-height:640px;position:relative;display:flex;align-items:flex-end;overflow:hidden;}
-.hero-img{position:absolute;inset:0;background:url('images/hero.jpg') center/cover no-repeat;}
+.hero-img{position:absolute;inset:0;background:url('images/hero-w800.jpg') center/cover no-repeat;}
+@media (min-width:801px){.hero-img{background-image:url('images/hero-w1200.jpg');}}
+@media (min-width:1201px){.hero-img{background-image:url('images/hero.jpg');}}
 .hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(27,28,30,.82) 0%,rgba(27,28,30,.55) 45%,rgba(27,28,30,.15) 100%);}
 .hero-content{position:relative;z-index:2;padding:0 56px 80px;max-width:700px;}
 .hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fu .7s .3s ease forwards;}
@@ -566,7 +585,7 @@ footer{background:#141517;padding:72px 56px 36px;}
       <div class="prog">
         <div class="prog-bar"></div>
         <span class="prog-num">01</span>
-        <img src="images/pilates.jpg" alt="Reformer Pilates studio" class="prog-img" loading="lazy" decoding="async" width="1400" height="859">
+        <img src="images/pilates-w600.jpg" srcset="images/pilates-w600.jpg 600w, images/pilates-w900.jpg 900w, images/pilates.jpg 1400w" sizes="(max-width:768px) 100vw, 33vw" alt="Reformer Pilates studio" class="prog-img" loading="lazy" decoding="async" width="1400" height="859">
         <div class="prog-name">Reformer Pilates</div>
         <div class="prog-en">Pilates na strojích</div>
         <p class="prog-desc">Precizní cvičení na profesionálních reformerech Balanced Body Allegro. Posilujete střed těla, zlepšujete držení, odstraňujete svalové dysbalance. Každý pohyb má svůj smysl.</p>
@@ -577,7 +596,7 @@ footer{background:#141517;padding:72px 56px 36px;}
       <div class="prog">
         <div class="prog-bar"></div>
         <span class="prog-num">02</span>
-        <img src="images/fitness.jpg" alt="Silový a funkční trénink" class="prog-img" loading="lazy" decoding="async" width="1200" height="1800">
+        <img src="images/fitness-w600.jpg" srcset="images/fitness-w600.jpg 600w, images/fitness-w900.jpg 900w, images/fitness.jpg 1200w" sizes="(max-width:768px) 100vw, 33vw" alt="Silový a funkční trénink" class="prog-img" loading="lazy" decoding="async" width="1200" height="1800">
         <div class="prog-name">Funkční trénink</div>
         <div class="prog-en">Strength &amp; Fitness</div>
         <p class="prog-desc">Kompletní silová a funkční zóna – závaží Jordan, kettlebelly, TRX závěsný systém, TuffStuff FX stroj, bench, squat rack a BOSU Elite. Budujete skutečnou fyzickou kondici. Výsledky vidíte rychle.</p>
@@ -588,7 +607,7 @@ footer{background:#141517;padding:72px 56px 36px;}
       <div class="prog">
         <div class="prog-bar"></div>
         <span class="prog-num">03</span>
-        <img src="images/boxing-studio.jpg" alt="Kondiční box Everlast" class="prog-img" loading="lazy" decoding="async" width="1200" height="800">
+        <img src="images/boxing-studio-w600.jpg" srcset="images/boxing-studio-w600.jpg 600w, images/boxing-studio-w900.jpg 900w, images/boxing-studio.jpg 1200w" sizes="(max-width:768px) 100vw, 33vw" alt="Kondiční box Everlast" class="prog-img" loading="lazy" decoding="async" width="1200" height="800">
         <div class="prog-name">Kondiční Box</div>
         <div class="prog-en">Fitness Boxing</div>
         <p class="prog-desc">Základy techniky, stínový box, práce na pytli a lapování s trenérem. Bez kontaktu – s plným nasazením. Rozvíjíte koordinaci, kondici a rychlost. A mimochodem nejúčinnější způsob, jak nechat stres v šatně.</p>
@@ -660,7 +679,7 @@ footer{background:#141517;padding:72px 56px 36px;}
       <h2>Prostor navržený<br><em>pro výkon i komfort</em></h2>
     </div>
     <div class="gallery-grid rv" style="margin-top:40px;">
-      <div class="g-item" style="grid-row:span 2"><img src="images/trainer-action.jpg" alt="Lektor ve studiu" loading="lazy" decoding="async" width="900" height="1323" style="height:100%;"></div>
+      <div class="g-item" style="grid-row:span 2"><img src="images/trainer-action-w450.jpg" srcset="images/trainer-action-w450.jpg 450w, images/trainer-action-w700.jpg 700w, images/trainer-action.jpg 900w" sizes="(max-width:768px) 50vw, 25vw" alt="Lektor ve studiu" loading="lazy" decoding="async" width="900" height="1323" style="height:100%;"></div>
       <div class="g-item wide"><div class="zoom-stage"><img id="fp-zoom-img" src="images/studio-main.jpg" alt="Hlavní sál Fit Pilates" loading="lazy" decoding="async" width="1400" height="859"></div></div>
       <div class="g-item"><img src="images/detail-clock.jpg" alt="Fit Pilates hodiny" loading="lazy" decoding="async" width="700" height="439"></div>
       <div class="g-item"><img src="images/detail-kettlebells.jpg" alt="Kettlebelly Jordan" loading="lazy" decoding="async" width="800" height="500"></div>
@@ -834,6 +853,17 @@ footer{background:#141517;padding:72px 56px 36px;}
         <img src="images/logo-wall.jpg" alt="Fit Pilates" loading="lazy" decoding="async" width="1200" height="800" style="height:52px;width:auto;border-radius:3px;opacity:.85;">
       </div>
       <p class="f-desc">Pilates, funkční trénink a kondiční box pod jednou střechou. Praha.</p>
+      <div class="f-social">
+        <a href="https://www.instagram.com/stefanbitto" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Fit Pilates na Instagramu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://www.facebook.com/share/1Hs5UmhdH9/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Fit Pilates na Facebooku">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://wa.me/420604925249" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="Fit Pilates na WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        </a>
+      </div>
     </div>
     <div>
       <div class="f-col-t">Programy</div>
@@ -860,6 +890,7 @@ footer{background:#141517;padding:72px 56px 36px;}
       <ul class="f-links">
         <li><a class="fp-email" data-u="stefanbitto" data-d="seznam.cz" href="#" rel="nofollow">stefanbitto&#64;seznam.cz</a></li>
         <li><a href="tel:+420604925249">+420 604 925 249</a></li>
+        <li><a href="https://wa.me/420604925249" target="_blank" rel="noopener noreferrer">WhatsApp +420 604 925 249</a></li>
         <li><a href="https://maps.google.com/?q=U+Trati+886/52,+Praha+10" target="_blank" rel="noopener">U Trati 886/52, Praha 10</a></li>
         <li>Otevírací doba: Po–Pá 7:00–20:00</li>
         <li><a href="/gdpr.html">GDPR</a></li>
