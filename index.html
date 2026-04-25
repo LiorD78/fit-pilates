@@ -492,7 +492,7 @@ footer{background:#141517;padding:72px 56px 36px;}
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="logo" aria-label="Fit Pilates – domů">
+  <a href="/" class="logo" aria-label="Fit Pilates – domů">
     <!-- Světlá verze: viditelná přes hero (tmavé pozadí) -->
     <img src="images/logo-light.png" alt="Fit Pilates" class="logo-light-img" width="180" height="166" decoding="async" fetchpriority="high">
     <!-- Tmavá verze: po scrollu (světlé pozadí) -->
@@ -858,7 +858,7 @@ footer{background:#141517;padding:72px 56px 36px;}
     <div>
       <div class="f-col-t">Kontakt</div>
       <ul class="f-links">
-        <li><a href="mailto:stefanbitto@seznam.cz">stefanbitto@seznam.cz</a></li>
+        <li><a class="fp-email" data-u="stefanbitto" data-d="seznam.cz" href="#" rel="nofollow">stefanbitto&#64;seznam.cz</a></li>
         <li><a href="tel:+420604925249">+420 604 925 249</a></li>
         <li><a href="https://maps.google.com/?q=U+Trati+886/52,+Praha+10" target="_blank" rel="noopener">U Trati 886/52, Praha 10</a></li>
         <li>Otevírací doba: Po–Pá 7:00–20:00</li>
@@ -1023,6 +1023,17 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
     var t=document.querySelector(a.getAttribute('href'));
     if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
   });
+});
+
+/* ── 8. EMAIL DECODE (anti-spam obfuscation) ── */
+document.querySelectorAll('a.fp-email').forEach(function(a){
+  var u = a.getAttribute('data-u');
+  var d = a.getAttribute('data-d');
+  if(u && d){
+    var addr = u + '@' + d;
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+  }
 });
 
 })();
