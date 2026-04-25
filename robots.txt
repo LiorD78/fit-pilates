@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /*.md$
 
 # Block image hot-linking sniffers
 User-agent: ImagesiftBot
