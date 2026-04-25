@@ -1,0 +1,32 @@
+# ─── Security headers — vše ───
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
+  X-XSS-Protection: 1; mode=block
+
+# ─── HTML — krátký cache, vždy revalidovat ───
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ─── Images — agresivní cache (1 rok, immutable) ───
+# Soubory mají hash nebo verzi v názvu (např. -w800), takže nikdy nemění obsah
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ─── XML / TXT — krátký cache ───
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=UTF-8
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=UTF-8
+
+# ─── IndexNow verifikační soubor — krátký cache ───
+/*.txt
+  Cache-Control: public, max-age=3600
