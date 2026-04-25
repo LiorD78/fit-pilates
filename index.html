@@ -400,7 +400,9 @@ h2 em{font-style:italic;color:var(--gold);font-weight:300;}
 .test-role{font-size:11px;color:var(--lgrey);margin-top:2px;}
 
 /* ─── CONTACT BAND ─── */
-.cb{background:url('images/pilates.jpg') center/cover;position:relative;}
+.cb{background:url('images/pilates-w600.jpg') center/cover;position:relative;}
+@media (min-width:601px){.cb{background-image:url('images/pilates-w900.jpg');}}
+@media (min-width:1001px){.cb{background-image:url('images/pilates.jpg');}}
 .cb::before{content:'';position:absolute;inset:0;background:rgba(27,28,30,.85);}
 .cb-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:100px 56px;max-width:1260px;margin:0 auto;}
 .cb-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,52px);font-weight:700;color:var(--white);line-height:1.05;}
@@ -680,14 +682,14 @@ footer{background:#141517;padding:72px 56px 36px;}
     </div>
     <div class="gallery-grid rv" style="margin-top:40px;">
       <div class="g-item" style="grid-row:span 2"><img src="images/trainer-action-w450.jpg" srcset="images/trainer-action-w450.jpg 450w, images/trainer-action-w700.jpg 700w, images/trainer-action.jpg 900w" sizes="(max-width:768px) 50vw, 25vw" alt="Lektor ve studiu" loading="lazy" decoding="async" width="900" height="1323" style="height:100%;"></div>
-      <div class="g-item wide"><div class="zoom-stage"><img id="fp-zoom-img" src="images/studio-main.jpg" alt="Hlavní sál Fit Pilates" loading="lazy" decoding="async" width="1400" height="859"></div></div>
+      <div class="g-item wide"><div class="zoom-stage"><img id="fp-zoom-img" src="images/studio-main-w700.jpg" srcset="images/studio-main-w700.jpg 700w, images/studio-main-w1000.jpg 1000w, images/studio-main.jpg 1400w" sizes="(max-width:768px) 100vw, 50vw" alt="Hlavní sál Fit Pilates" loading="lazy" decoding="async" width="1400" height="859"></div></div>
       <div class="g-item"><img src="images/detail-clock.jpg" alt="Fit Pilates hodiny" loading="lazy" decoding="async" width="700" height="439"></div>
       <div class="g-item"><img src="images/detail-kettlebells.jpg" alt="Kettlebelly Jordan" loading="lazy" decoding="async" width="800" height="500"></div>
       <div class="g-item"><img src="images/detail-springs.jpg" alt="Pružiny reformeru" loading="lazy" decoding="async" width="800" height="498"></div>
       <div class="g-item"><img src="images/detail-gloves.jpg" alt="Boxovací rukavice Windy" loading="lazy" decoding="async" width="800" height="533"></div>
       <div class="g-item"><img src="images/locker.jpg" alt="Šatny" loading="lazy" decoding="async" width="900" height="1350"></div>
       <div class="g-item"><img src="images/shower.jpg" alt="Sprchy" loading="lazy" decoding="async" width="900" height="1350"></div>
-      <div class="g-item wide"><img src="images/trainer-reformer.jpg" alt="Štefan Bitto na reformeru" loading="lazy" decoding="async" width="1278" height="800"></div>
+      <div class="g-item wide"><img src="images/trainer-reformer-w700.jpg" srcset="images/trainer-reformer-w700.jpg 700w, images/trainer-reformer-w1000.jpg 1000w, images/trainer-reformer.jpg 1278w" sizes="(max-width:768px) 100vw, 50vw" alt="Štefan Bitto na reformeru" loading="lazy" decoding="async" width="1278" height="800"></div>
     </div>
     <p style="margin-top:20px;font-size:12px;color:var(--lgrey);text-align:right;">Šatny · Sprchy · Sociální zázemí · Klimatizace</p>
   </div>
