@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block image hot-linking sniffers
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+# Standard sitemap location
+Sitemap: https://fitpilates.cz/sitemap.xml

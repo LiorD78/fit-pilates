@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://fitpilates.cz/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/hero.jpg</image:loc>
+      <image:title>Fit Pilates studio – hero</image:title>
+      <image:caption>Pohyb, který formuje a posiluje. Pilates, fitness a box v Praze 10.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/studio-main.jpg</image:loc>
+      <image:title>Fit Pilates – hlavní sál</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/pilates.jpg</image:loc>
+      <image:title>Reformer pilates</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/fitness.jpg</image:loc>
+      <image:title>Funkční trénink</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/boxing-studio.jpg</image:loc>
+      <image:title>Kondiční box</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/trainer-hero.jpg</image:loc>
+      <image:title>Štefan Bitto – lektor</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/gdpr.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
