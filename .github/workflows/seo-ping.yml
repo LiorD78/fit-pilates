@@ -32,6 +32,7 @@ jobs:
           fb-access-token: ${{ secrets.FB_APP_ACCESS_TOKEN }}
           url-list: |
             https://fitpilates.cz/
+            https://fitpilates.cz/pilates-allegro/
             https://fitpilates.cz/gdpr.html
           ping-google-sitemap: 'true'
           fail-on-error: 'false'

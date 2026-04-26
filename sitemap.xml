@@ -33,6 +33,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://fitpilates.cz/pilates-allegro/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/hero.jpg</image:loc>
+      <image:title>Pilates Allegro Praha 10 — Fit Pilates</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://fitpilates.cz/gdpr.html</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>yearly</changefreq>
