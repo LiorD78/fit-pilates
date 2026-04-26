@@ -61,7 +61,7 @@
   "@id": "https://fitpilates.cz/#localbusiness",
   "name": "Fit Pilates",
   "alternateName": "Fit Pilates Studio Praha",
-  "description": "Pilates studio v Praze 10 kombinující reformer pilates, silový a funkční trénink s kondičním boxem. Individuální i skupinové lekce pod vedením Štefana Bitta.",
+  "description": "Pilates studio v Praze 10 – Strašnice. Reformer pilates, silový a funkční trénink, kondiční box pod jednou střechou. Individuální i skupinové lekce pod vedením Štefana Bitta. MHD: Tram Radošovická, Bus Korytná. Parkování zdarma v ulici. Studio U Trati 886/52, dostupné z Vršovic, Vinohrad, Žižkova i Malešic.",
   "url": "https://fitpilates.cz/",
   "telephone": "+420604925249",
   "email": "stefanbitto@seznam.cz",
@@ -82,24 +82,39 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 50.0708,
-    "longitude": 14.4719
+    "latitude": 50.0653696,
+    "longitude": 14.4951578
   },
+  "hasMap": "https://maps.google.com/?q=U+Trati+886/52,+Praha+10",
+  "publicAccess": true,
+  "isAccessibleForFree": false,
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "07:00",
       "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "18:00",
+      "description": "Víkendové lekce na základě individuální dohody"
     }
   ],
   "priceRange": "$$",
   "currenciesAccepted": "CZK",
   "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-  "areaServed": {
-    "@type": "City",
-    "name": "Praha"
-  },
+  "areaServed": [
+    { "@type": "City", "name": "Praha" },
+    { "@type": "AdministrativeArea", "name": "Praha 10" },
+    { "@type": "Place", "name": "Strašnice" },
+    { "@type": "Place", "name": "Vršovice" },
+    { "@type": "Place", "name": "Vinohrady" },
+    { "@type": "Place", "name": "Žižkov" },
+    { "@type": "Place", "name": "Malešice" }
+  ],
   "founder": {
     "@type": "Person",
     "name": "Štefan Bitto",
@@ -112,7 +127,13 @@
     { "@type": "LocationFeatureSpecification", "name": "Kondiční box", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Individuální lekce", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Skupinové lekce", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Šatny a sprchy", "value": true }
+    { "@type": "LocationFeatureSpecification", "name": "Šatny a sprchy", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Parkování v ulici zdarma", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "MHD: Tram Radošovická", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "MHD: Bus Korytná", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Vhodné pro začátečníky", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Lekce po zranění a v rehabilitaci", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Platba kartou i bankovním převodem", "value": true }
   ],
   "makesOffer": [
     {
@@ -171,6 +192,65 @@
   "publisher": { "@id": "https://fitpilates.cz/#localbusiness" }
 }
 </script>
+
+<!-- Schema.org JSON-LD: FAQPage (lokální dotazy) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kde přesně se Fit Pilates studio nachází?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Studio Fit Pilates najdete na adrese U Trati 886/52, Praha 10 – Strašnice, 100 00. Nacházíme se v dosahu Vršovic, Vinohrad, Žižkova i Malešic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak se ke studiu dostanu MHD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nejbližší tramvajová zastávka je Radošovická (linky 7, 22, 26), nejbližší autobusová zastávka Korytná. Z metra Strašnická (linka A) je to 10 minut pěšky."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Je u studia parkování?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ano, v ulici U Trati a okolních ulicích je parkování zdarma. Není zde modrá ani fialová zóna placeného parkování."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jaká je otevírací doba studia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standardní otevírací doba je pondělí až pátek 7:00–20:00. Víkendové lekce probíhají na základě individuální dohody. Rezervace na +420 604 925 249."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kolik stojí první zkušební lekce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vstupní zkušební lekce stojí 590 Kč a trvá 60 minut. Můžete si vyzkoušet reformer pilates, silový trénink nebo kondiční box pod vedením Štefana Bitta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak se objednám na lekci?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nejrychleji telefonicky na +420 604 925 249 nebo přes WhatsApp. Můžete také napsat e-mail na stefanbitto@seznam.cz nebo využít kontaktní formulář na webu."
+      }
+    }
+  ]
+}
+</script>
+
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
@@ -522,9 +602,10 @@
       <h2 class="cb-title">Vaše první lekce<br><em>čeká na vás</em></h2>
       <p class="cb-sub">Napište nám nebo zavolejte. Odpovídáme do 2 hodin. Lekce dostupné 7 dní v týdnu.</p>
       <div class="cb-contacts">
-        <div class="cb-contact">📞 +420 604 925 249</div>
-        <div class="cb-contact">✉️ info@fitpilates.cz</div>
-        <div class="cb-contact">📍 Praha</div>
+        <div class="cb-contact">📞 <a href="tel:+420604925249" style="color:inherit;text-decoration:none;">+420 604 925 249</a></div>
+        <div class="cb-contact">✉️ <a class="fp-email" data-u="stefanbitto" data-d="seznam.cz" href="#" rel="nofollow" style="color:inherit;text-decoration:none;">stefanbitto&#64;seznam.cz</a></div>
+        <div class="cb-contact">📍 U Trati 886/52, Praha 10 – Strašnice</div>
+        <div class="cb-contact" style="opacity:.85;font-size:.95em;">🚊 Tram Radošovická · 🚌 Bus Korytná · 🅿️ Parkování zdarma v ulici</div>
       </div>
     </div>
     <form class="cb-form rv d1" onsubmit="return false;">
@@ -545,6 +626,90 @@
   </div>
 </div>
 
+<!-- LOKÁLNÍ INFO + MAPA -->
+<section class="local-info" id="kde-jsme" style="padding: 80px 24px; background: var(--cream); max-width: 1280px; margin: 0 auto;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="rv" style="text-align:center; margin-bottom: 48px;">
+      <div class="tag" style="justify-content:center; color: var(--gold);">Kde nás najdete</div>
+      <h2 class="cta-t" style="margin-top: 16px;">Pilates studio v srdci<br><em>Prahy 10</em></h2>
+      <p style="margin-top: 16px; max-width: 640px; margin-left: auto; margin-right: auto; color: var(--charcoal); line-height: 1.6;">U Trati 886/52, Praha 10 – Strašnice. Klidná lokalita s výbornou dostupností MHD i autem. Sloužíme klientům z celé Prahy 10 i sousedních čtvrtí.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px;" class="rv d1 local-grid">
+      <!-- Mapa -->
+      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,.08); min-height: 400px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.789!2d14.4951578!3d50.0653696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDAzJzU1LjMiTiAxNMKwMjknNDIuNiJF!5e0!3m2!1scs!2scz!4v1714128000000!5m2!1scs!2scz"
+          width="100%"
+          height="400"
+          style="border:0; display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Fit Pilates studio – U Trati 886/52, Praha 10"></iframe>
+      </div>
+
+      <!-- Info bloky -->
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="background: white; border-radius: 12px; padding: 24px; border-left: 3px solid var(--gold);">
+          <h3 style="margin: 0 0 12px; font-size: 1.1rem; color: var(--black);">🚊 MHD dostupnost</h3>
+          <p style="margin: 0; line-height: 1.6; color: var(--charcoal); font-size: .95rem;"><strong>Tram Radošovická</strong> – linky 7, 22, 26 (3 minuty pěšky).<br><strong>Bus Korytná</strong> – přímé spojení z Vršovic.<br><strong>Metro A Strašnická</strong> – 10 minut pěšky.</p>
+        </div>
+
+        <div style="background: white; border-radius: 12px; padding: 24px; border-left: 3px solid var(--gold);">
+          <h3 style="margin: 0 0 12px; font-size: 1.1rem; color: var(--black);">🅿️ Parkování</h3>
+          <p style="margin: 0; line-height: 1.6; color: var(--charcoal); font-size: .95rem;">V ulici U Trati a okolních ulicích je <strong>parkování zdarma</strong>. Žádná modrá ani fialová zóna.</p>
+        </div>
+
+        <div style="background: white; border-radius: 12px; padding: 24px; border-left: 3px solid var(--gold);">
+          <h3 style="margin: 0 0 12px; font-size: 1.1rem; color: var(--black);">🕐 Otevírací doba</h3>
+          <p style="margin: 0; line-height: 1.6; color: var(--charcoal); font-size: .95rem;"><strong>Po–Pá:</strong> 7:00–20:00<br><strong>So–Ne:</strong> dle individuální dohody<br><a href="tel:+420604925249" style="color: var(--gold);">📞 +420 604 925 249</a></p>
+        </div>
+
+        <div style="background: white; border-radius: 12px; padding: 24px; border-left: 3px solid var(--gold);">
+          <h3 style="margin: 0 0 12px; font-size: 1.1rem; color: var(--black);">📍 Sloužíme klientům z</h3>
+          <p style="margin: 0; line-height: 1.6; color: var(--charcoal); font-size: .95rem;">Strašnice · Vršovice · Vinohrady · Žižkov · Malešice · Záběhlice · celá <a href="/pilates-praha-10/" style="color: var(--gold);">Praha 10</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="rv" style="max-width: 760px; margin: 0 auto;">
+      <h3 style="text-align: center; font-size: 1.6rem; margin-bottom: 32px; color: var(--black);">Nejčastější dotazy</h3>
+
+      <details class="faq-item">
+        <summary>Kde přesně se Fit Pilates studio nachází?</summary>
+        <p>Studio Fit Pilates najdete na adrese <strong>U Trati 886/52, Praha 10 – Strašnice, 100 00</strong>. Nacházíme se v dosahu Vršovic, Vinohrad, Žižkova i Malešic. Více podrobností o lokalitě najdete na stránce <a href="/pilates-praha-10/">pilates Praha 10</a>.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Jak se ke studiu dostanu MHD?</summary>
+        <p>Nejbližší tramvajová zastávka je <strong>Radošovická</strong> (linky 7, 22, 26) – 3 minuty pěšky. Nejbližší autobusová zastávka je <strong>Korytná</strong>. Z metra <strong>Strašnická</strong> (linka A) je to 10 minut pěšky přes klidnou zástavbu.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Je u studia parkování?</summary>
+        <p>Ano, v ulici U Trati a okolních ulicích je <strong>parkování zdarma</strong>. Není zde modrá ani fialová zóna placeného parkování, takže můžete pohodlně přijet autem bez nutnosti řešit parkovací oprávnění.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Jaká je otevírací doba studia?</summary>
+        <p>Standardní otevírací doba je <strong>pondělí až pátek 7:00–20:00</strong>. Víkendové lekce probíhají na základě individuální dohody – stačí zavolat na <a href="tel:+420604925249">+420 604 925 249</a> a domluvíme se. Pravidelní klienti mají možnost rezervace fixních termínů.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kolik stojí první zkušební lekce?</summary>
+        <p>Vstupní zkušební lekce stojí <strong>590 Kč</strong> a trvá 60 minut. Můžete si v ní vyzkoušet reformer pilates, silový a funkční trénink nebo kondiční box pod osobním vedením Štefana Bitta. Zkušební lekce slouží k tomu, abyste si vyzkoušeli prostředí studia a styl trénování bez závazku.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Jak se objednám na lekci?</summary>
+        <p>Nejrychlejší způsob je <strong>telefonicky na <a href="tel:+420604925249">+420 604 925 249</a></strong> nebo přes WhatsApp. Můžete také napsat e-mail na <a class="fp-email" data-u="stefanbitto" data-d="seznam.cz" href="#" rel="nofollow">stefanbitto&#64;seznam.cz</a> nebo využít kontaktní formulář výše. Odpovídáme zpravidla do 2 hodin.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <div class="cta-strip hex-bg">
   <div class="tag rv" style="justify-content:center;color:var(--gold);">Začněte dnes</div>
@@ -552,7 +717,7 @@
   <p class="cta-sub rv">Přijďte si vyzkoušet pilates, fitness nebo box. Bez závazků. S lektorem, který se vám plně věnuje.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="rv">
     <a href="tel:+420604925249" class="btn-d">📞 Zavolat nám</a>
-    <a href="mailto:info@fitpilates.cz" class="btn-o">✉️ Napsat e-mail</a>
+    <a href="mailto:stefanbitto@seznam.cz" class="btn-o">✉️ Napsat e-mail</a>
   </div>
   <p class="cta-note rv">Odpovídáme do 2 hodin · Otevřeno 7 dní v týdnu · Bez závazků</p>
 </div>
@@ -591,8 +756,9 @@
       <div class="f-col-t">Studio</div>
       <ul class="f-links">
         <li><a href="#o-nas">O nás</a></li>
-        <li><a href="#o-nas">Lektor</a></li>
+        <li><a href="/o-stefanovi/">O Štefanovi</a></li>
         <li><a href="/studio/">Fotogalerie studia</a></li>
+        <li><a href="/pilates-praha-10/">Pilates Praha 10</a></li>
         <li><a href="/blog/co-je-reformer-pilates/">Co je reformer pilates</a></li>
         <li><a href="/blog/pilates-pro-zacatecniky/">Pilates pro začátečníky</a></li>
         <li><a href="/pilates-allegro/">Pilates Allegro</a></li>
@@ -607,11 +773,12 @@
         <li><a href="tel:+420604925249">+420 604 925 249</a></li>
         <li><a href="https://wa.me/420604925249" target="_blank" rel="noopener noreferrer">WhatsApp +420 604 925 249</a></li>
         <li><a href="https://maps.google.com/?q=U+Trati+886/52,+Praha+10" target="_blank" rel="noopener">U Trati 886/52, Praha 10</a></li>
-        <li>Otevírací doba: Po–Pá 7:00–20:00</li>
+        <li>Po–Pá 7:00–20:00</li>
+        <li>So–Ne dle dohody</li>
         <li><a href="/gdpr.html">GDPR</a></li>
       </ul>
       <div style="margin-top:20px;border-radius:10px;overflow:hidden;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.5!2d14.508!3d50.058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b93b0!2sU+Trati+886%2F52%2C+100+00+Praha+10!5e0!3m2!1scs!2scz!4v1" width="100%" height="140" style="border:0;filter:grayscale(30%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.789!2d14.4951578!3d50.0653696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDAzJzU1LjMiTiAxNMKwMjknNDIuNiJF!5e0!3m2!1scs!2scz!4v1714128000000!5m2!1scs!2scz" width="100%" height="140" style="border:0;filter:grayscale(30%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Fit Pilates – mapa"></iframe>
       </div>
     </div>
   </div>

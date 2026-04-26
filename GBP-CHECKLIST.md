@@ -64,39 +64,48 @@ I když není ověřený, vyplň profil naplno — Google to schvaluje rychleji 
 | St | 7:00 — 20:00 |
 | Čt | 7:00 — 20:00 |
 | Pá | 7:00 — 20:00 |
-| So | zavřeno (nebo dle preference) |
-| Ne | zavřeno |
+| So | **9:00 — 18:00** (poznámka v profilu: "dle individuální dohody") |
+| Ne | **9:00 — 18:00** (poznámka v profilu: "dle individuální dohody") |
+
+> **💡 Tip:** GBP nemá nativní možnost "dle dohody" — uveď orientační hodiny a do popisu firmy/atributu **"By appointment only"** přidej, že víkendy fungují dle telefonické dohody. To je lepší než "zavřeno" (lidé volají i v sobotu).
 
 ### 2.2 Popis firmy (max 750 znaků)
 
 **Zkopíruj přímo:**
 
 ```
-Fit Pilates je pilates studio v Praze 10, kde pod jednou střechou
-spojujeme reformer pilates, silový a funkční trénink a kondiční box.
-Jsme výjimeční přístupem — neformatujeme tělo do uniformy, ale stavíme
-ho funkčně a esteticky podle potřeb každého klienta.
+Fit Pilates je pilates studio v Praze 10 – Strašnicích, kde pod jednou
+střechou spojujeme reformer pilates, silový a funkční trénink a kondiční
+box. Vede Štefan Bitto, ACI Trenér fitness I. třídy s 24 lety praxe.
 
-Lektor Štefan Bitto vede individuální i skupinové lekce. První zkušební
-lekce za 590 Kč. Šatny, sprchy a profesionální vybavení (Reformery,
-Everlast box, Jordan kettlebelly).
+První zkušební lekce 590 Kč. Skupinové lekce max. 3 osoby — individuální
+přístup i v ceně skupinky. Profesionální vybavení (Reformery, Allegro,
+Everlast box, Jordan kettlebelly), šatny a sprchy.
 
-Studio U Trati 886/52, Praha 10. Otevřeno Po-Pá 7:00-20:00.
-Rezervace na +420 604 925 249.
+📍 U Trati 886/52, Praha 10 (Strašnice)
+🚊 Tram Radošovická (linky 7, 22, 26)
+🚌 Bus Korytná
+🅿️ Parkování zdarma v ulici (bez modré zóny)
+🕐 Po-Pá 7:00-20:00, víkend dle dohody
+
+Rezervace: +420 604 925 249
 ```
 
 ### 2.3 Atributy (zaškrtni)
-- ✅ **Bezbariérový vchod / parking** — pokud relevantní
+- ✅ **Bezbariérový vchod** — vstup v přízemí, žádné schody
+- ✅ **Parkování v ulici zdarma** (důležité — odlišuje od konkurence v zónách!)
 - ✅ **Šatny**
 - ✅ **Sprchy**
 - ✅ **WiFi pro hosty**
 - ✅ **Skupinové lekce**
 - ✅ **Individuální tréninky**
 - ✅ **Vhodné pro začátečníky**
-- ✅ **Lekce po zranění / rehabilitace** — pokud nabízíš
-- ✅ **Lekce pro těhotné** — pokud nabízíš (specializované lekce máš ve webu)
-- ✅ **Platba kartou** — pokud akceptuješ
+- ✅ **Lekce po zranění / rehabilitace**
+- ✅ **Lekce pro těhotné**
+- ✅ **By appointment only** (pro víkend — doplní info "víkend dle dohody")
+- ✅ **Platba kartou**
 - ✅ **Bezhotovostně** — bankovní převod
+- ✅ **WhatsApp kontakt** (pokud nabízí — někdy v atributech)
 
 ### 2.4 Fotky (kritické pro konverzi!)
 
@@ -167,12 +176,15 @@ Klikni **"Přidat službu"** a pro každou napiš:
   První zkušební lekce za 590 Kč.
   Rezervace +420 604 925 249.
   ```
-- **Q&A sekce** — vyplň 5 nejčastějších otázek sám (Google to dovoluje):
+- **Q&A sekce** — vyplň 7 nejčastějších otázek sám (Google to dovoluje):
   1. *Q: Jaké lekce nabízíte?* → A: Reformer pilates, funkční trénink, kondiční box.
-  2. *Q: Mám zkušenost 0, je to pro mě?* → A: Ano, máme zkušební lekci 590 Kč pro začátečníky.
-  3. *Q: Jak se objednám?* → A: Telefonicky +420 604 925 249 nebo přes WhatsApp.
+  2. *Q: Mám zkušenost 0, je to pro mě?* → A: Ano, máme zkušební lekci 590 Kč pro začátečníky. Skupinové lekce mají max. 3 osoby pro individuální vedení.
+  3. *Q: Jak se objednám?* → A: Telefonicky +420 604 925 249, přes WhatsApp nebo e-mailem stefanbitto@seznam.cz.
   4. *Q: Máte šatny a sprchy?* → A: Ano, plně vybavené.
-  5. *Q: Kde přesně jste?* → A: U Trati 886/52, Praha 10. Mapa: [link].
+  5. *Q: Kde přesně jste?* → A: U Trati 886/52, Praha 10 - Strašnice. Mapa: [link na GBP].
+  6. *Q: Jak se ke studiu dostanu MHD?* → A: Tram Radošovická (linky 7, 22, 26) - 3 minuty pěšky. Bus Korytná. Z metra Strašnická 10 minut pěšky.
+  7. *Q: Je u studia parkování?* → A: Ano, v ulici U Trati a okolních ulicích parkování zdarma. Není zde modrá ani fialová zóna.
+  8. *Q: Cvičíte i o víkendu?* → A: Víkendové lekce probíhají dle individuální dohody. Stačí zavolat na +420 604 925 249.
 
 ---
 
