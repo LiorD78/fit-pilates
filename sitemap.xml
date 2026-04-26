@@ -13,23 +13,37 @@
     </image:image>
     <image:image>
       <image:loc>https://fitpilates.cz/images/studio-main.jpg</image:loc>
-      <image:title>Fit Pilates – hlavní sál</image:title>
+      <image:title>Hlavní sál Fit Pilates – reformery a hexagonální osvětlení</image:title>
     </image:image>
     <image:image>
       <image:loc>https://fitpilates.cz/images/pilates.jpg</image:loc>
-      <image:title>Reformer pilates</image:title>
+      <image:title>Reformer pilates ve Fit Pilates studiu</image:title>
     </image:image>
     <image:image>
       <image:loc>https://fitpilates.cz/images/fitness.jpg</image:loc>
-      <image:title>Funkční trénink</image:title>
+      <image:title>Funkční trénink ve Fit Pilates</image:title>
     </image:image>
     <image:image>
       <image:loc>https://fitpilates.cz/images/boxing-studio.jpg</image:loc>
-      <image:title>Kondiční box</image:title>
+      <image:title>Kondiční box ve Fit Pilates</image:title>
     </image:image>
     <image:image>
       <image:loc>https://fitpilates.cz/images/trainer-hero.jpg</image:loc>
-      <image:title>Štefan Bitto – lektor</image:title>
+      <image:title>Štefan Bitto – lektor Fit Pilates</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/blog/co-je-reformer-pilates/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/pillar-stretch.jpg</image:loc>
+      <image:title>Reformer pilates – kompletní průvodce, Fit Pilates Praha 10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/detail-kettlebells.jpg</image:loc>
+      <image:title>Detail reformeru Allegro</image:title>
     </image:image>
   </url>
   <url>
@@ -40,6 +54,38 @@
     <image:image>
       <image:loc>https://fitpilates.cz/images/hero.jpg</image:loc>
       <image:title>Pilates Allegro Praha 10 — Fit Pilates</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/pillar-stretch.jpg</image:loc>
+      <image:title>Pilates Allegro – Štefan Bitto v akci</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/o-stefanovi/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/stefan-doorway.jpg</image:loc>
+      <image:title>Štefan Bitto – lektor Fit Pilates Praha 10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/stefan-portrait.jpg</image:loc>
+      <image:title>Štefan Bitto – portrét</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/studio/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/studio-main.jpg</image:loc>
+      <image:title>Hlavní sál Fit Pilates studia</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-08-fp-reception-full.jpg</image:loc>
+      <image:title>Recepce Fit Pilates s logem</image:title>
     </image:image>
   </url>
   <url>
