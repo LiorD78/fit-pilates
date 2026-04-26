@@ -138,6 +138,7 @@ h1 em { font-style: italic; font-weight: 300; color: var(--gold); }
 .page-hero.hero-stretch::before { background-image: url('/images/pillar-stretch-w1200.jpg'); opacity: .35; }
 .page-hero.hero-doorway::before { background-image: url('/images/stefan-doorway-w1200.jpg'); opacity: .40; background-position: center 30%; }
 .page-hero.hero-studio::before { background-image: url('/images/studio-main-w1200.jpg'); opacity: .35; }
+.page-hero.hero-handstand::before { background-image: url('/images/stefan-handstand-w1200.jpg'); opacity: .35; background-position: center 25%; }
 
 /* Page hero inherits unified h1 typography */
 .page-hero h1 { color: var(--white); margin-bottom: 20px; max-width: 900px; }
