@@ -131,14 +131,13 @@
 
   <link rel="stylesheet" href="/assets/css/site.css">
   <style>
-    .lph-hero { padding: 140px 56px 80px; background: linear-gradient(135deg, var(--cream) 0%, #f5f1e8 100%); }
-    .lph-hero-inner { max-width: 1100px; margin: 0 auto; }
-    .lph-bc { font-size: .9rem; color: var(--charcoal); margin-bottom: 24px; opacity: .8; }
-    .lph-bc a { color: var(--gold); text-decoration: none; }
-    .lph-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 600; color: var(--black); line-height: 1.1; margin-bottom: 24px; }
-    .lph-hero h1 em { font-style: italic; color: var(--gold); }
-    .lph-hero .lead { font-size: 1.2rem; color: var(--charcoal); max-width: 720px; line-height: 1.6; margin-bottom: 32px; }
-    .lph-hero .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    /* Breadcrumb v page-hero kontextu */
+    .page-hero .lph-bc { font-size: .9rem; color: rgba(255,255,255,.7); margin-bottom: 20px; opacity: 0; animation: fu .7s .25s ease forwards; }
+    .page-hero .lph-bc a { color: var(--gold); text-decoration: none; }
+    .page-hero .lph-bc a:hover { text-decoration: underline; }
+    .page-hero .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; opacity: 0; animation: fu .8s .8s ease forwards; }
+
+    /* Content area utility (nemění hero, jen content sekci) */
     .lph-content { max-width: 880px; margin: 0 auto; padding: 64px 24px; }
     .lph-content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 600; color: var(--black); margin: 56px 0 20px; line-height: 1.25; }
     .lph-content h2:first-child { margin-top: 0; }
@@ -157,7 +156,6 @@
     .lph-cta h2 { color: white; margin-top: 0; }
     .lph-cta p { color: rgba(255,255,255,.85); }
     @media (max-width: 768px) {
-      .lph-hero { padding: 120px 20px 56px; }
       .lph-content { padding: 48px 20px; }
       .lph-grid-2 { grid-template-columns: 1fr; }
       .lph-cta { padding: 40px 24px; }
@@ -182,8 +180,8 @@
 </nav>
 
 <!-- HERO -->
-<section class="lph-hero">
-  <div class="lph-hero-inner">
+<section class="page-hero hero-praha10">
+  <div class="page-hero-inner">
     <nav class="lph-bc" aria-label="Drobečková navigace">
       <a href="/">Domů</a> &nbsp;›&nbsp; <span>Pilates Praha 10</span>
     </nav>
