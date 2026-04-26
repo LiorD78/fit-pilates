@@ -47,6 +47,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://fitpilates.cz/blog/pilates-pro-zacatecniky/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/stefan-handstand.jpg</image:loc>
+      <image:title>Pilates pro začátečníky — kompletní průvodce, Fit Pilates Praha 10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/allegro-hero.jpg</image:loc>
+      <image:title>Štefan Bitto na Allegro reformeru, Fit Pilates Praha 10</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://fitpilates.cz/pilates-allegro/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
