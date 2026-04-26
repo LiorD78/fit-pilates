@@ -337,26 +337,36 @@ h1 em { font-style: italic; font-weight: 300; color: var(--gold); }
   box-shadow: var(--shadow-md);
 }
 
-/* Content prose — typografie pro tělo článku/landing page (h2/h3/p/ul/a styly) */
+/* Content prose — typografie pro tělo článku/landing page (h2/h3/p/ul/a styly).
+   Aplikuje se identicky na všechny stránky bez výjimek. */
+/* Content prose — typografie pro tělo článku/landing page (h2/h3/p/ul/a styly).
+   Aplikuje se identicky na všechny stránky bez výjimek.
+
+   Pattern: container je široký (1080px) pro vizuální bloky (grid, card, callout,
+   figure), ale prose elementy (p, h2, h3, ul) jsou max 760px pro čitelnost
+   (60-80 znaků na řádek je sweet spot pro čtení dlouhého textu). */
+.content-prose > h2,
+.content-prose > h3,
+.content-prose > p,
+.content-prose > ul,
+.content-prose > ol,
+.content-prose > details {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .content-prose h2 {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--black);
-  line-height: 1.25;
+  line-height: 1.2;
   margin: 56px 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
 }
 .content-prose h2:first-child { margin-top: 0; }
 .content-prose h2 em { font-style: italic; color: var(--gold); font-weight: 300; }
-
-/* Blog article (narrow container) — h2 s border-bottom pro vizuální rytmus dlouhých článků */
-.container--narrow.content-prose h2 {
-  font-weight: 700;
-  font-size: clamp(1.7rem, 3vw, 2.2rem);
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
-  line-height: 1.15;
-}
 .content-prose h3 {
   font-family: var(--font-serif);
   font-size: 1.4rem;
