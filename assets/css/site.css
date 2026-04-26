@@ -341,20 +341,7 @@ h1 em { font-style: italic; font-weight: 300; color: var(--gold); }
    Aplikuje se identicky na všechny stránky bez výjimek. */
 /* Content prose — typografie pro tělo článku/landing page (h2/h3/p/ul/a styly).
    Aplikuje se identicky na všechny stránky bez výjimek.
-
-   Pattern: container je široký (1080px) pro vizuální bloky (grid, card, callout,
-   figure), ale prose elementy (p, h2, h3, ul) jsou max 760px pro čitelnost
-   (60-80 znaků na řádek je sweet spot pro čtení dlouhého textu). */
-.content-prose > h2,
-.content-prose > h3,
-.content-prose > p,
-.content-prose > ul,
-.content-prose > ol,
-.content-prose > details {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
+   Container je 1080px, prose i vizuální bloky sdílí tu samou šířku. */
 .content-prose h2 {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
