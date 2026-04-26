@@ -203,34 +203,10 @@
   <link rel="stylesheet" href="/assets/css/site.css">
 
   <style>
-    /* Page-specific helpers for Allegro */
+    /* Allegro figure — jediná lokální specifikace (img + caption pro článkové obrázky) */
     .allegro-figure { margin: 36px 0; }
-    .allegro-figure img { width: 100%; height: auto; border-radius: 8px; display: block; }
+    .allegro-figure img { width: 100%; height: auto; border-radius: var(--radius-md); display: block; }
     .allegro-figure figcaption { font-size: .85rem; color: var(--grey); margin-top: 10px; text-align: center; font-style: italic; }
-
-    /* Allegro je landing page, ne dlouhý článek — širší layout než blog content */
-    .content.allegro-content { max-width: 1080px; padding: 80px 56px 96px; }
-    .content.allegro-content > p { font-size: 1.08rem; line-height: 1.78; max-width: 760px; }
-    .content.allegro-content > p.intro { font-size: 1.22rem; line-height: 1.7; max-width: 820px; margin-bottom: 40px; }
-    .content.allegro-content h2 { font-size: clamp(1.9rem, 3.2vw, 2.5rem); margin: 64px 0 24px; max-width: 820px; }
-    .content.allegro-content h3 { font-size: 1.35rem; margin: 32px 0 12px; }
-    .content.allegro-content ul { max-width: 760px; }
-
-    /* 2-sloupcová grida pro vizuální blok */
-    .allegro-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 40px 0; }
-    .allegro-card { background: var(--cream); border-left: 3px solid var(--gold); padding: 28px 32px; border-radius: 8px; }
-    .allegro-card h3 { margin: 0 0 12px; color: var(--black); font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; }
-    .allegro-card p { margin: 0; font-size: .98rem; line-height: 1.65; color: var(--charcoal); }
-
-    /* Highlight callout */
-    .allegro-callout { background: var(--cream); border-left: 4px solid var(--gold); padding: 28px 36px; border-radius: 8px; margin: 36px 0; max-width: 900px; }
-    .allegro-callout strong { color: var(--black); }
-
-    @media (max-width: 768px) {
-      .content.allegro-content { padding: 56px 20px 72px; }
-      .allegro-grid-2 { grid-template-columns: 1fr; gap: 16px; }
-      .allegro-callout { padding: 22px 24px; }
-    }
   </style>
 </head>
 <body>
@@ -260,7 +236,7 @@
   </div>
 </section>
 
-<article class="content allegro-content">
+<article class="container content-prose section">
 
   <p class="intro">Pilates Allegro je pokročilejší formou cvičení na strojích, která spojuje principy klasického reformeru s vertikální věží (Tower). Pro cvičence to znamená širší rejstřík cviků, větší možnosti progrese a univerzálnější trénink celého těla. Ve studiu Fit Pilates v Praze 10 je Allegro jeden z hlavních pilířů našich lekcí.</p>
 
@@ -332,26 +308,26 @@
 
   <p>Allegro je univerzální stroj, který vyhovuje široké škále cvičenců. Konkrétně bych ho doporučil v těchto případech:</p>
 
-  <div class="allegro-grid-2">
-    <div class="allegro-card">
+  <div class="grid grid--2">
+    <div class="card card--bordered">
       <h3>Pokročilí cvičenci hledající progresi</h3>
       <p>Pokud už nějakou dobu cvičíte na reformeru, matwork pilates nebo jiných strojích a začíná vám to být „lehké", Allegro vám otevře úplně nové roviny obtížnosti. Kombinace gravitace, odporu pružin z věže a horizontálního vozíku vytváří nečekané výzvy i pro pokročilé.</p>
     </div>
-    <div class="allegro-card">
+    <div class="card card--bordered">
       <h3>Sportovci v rehabilitaci a prevenci</h3>
       <p>Allegro je vynikající pro sportovce, kteří potřebují kombinovat sílu, mobilitu a stabilitu. Funkční pohybové vzorce, které v Allegru trénujete, mají přímý přesah do běžeckých, cyklistických, plaveckých i míčových sportů.</p>
     </div>
-    <div class="allegro-card">
+    <div class="card card--bordered">
       <h3>Lidé se sedavým zaměstnáním</h3>
       <p>Pokud trávíte 8+ hodin denně v sedu před počítačem, Allegro vám pomůže obnovit přirozený rozsah pohybu kyčlí, ramen a páteře. Vertikální cviky řeší typické problémy moderního těla — zkrácené flexory kyčlí, zaoblená záda, ztuhlou krční páteř.</p>
     </div>
-    <div class="allegro-card">
+    <div class="card card--bordered">
       <h3>Lidé v rehabilitaci nebo s bolestí zad</h3>
       <p>Allegro umožňuje pracovat s velmi nízkým odporem a velkou kontrolou — proto je oblíbené i v rehabilitaci. Pružiny z věže poskytují podporu, takže klient může cvičit bez nárazu a s plnou bezpečností.</p>
     </div>
   </div>
 
-  <div class="allegro-callout">
+  <div class="callout">
     <strong>Pozn.:</strong> U cvičenců se závažnými zdravotními problémy (operace páteře, akutní hernie, srdeční obtíže) vždy doporučujeme nejdřív konzultaci se Štefanem a souhlas vašeho lékaře nebo fyzioterapeuta.
   </div>
 

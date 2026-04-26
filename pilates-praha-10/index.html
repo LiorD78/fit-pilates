@@ -131,35 +131,11 @@
 
   <link rel="stylesheet" href="/assets/css/site.css">
   <style>
-    /* Breadcrumb v page-hero kontextu */
+    /* Breadcrumb v page-hero kontextu — jen tahle drobná specialita */
     .page-hero .lph-bc { font-size: .9rem; color: rgba(255,255,255,.7); margin-bottom: 20px; opacity: 0; animation: fu .7s .25s ease forwards; }
     .page-hero .lph-bc a { color: var(--gold); text-decoration: none; }
     .page-hero .lph-bc a:hover { text-decoration: underline; }
     .page-hero .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; opacity: 0; animation: fu .8s .8s ease forwards; }
-
-    /* Content area utility (nemění hero, jen content sekci) */
-    .lph-content { max-width: 880px; margin: 0 auto; padding: 64px 24px; }
-    .lph-content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 600; color: var(--black); margin: 56px 0 20px; line-height: 1.25; }
-    .lph-content h2:first-child { margin-top: 0; }
-    .lph-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--black); margin: 36px 0 14px; }
-    .lph-content p { font-size: 1.05rem; line-height: 1.75; color: var(--charcoal); margin-bottom: 18px; }
-    .lph-content ul { margin: 16px 0 24px; padding-left: 24px; }
-    .lph-content ul li { margin-bottom: 10px; line-height: 1.7; color: var(--charcoal); }
-    .lph-content a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
-    .lph-callout { background: var(--cream); border-left: 4px solid var(--gold); padding: 24px 32px; border-radius: 8px; margin: 32px 0; }
-    .lph-callout strong { color: var(--black); }
-    .lph-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; }
-    .lph-card { background: white; border: 1px solid #e8e3d8; border-radius: 12px; padding: 28px; box-shadow: 0 4px 12px rgba(0,0,0,.04); }
-    .lph-card h3 { margin-top: 0; }
-    .lph-map-wrap { margin: 48px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
-    .lph-cta { background: var(--black); color: white; padding: 56px 32px; border-radius: 16px; text-align: center; margin: 56px 0; }
-    .lph-cta h2 { color: white; margin-top: 0; }
-    .lph-cta p { color: rgba(255,255,255,.85); }
-    @media (max-width: 768px) {
-      .lph-content { padding: 48px 20px; }
-      .lph-grid-2 { grid-template-columns: 1fr; }
-      .lph-cta { padding: 40px 24px; }
-    }
   </style>
 </head>
 <body>
@@ -195,13 +171,13 @@
 </section>
 
 <!-- OBSAH -->
-<article class="lph-content">
+<article class="container container--narrow content-prose section">
 
   <h2>Hledáte pilates v Praze 10? Tady je studio, které spojuje tři disciplíny</h2>
   <p>Praha 10 je jedna z nejlidnatějších částí Prahy a poptávka po kvalitním pilates v ní každoročně roste. Většina studií ale nabízí jen jedno – buď pilates, nebo fitness, nebo box. <strong>Fit Pilates v Praze 10 – Strašnicích</strong> jde proti proudu a kombinuje všechny tři přístupy v jednom prostoru, pod vedením jednoho lektora, který je v každé z nich certifikovaný.</p>
   <p>Pokud sem chodíte na <a href="/blog/co-je-reformer-pilates/">reformer pilates</a>, máte kdykoli možnost přidat silový trénink nebo kondiční box, aniž byste museli měnit studio nebo trenéra. To je v Praze 10 unikátní kombinace, kterou nikde jinde v dosahu MHD nenajdete.</p>
 
-  <div class="lph-callout">
+  <div class="callout">
     <strong>Proč právě Fit Pilates v Praze 10:</strong>
     <ul style="margin-top: 12px; margin-bottom: 0;">
       <li>Lektor s 24 lety praxe – ACI Trenér fitness I. třídy od roku 2000</li>
@@ -215,27 +191,27 @@
   <h2>Jak se ke studiu dostanete</h2>
   <p>Studio Fit Pilates najdete na adrese <strong>U Trati 886/52, Praha 10 – Strašnice, 100 00</strong>. Lokalita je strategická – leží přímo na hranici Strašnic a Vršovic, takže do 10 minut se sem dostanete prakticky z celé Prahy 10 i ze sousedních čtvrtí Vinohrad, Žižkova a Malešic.</p>
 
-  <div class="lph-grid-2">
-    <div class="lph-card">
+  <div class="grid grid--2">
+    <div class="card">
       <h3>🚊 Tramvají</h3>
       <p style="margin-bottom: 0;">Nejbližší zastávka <strong>Radošovická</strong> – linky <strong>7, 22, 26</strong>. Cesta k vchodu studia trvá 3 minuty pěšky. Z Vinohrad přijedete linkou 22 za 12 minut, z Vršovic za 5 minut.</p>
     </div>
-    <div class="lph-card">
+    <div class="card">
       <h3>🚌 Autobusem</h3>
       <p style="margin-bottom: 0;">Nejbližší autobusová zastávka je <strong>Korytná</strong>. Přímé spojení z Vršovic, Záběhlic a Malešic. Pro spojení z dalších částí Prahy je vhodný přestup na Strašnické nebo Skalce.</p>
     </div>
-    <div class="lph-card">
+    <div class="card">
       <h3>🚇 Metrem</h3>
       <p style="margin-bottom: 0;">Z metra <strong>Strašnická</strong> (linka A) je to 10 minut pěšky přes klidnou zástavbu. Vlakem doporučujeme přestup na metro A na Můstku, Náměstí Míru nebo Flora a pokračovat na Strašnickou.</p>
     </div>
-    <div class="lph-card">
+    <div class="card">
       <h3>🅿️ Autem</h3>
       <p style="margin-bottom: 0;">V ulici U Trati a celém okolí je <strong>parkování zdarma</strong> – bez modré nebo fialové zóny. Bezproblémové parkování bývá i v rušnějších časech, protože jde o klidnou rezidenční zónu.</p>
     </div>
   </div>
 
   <h2 id="mapa">Mapa a poloha</h2>
-  <div class="lph-map-wrap">
+  <div class="map-wrap">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.789!2d14.4951578!3d50.0653696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDAzJzU1LjMiTiAxNMKwMjknNDIuNiJF!5e0!3m2!1scs!2scz!4v1714128000000!5m2!1scs!2scz"
       width="100%"
@@ -277,7 +253,7 @@
   <p>Nejrychlejší způsob, jak se domluvit na první lekci v Praze 10, je telefonicky na <a href="tel:+420604925249"><strong>+420 604 925 249</strong></a>. Štefan zvedá osobně, takže si rovnou dohodneme termín, který sedí oběma stranám. Můžete také napsat přes WhatsApp nebo e-mailem na <a href="mailto:stefanbitto@seznam.cz">stefanbitto@seznam.cz</a>.</p>
   <p>Standardně cvičíme <strong>Po–Pá 7:00–20:00</strong>. Víkendové lekce řešíme individuálně dle dohody – pokud potřebujete sobotní nebo nedělní termín, ozvěte se a najdeme cestu.</p>
 
-  <div class="lph-cta">
+  <div class="cta-block">
     <h2 style="margin-bottom: 16px;">Zkušební lekce za <em style="color: var(--gold); font-style: italic;">590 Kč</em></h2>
     <p style="font-size: 1.1rem; margin-bottom: 24px;">První lekce reformer pilates, silového tréninku nebo boxu v Praze 10. Bez závazků. S lektorem, který se vám plně věnuje.</p>
     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">

@@ -7,6 +7,7 @@
 
 /* ─── DESIGN TOKENS ─── */
 :root {
+  /* ─── BARVY ─── */
   --black:    #1a1b1e;
   --charcoal: #2b2e33;
   --gold:     #c49a3c;
@@ -19,6 +20,43 @@
   --lgrey:    #9ca3af;
   --border:   #e5e2db;
   --hex:      rgba(196,154,60,0.06);
+
+  /* ─── ŠÍŘKY (max-width pro container utility) ─── */
+  --w-narrow:  820px;   /* dlouhé čtení (blog, pillary) */
+  --w-content: 1080px;  /* landing pages (allegro, praha10, stefan, studio) */
+  --w-wide:    1280px;  /* wide hero/sekce, full-bleed grids */
+
+  /* ─── SPACING (vertikální + padding) ─── */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  40px;
+  --space-xl:  64px;
+  --space-2xl: 96px;
+
+  /* ─── PADDING horizontální (viewport edges) ─── */
+  --pad-x:     56px;
+  --pad-x-mob: 20px;
+
+  /* ─── TYPOGRAFIE ─── */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans:  'Inter', sans-serif;
+  --text-sm:    0.9rem;
+  --text-base:  1rem;
+  --text-md:    1.05rem;
+  --text-lg:    1.15rem;
+  --text-lead:  1.22rem;
+
+  /* ─── RADIUS ─── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* ─── SHADOW ─── */
+  --shadow-sm: 0 4px 12px rgba(0,0,0,.04);
+  --shadow-md: 0 8px 24px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.15);
 }
 
 /* ─── RESET ─── */
@@ -200,7 +238,163 @@ h1 em { font-style: italic; font-weight: 300; color: var(--gold); }
 .btn-b { display: flex; align-items: center; justify-content: center; background: transparent; color: var(--charcoal); padding: 14px; border-radius: 2px; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: 1.5px solid var(--border); cursor: pointer; transition: all .3s; }
 .btn-b:hover { border-color: var(--charcoal); }
 
-/* ─── SECTION UTILS ─── */
+/* ─── DESIGN SYSTEM UTILITIES ─── */
+/* Použití: <div class="container">…</div> / <div class="container container--narrow">…</div> */
+.container         { max-width: var(--w-content); margin: 0 auto; padding: 0 var(--pad-x); }
+.container--narrow { max-width: var(--w-narrow); }
+.container--wide   { max-width: var(--w-wide); }
+
+/* Vertikální padding pro sekce — používá design tokens pro konzistenci */
+.section           { padding: var(--space-2xl) 0; }
+.section--lg       { padding: 120px 0; }
+.section--sm       { padding: var(--space-xl) 0; }
+
+/* Pozadí pro sekce */
+.section--cream    { background: var(--cream); }
+.section--dark     { background: var(--black); color: var(--white); }
+.section--dark h2,
+.section--dark h3  { color: var(--white); }
+
+/* Eyebrow tag — gold, uppercase, s gold čárou (jako .tag, ale standardizovaný) */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-md);
+}
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* Karta — bílé pozadí s borderem (default), používá se v gridu */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+.card--cream      { background: var(--cream); border: none; box-shadow: none; }
+.card--bordered   { background: var(--cream); border-left: 3px solid var(--gold); border-radius: var(--radius-md); }
+.card--dark       { background: var(--black); color: var(--white); border: none; }
+.card h3          { font-family: var(--font-serif); font-size: 1.35rem; color: var(--black); margin: 0 0 12px; line-height: 1.25; }
+.card--dark h3    { color: var(--white); }
+.card p           { font-size: 0.98rem; line-height: 1.65; color: var(--charcoal); margin: 0; }
+.card--dark p     { color: rgba(255,255,255,.85); }
+.card a:not(.btn-d):not(.btn-o):not(.btn-w) { color: var(--gold); text-decoration: none; }
+.card a:not(.btn-d):not(.btn-o):not(.btn-w):hover { text-decoration: underline; }
+
+/* Callout — cream blok s 4px gold left borderem (ne karta, ale highlight box) */
+.callout {
+  background: var(--cream);
+  border-left: 4px solid var(--gold);
+  padding: 24px 32px;
+  border-radius: var(--radius-md);
+  margin: var(--space-lg) 0;
+}
+.callout strong { color: var(--black); }
+.callout p:last-child { margin-bottom: 0; }
+
+/* Grid utility — dvou/tří/čtyř-sloupcový */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+.grid--2 { grid-template-columns: 1fr 1fr; }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+.grid--gap-sm { gap: var(--space-sm); }
+.grid--gap-lg { gap: var(--space-lg); }
+
+/* CTA box — tmavý CTA blok pro konec sekce */
+.cta-block {
+  background: var(--black);
+  color: var(--white);
+  padding: 56px 32px;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  margin: var(--space-xl) 0;
+}
+.cta-block h2 { color: var(--white); margin: 0 0 16px; }
+.cta-block p { color: rgba(255,255,255,.85); margin-bottom: var(--space-md); }
+.cta-block .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* Map wrap — společný styl pro embed mapy */
+.map-wrap {
+  margin: var(--space-xl) 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+/* Content prose — typografie pro tělo článku/landing page (h2/h3/p/ul/a styly) */
+.content-prose h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.25;
+  margin: 56px 0 20px;
+}
+.content-prose h2:first-child { margin-top: 0; }
+.content-prose h2 em { font-style: italic; color: var(--gold); font-weight: 300; }
+
+/* Blog article (narrow container) — h2 s border-bottom pro vizuální rytmus dlouhých článků */
+.container--narrow.content-prose h2 {
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.15;
+}
+.content-prose h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--black);
+  margin: 36px 0 14px;
+  line-height: 1.3;
+}
+.content-prose p {
+  font-size: var(--text-md);
+  line-height: 1.75;
+  color: var(--charcoal);
+  margin-bottom: 18px;
+}
+.content-prose .intro,
+.content-prose p.intro {
+  font-size: var(--text-lead);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+.content-prose ul,
+.content-prose ol {
+  margin: 16px 0 24px;
+  padding-left: 24px;
+}
+.content-prose ul li,
+.content-prose ol li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: var(--charcoal);
+}
+.content-prose a:not(.btn-d):not(.btn-o):not(.btn-w):not(.related-card) {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.content-prose strong { color: var(--black); }
+
+
 .sec { padding: 100px 56px; }
 .sec-sm { padding: 60px 56px; }
 .wrap { max-width: 1260px; margin: 0 auto; }
@@ -401,20 +595,9 @@ footer.footer-simple a { color: var(--gold); text-decoration: none; }
 .zoom-stage img { width: 100%; height: auto; display: block; transform: scale(1); transform-origin: center center; will-change: transform; }
 
 /* ────────────────────────────────────────────────────────────
-   ARTICLE / SUB-PAGE CONTENT (pillar, allegro, author, studio, gdpr)
-   ──────────────────────────────────────────────────────────── */
-.content { max-width: 820px; margin: 0 auto; padding: 72px 56px 96px; }
-.content > p { margin-bottom: 18px; font-size: 1.02rem; color: var(--charcoal); line-height: 1.75; }
-.content > p.intro { font-size: 1.15rem; color: var(--charcoal); font-weight: 400; margin-bottom: 32px; line-height: 1.7; }
-.content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 700; color: var(--black); margin: 56px 0 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border); line-height: 1.15; }
-.content h2 em { font-style: italic; color: var(--gold); font-weight: 300; }
-.content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--charcoal); margin: 36px 0 14px; line-height: 1.25; }
-.content ul, .content ol { margin: 0 0 20px 24px; }
-.content li { font-size: 1rem; color: var(--charcoal); margin-bottom: 8px; line-height: 1.65; }
-.content a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
-.content a:hover { border-bottom-color: var(--gold); }
-.content strong { color: var(--black); font-weight: 600; }
-
+   ARTICLE / SUB-PAGE CONTENT — typografie nyní řeší .content-prose utility,
+   layout řeší .container utility. Stará .content pravidla jsou retired.
+   Společné prvky pro články (.highlight, .fig, .compare-table) zůstávají. */
 .highlight { background: var(--cream); border-left: 3px solid var(--gold); padding: 20px 24px; border-radius: 0 6px 6px 0; margin: 28px 0; font-size: .95rem; }
 .highlight strong { color: var(--black); }
 
@@ -479,7 +662,6 @@ footer.footer-simple a { color: var(--gold); text-decoration: none; }
   .nav-l { display: none; }
   .hero-content { padding: 0 20px 60px; } .hero-stats { right: 20px; bottom: 60px; }
   .page-hero-inner { padding: 0 20px 60px; }
-  .page-hero { padding: 130px 20px 64px; min-height: 420px; }
   .sec { padding: 64px 20px; } .sec-sm { padding: 40px 20px; }
   .progs-grid { grid-template-columns: 1fr; }
   .fw-grid { grid-template-columns: 1fr; }
@@ -495,7 +677,6 @@ footer.footer-simple a { color: var(--gold); text-decoration: none; }
   .f-top { grid-template-columns: 1fr 1fr; gap: 32px; } footer { padding: 56px 20px 28px; }
   .ms-grid { grid-template-columns: 1fr 1fr; }
   .cta-strip { padding: 60px 20px; }
-  .content { padding: 40px 20px 64px; }
   .cta-box { padding: 32px 24px; }
   .related-grid { grid-template-columns: 1fr; }
   footer.footer-simple { padding: 32px 20px; }
@@ -503,6 +684,15 @@ footer.footer-simple a { color: var(--gold); text-decoration: none; }
   .compare-table th, .compare-table td { padding: 10px 12px; }
   .local-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
   .local-info { padding: 56px 20px !important; }
+
+  /* ─── Design system mobile ─── */
+  .container { padding: 0 var(--pad-x-mob); }
+  .section { padding: var(--space-xl) 0; }
+  .section--lg { padding: 72px 0; }
+  .section--sm { padding: var(--space-lg) 0; }
+  .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; gap: var(--space-sm); }
+  .cta-block { padding: 40px 24px; }
+  .callout { padding: 20px 24px; }
 }
 
 @media (max-width: 768px) {
