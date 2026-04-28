@@ -188,6 +188,9 @@ h1 em { font-style: italic; font-weight: 300; color: var(--gold); }
 .page-hero.hero-portrait::before { background-image: url('/images/stefan-portrait-w1200.jpg'); background-position: center 30%; }
 .page-hero.hero-praha10::before { background-image: url('/images/hero-w1200.jpg'); }
 @media (min-width: 1201px) { .page-hero.hero-praha10::before { background-image: url('/images/hero.jpg'); } }
+.page-hero.hero-fitness::before { background-image: url('/images/trainer-fitness-w1200.jpg'); background-position: center 30%; }
+.page-hero.hero-boxing::before { background-image: url('/images/boxing-studio-w900.jpg'); background-position: center center; }
+@media (min-width: 1201px) { .page-hero.hero-boxing::before { background-image: url('/images/boxing-studio.jpg'); } }
 
 /* Sub-page hero používá stejné komponenty jako homepage:
    .hero-tag, h1, .hero-sub, .hero-acts, .hero-pills.
