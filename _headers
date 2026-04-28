@@ -1,24 +1,86 @@
-# ─── Security headers — vše ───
+# ────────────────────────────────────────────────
+# Security headers — applied to ALL responses
+# ────────────────────────────────────────────────
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=()
   X-XSS-Protection: 1; mode=block
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
-# ─── HTML — krátký cache, vždy revalidovat ───
+# ────────────────────────────────────────────────
+# HTML — short cache, must revalidate
+# (content can change, but allow stale-while-revalidate for speed)
+# ────────────────────────────────────────────────
 /
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
 
 /*.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
 
-# ─── Images — agresivní cache (1 rok, immutable) ───
-# Soubory mají hash nebo verzi v názvu (např. -w800), takže nikdy nemění obsah
+# Sub-pages without .html extension (Netlify pretty URLs)
+/pilates-allegro/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/pilates-praha-10/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/silovy-trenink/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/kondicni-box/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/o-stefanovi/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/studio/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/blog/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+# ────────────────────────────────────────────────
+# Images — aggressive caching (1 year, immutable)
+# Files have hash or size suffix, so content never changes for a given URL
+# ────────────────────────────────────────────────
 /images/*
   Cache-Control: public, max-age=31536000, immutable
 
-# ─── XML / TXT — krátký cache ───
+# Root-level icons (favicon, apple-touch, android-chrome, opengraph)
+/favicon.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon-*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/android-chrome-*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/opengraph-image.*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ────────────────────────────────────────────────
+# CSS — versioned via hash in URL eventually, for now 1 day cache
+# Content-Type explicit pro jistotu
+# ────────────────────────────────────────────────
+/assets/css/*
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: text/css; charset=UTF-8
+
+# ────────────────────────────────────────────────
+# JS (nebudeme mít moc, ale pro budoucnost)
+# ────────────────────────────────────────────────
+/assets/js/*
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# ────────────────────────────────────────────────
+# XML / TXT / JSON metadata
+# ────────────────────────────────────────────────
 /sitemap.xml
   Cache-Control: public, max-age=3600
   Content-Type: application/xml; charset=UTF-8
@@ -27,6 +89,25 @@
   Cache-Control: public, max-age=86400
   Content-Type: text/plain; charset=UTF-8
 
-# ─── IndexNow verifikační soubor — krátký cache ───
+/llms.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=UTF-8
+
+/humans.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=UTF-8
+
+/manifest.json
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json; charset=UTF-8
+
+# ────────────────────────────────────────────────
+# Misc verification files — short cache
+# ────────────────────────────────────────────────
 /*.txt
   Cache-Control: public, max-age=3600
+
+# ────────────────────────────────────────────────
+# Redirect www -> apex (handled in _redirects, but headers
+# applied here just in case)
+# ────────────────────────────────────────────────
