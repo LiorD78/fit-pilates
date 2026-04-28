@@ -240,15 +240,18 @@ h1 em { font-style: italic; font-weight: 300; color: var(--gold); }
 .btn-b:hover { border-color: var(--charcoal); }
 
 /* ─── DESIGN SYSTEM UTILITIES ─── */
-/* Použití: <div class="container">…</div> / <div class="container container--narrow">…</div> */
-.container         { max-width: var(--w-content); margin: 0 auto; padding: 0 var(--pad-x); }
+/* Použití: <div class="container">…</div> / <div class="container container--narrow">…</div>
+   POZN: Container používá padding-inline (horizontal), section používá padding-block
+   (vertical) — díky tomu je můžeš kombinovat na stejném elementu (např.
+   <article class="container section">) bez vzájemného přebíjení. */
+.container         { max-width: var(--w-content); margin-inline: auto; padding-inline: var(--pad-x); }
 .container--narrow { max-width: var(--w-narrow); }
 .container--wide   { max-width: var(--w-wide); }
 
 /* Vertikální padding pro sekce — používá design tokens pro konzistenci */
-.section           { padding: var(--space-2xl) 0; }
-.section--lg       { padding: 120px 0; }
-.section--sm       { padding: var(--space-xl) 0; }
+.section           { padding-block: var(--space-2xl); }
+.section--lg       { padding-block: 120px; }
+.section--sm       { padding-block: var(--space-xl); }
 
 /* Pozadí pro sekce */
 .section--cream    { background: var(--cream); }
@@ -684,10 +687,10 @@ footer.footer-simple a { color: var(--gold); text-decoration: none; }
   .local-info { padding: 56px 20px !important; }
 
   /* ─── Design system mobile ─── */
-  .container { padding: 0 var(--pad-x-mob); }
-  .section { padding: var(--space-xl) 0; }
-  .section--lg { padding: 72px 0; }
-  .section--sm { padding: var(--space-lg) 0; }
+  .container { padding-inline: var(--pad-x-mob); }
+  .section { padding-block: var(--space-xl); }
+  .section--lg { padding-block: 72px; }
+  .section--sm { padding-block: var(--space-lg); }
   .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; gap: var(--space-sm); }
   .cta-block { padding: 40px 24px; }
   .callout { padding: 20px 24px; }
