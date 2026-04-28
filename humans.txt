@@ -1,0 +1,16 @@
+/* TEAM */
+Owner & Lektor: Štefan Bitto
+Site: https://fitpilates.cz/o-stefanovi/
+Contact: stefanbitto [at] seznam.cz
+Twitter: -
+From: Praha 10, Strašnice, Česká republika
+
+/* THANKS */
+Balanced Body — pilates equipment
+Jordan Fitness — strength equipment
+
+/* SITE */
+Last update: 2026-04-28
+Standards: HTML5, CSS3
+Components: Vanilla JS, no frameworks
+Hosting: Netlify Edge

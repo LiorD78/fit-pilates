@@ -1,13 +1,100 @@
+# robots.txt for fitpilates.cz
+# Last updated: 2026-04-28
+
+# ─── DEFAULT POLICY ───
 User-agent: *
 Allow: /
 Disallow: /*.md$
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
 
-# Block image hot-linking sniffers
+# ─── SEARCH ENGINES (explicit allow) ───
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Seznam
+Allow: /
+
+User-agent: SeznamBot
+Allow: /
+
+# ─── LLM CRAWLERS (explicit allow for GEO) ───
+# We want to be discoverable in ChatGPT, Perplexity, Gemini, Claude
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ─── BLOCKED CRAWLERS (image scrapers) ───
 User-agent: ImagesiftBot
 Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 30
 
 User-agent: AhrefsBot
 Crawl-delay: 10
 
-# Standard sitemap location
+User-agent: MJ12bot
+Crawl-delay: 10
+
+# ─── SITEMAPS ───
 Sitemap: https://fitpilates.cz/sitemap.xml
+
+# ─── LLM-friendly metadata ───
+# This site implements the llms.txt standard:
+# https://fitpilates.cz/llms.txt

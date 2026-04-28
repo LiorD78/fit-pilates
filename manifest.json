@@ -1,0 +1,62 @@
+{
+  "name": "Fit Pilates",
+  "short_name": "Fit Pilates",
+  "description": "Pilates, silový trénink a kondiční box pod jednou střechou. Praha 10 — Strašnice.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1b1e",
+  "theme_color": "#c49a3c",
+  "lang": "cs",
+  "dir": "ltr",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "categories": ["fitness", "health", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Rezervovat lekci",
+      "short_name": "Rezervovat",
+      "description": "Rezervovat vstupní lekci",
+      "url": "/#kontakt",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Reformer pilates",
+      "short_name": "Reformer",
+      "url": "/pilates-allegro/"
+    },
+    {
+      "name": "Silový trénink",
+      "short_name": "Silovka",
+      "url": "/silovy-trenink/"
+    },
+    {
+      "name": "Kondiční box",
+      "short_name": "Box",
+      "url": "/kondicni-box/"
+    }
+  ]
+}
