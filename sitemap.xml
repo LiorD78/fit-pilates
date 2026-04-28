@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://fitpilates.cz/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/blog/co-je-reformer-pilates/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/blog/pilates-pro-zacatecniky/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/pilates-allegro/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -70,13 +70,13 @@
       <image:title>Pilates Allegro Praha 10 — Fit Pilates</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://fitpilates.cz/images/pillar-stretch.jpg</image:loc>
-      <image:title>Pilates Allegro – Štefan Bitto v akci</image:title>
+      <image:loc>https://fitpilates.cz/images/cadillac-detail.jpg</image:loc>
+      <image:title>Detail Cadillacu (Trapeze Table) Balanced Body — Fit Pilates Praha 10</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://fitpilates.cz/pilates-praha-10/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -90,7 +90,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/o-stefanovi/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -104,7 +104,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/studio/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
