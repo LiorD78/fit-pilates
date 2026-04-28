@@ -74,18 +74,23 @@ I když není ověřený, vyplň profil naplno — Google to schvaluje rychleji 
 **Zkopíruj přímo:**
 
 ```
-Fit Pilates je pilates studio v Praze 10 – Strašnicích, kde pod jednou
-střechou spojujeme reformer pilates, silový a funkční trénink a kondiční
-box. Vede Štefan Bitto, ACI Trenér fitness I. třídy s 24 lety praxe.
+Fit Pilates je studio v Praze 10 – Strašnicích, kde pod jednou
+střechou spojujeme reformer pilates, silový a funkční trénink
+a kondiční box. Žádné jiné studio v Praze 10 tuto kombinaci
+s jedním lektorem nenabízí.
 
-První zkušební lekce 590 Kč. Skupinové lekce max. 3 osoby — individuální
-přístup i v ceně skupinky. Profesionální vybavení (Reformery, Allegro,
-Everlast box, Jordan kettlebelly), šatny a sprchy.
+Vede Štefan Bitto, ACI trenér fitness I. třídy s 24+ lety praxe.
 
-📍 U Trati 886/52, Praha 10 (Strašnice)
-🚊 Tram Radošovická (linky 7, 22, 26)
-🚌 Bus Korytná
-🅿️ Parkování zdarma v ulici (bez modré zóny)
+VYBAVENÍ:
+🤸 3× Balanced Body Allegro reformer (jeden s Tower) + Cadillac
+💪 TuffStuff squat rack, Jordan činky, kettlebelly, TRX, BOSU
+🥊 Boxerské vybavení Windy, King, Twins, Everlast (bez sparringu)
+
+První zkušební lekce 590 Kč.
+
+📍 U Trati 886/52, Praha 10 - Strašnice
+🚊 Tram Radošovická / 🚌 Bus Korytná
+🅿️ Parkování zdarma v ulici
 🕐 Po-Pá 7:00-20:00, víkend dle dohody
 
 Rezervace: +420 604 925 249
@@ -137,25 +142,37 @@ Nahraj přímo z webu (mám připravené v kvalitě):
 ### 2.5 Služby (volitelně, ale silný SEO signál)
 Klikni **"Přidat službu"** a pro každou napiš:
 
-**Reformer Pilates — individuální lekce**
-- Cena: napiš svou (např. 800 Kč / 60 min)
-- Popis: Pilates na speciálních přístrojích Reformer. Pod vedením Štefana Bitta.
+**Reformer pilates — individuální lekce**
+- Cena: napiš svou (např. 1 290 Kč / 60 min)
+- Popis: Klasický pilates na profesionálních Balanced Body Allegro reformerech (jeden s Tower) plus Cadillac. Individuální lekce s lektorem Štefanem Bittem. Více info: fitpilates.cz/pilates-allegro
 
-**Reformer Pilates — skupinová lekce**
-- Cena: 590 Kč / 60 min
-- Popis: Max. 3 osoby. Ideální pro začátečníky i pokročilé.
+**Reformer pilates — skupinová lekce**
+- Cena: 790 Kč / 60 min
+- Popis: Max. 3 osoby. Vhodné pro začátečníky i pokročilé.
 
-**Funkční trénink**
+**Silový a funkční trénink**
 - Cena: napiš svou
-- Popis: Kombinace silového a funkčního tréninku. Kettlebelly, vlastní váha, Jordan vybavení.
+- Popis: Kombinace silového a funkčního tréninku. TuffStuff squat rack, Jordan činky, kettlebelly Escape, TRX, BOSU. Trénink cílíme podle klienta. Více info: fitpilates.cz/silovy-trenink
 
-**Kondiční box**
+**Kondiční box (fitness boxing)**
 - Cena: napiš svou
-- Popis: Boxing fitness s Everlast vybavením. Antistresový a kardio efekt.
+- Popis: Technika úderů, stínový box, pytel a lapy. Bez sparringu. Profi vybavení Windy, King, Twins, Everlast. Skvělý kardio a stres relief. Více info: fitpilates.cz/kondicni-box
+
+**Pilates pro začátečníky**
+- Cena: 590 Kč (zkušební)
+- Popis: Vstupní lekce pro úplné začátečníky. Štefan vás provede pomalu, vysvětlí všechno potřebné. Více: fitpilates.cz/blog/pilates-pro-zacatecniky
+
+**Postnatální pilates**
+- Cena: napiš svou
+- Popis: Návrat do formy po porodu. Šetrné cvičení s důrazem na pánevní dno a střední vrstvu. Konzultace s gynekologem doporučena.
+
+**Pilates v rehabilitaci**
+- Cena: napiš svou
+- Popis: Reformer je díky pružinám šetrný — vhodný i po úraze nebo s chronickými problémy zad. Před první lekcí vždy konzultace.
 
 **Zkušební lekce**
 - Cena: 590 Kč
-- Popis: První lekce v životě nebo u nás? Vyzkoušejte si všechny tři disciplíny v 60 minutách.
+- Popis: První lekce u nás. Můžete si vybrat pilates, silovku nebo box. 60 minut individuálního tréninku se Štefanem.
 
 ---
 

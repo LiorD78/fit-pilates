@@ -5,9 +5,11 @@
 
 ---
 
-## 1. Prvních 10 GBP postů (na první 10 týdnů)
+## 1. Prvních 15 GBP postů (na první 15 týdnů)
 
 GBP posty mají max. 1500 znaků a životnost 7 dní v Maps view. Každý post musí mít **CTA tlačítko** (Rezervovat / Zavolat / Více info) a **fotku 1200×900 px**.
+
+> **Updated 28.4.2026:** Přidáno 5 nových postů (11–15) zaměřených na silovku, box a USP „tři disciplíny".
 
 ### Post 1 — Welcome / launch
 **Typ:** Co je nového
@@ -213,6 +215,124 @@ potřebuje." — Petr K., klient od dubna 2026
 
 Pojďte to taky vyzkoušet. První lekce 590 Kč.
 📞 +420 604 925 249
+```
+**CTA:** Rezervovat
+
+---
+
+### Post 11 — Silový trénink (silovka v 11. týdnu)
+**Typ:** Co je nového
+**Foto:** `images/fitness.jpg`
+**Text:**
+```
+💪 Silový trénink ve Fit Pilates — víc než „chodit do
+fitka"
+
+Štefan má 24+ let praxe jako osobní trenér. Trénink
+cílíme PODLE VÁS — od základů techniky pro začátečníky
+po pokročilé compound exercises.
+
+VYBAVENÍ:
+✓ TuffStuff squat rack (USA)
+✓ Sada Jordan činek (UK profi standard)
+✓ Olympijská osa s kotouči
+✓ Kettlebelly Escape, TRX, BOSU Elite
+
+Vstupní lekce 590 Kč. Praha 10 — U Trati 886/52.
+```
+**CTA:** Více info → /silovy-trenink/
+
+---
+
+### Post 12 — Kondiční box (box v 12. týdnu)
+**Typ:** Co je nového
+**Foto:** `images/boxing-studio.jpg`
+**Text:**
+```
+🥊 Kondiční box BEZ sparringu — kardio, technika a stres
+relief v jednom
+
+Žádný kontakt mezi cvičenci. Jen technika úderů, stínový
+box, pytel a lapy s trenérem. Vypocíte se víc než při
+běhu, naučíte se něco nového a po dni v kanceláři vám
+spadne stres jako kámen.
+
+VYBAVENÍ:
+✓ Rukavice Windy a King (thajské profi brandy)
+✓ Lapy Twins
+✓ Boxerský pytel Everlast
+
+Praha 10 — U Trati 886/52. Vstupní lekce 590 Kč.
+```
+**CTA:** Více info → /kondicni-box/
+
+---
+
+### Post 13 — Tři disciplíny pod jednou střechou (USP post)
+**Typ:** Co je nového
+**Foto:** `images/studio-main.jpg`
+**Text:**
+```
+🎯 Proč jsme jiní než „pilates studio"
+
+Většina studií v Praze 10 dělá JEN pilates. Nebo JEN
+silovku. Nebo JEN box. My děláme všechny tři —
+s jedním lektorem, na jednom místě:
+
+🤸 PILATES — kontrola pohybu, stabilita, mobilita
+💪 SILOVKA — síla, svalová hmota, výkonnost
+🥊 BOX — kardio, koordinace, stres relief
+
+Žádné jiné studio v Praze 10 to nenabízí. To je
+hlavní výhoda Fit Pilates.
+
+📍 U Trati 886/52, Praha 10 - Strašnice
+📞 +420 604 925 249
+```
+**CTA:** Rezervovat
+
+---
+
+### Post 14 — Cadillac (Trapeze Table)
+**Typ:** Co je nového
+**Foto:** `images/cadillac-detail.jpg`
+**Text:**
+```
+✨ Cadillac (Trapeze Table) Balanced Body — premium pilates
+
+Většina pilates studií v Praze má jen reformery. My máme
+také plný Cadillac (Trapeze Table) Balanced Body —
+nejvšestrannější pilates stroj.
+
+CO UMÍ NAVÍC?
+✓ Cvičení leže, sedě, ve stoje, dokonce v inverzi
+✓ Trapézka s ovčí kožešinou, push-through bar
+✓ Pětice Balanced Body Signature pružin
+✓ V rehabilitaci pro pacienty s omezenou mobilitou
+
+Profi vybavení — ne kompromisy.
+```
+**CTA:** Více info → /pilates-allegro/
+
+---
+
+### Post 15 — Ranní pilates pro lidi z kanceláře
+**Typ:** Akce / Special offer
+**Foto:** `images/trainer-action.jpg` nebo `images/pilates.jpg`
+**Text:**
+```
+☕ Začněte den lépe — ranní pilates ještě před prací
+
+Otevíráme už v 7:00. Za 60 minut si protáhnete páteř
+zatuhlou ze sedavé práce, zaktivujete střední vrstvu
+a do kanceláře přijdete s lepším držením těla.
+
+Tip pro Vršovice/Vinohrady/Žižkov — k nám se
+dostanete za 10-15 min MHD.
+
+📍 U Trati 886/52, Praha 10 - Strašnice
+🚊 Tram Radošovická / Bus Korytná
+🅿️ Parkování zdarma v ulici
 ```
 **CTA:** Rezervovat
 
