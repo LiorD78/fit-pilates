@@ -157,7 +157,27 @@
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/#kontakt" class="nav-cta">Rezervovat lekci</a></li>
   </ul>
+  <button class="nav-burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav-overlay">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+<div id="nav-overlay" role="dialog" aria-label="Hlavní menu" aria-modal="true">
+  <ul>
+    <li><a href="/#programy">Programy</a></li>
+    <li><a href="/o-stefanovi/">O Štefanovi</a></li>
+    <li><a href="/studio/">Studio</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#cenik">Ceník</a></li>
+  </ul>
+  <a href="/#kontakt" class="ov-cta">Rezervovat lekci</a>
+  <div class="ov-meta">
+    <a href="tel:+420604925249">+420 604 925 249</a> · <a href="mailto:stefanbitto@seznam.cz">stefanbitto@seznam.cz</a><br>
+    U Trati 886/52, Praha 10
+  </div>
+</div>
+
 
 <!-- HERO -->
 <section class="page-hero hero-praha10">
@@ -419,5 +439,6 @@ document.querySelectorAll('.fp-email').forEach(e => {
 });
 </script>
 
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>
