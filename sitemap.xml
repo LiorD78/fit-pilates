@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://fitpilates.cz/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -58,6 +58,20 @@
     <image:image>
       <image:loc>https://fitpilates.cz/images/allegro-hero.jpg</image:loc>
       <image:title>Štefan Bitto na Allegro reformeru, Fit Pilates Praha 10</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/blog/pilates-apparatus-stroje/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-26-ladder-barrel-full.jpg</image:loc>
+      <image:title>Pilates Apparatus — 4 klasické stroje Josepha Pilatese</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-27-wunda-chair-full.jpg</image:loc>
+      <image:title>Wunda Chair — klasický pilates apparatus, Fit Pilates Praha 10</image:title>
     </image:image>
   </url>
   <url>
@@ -132,7 +146,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/studio/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -142,6 +156,14 @@
     <image:image>
       <image:loc>https://fitpilates.cz/images/gallery/gallery-08-fp-reception-full.jpg</image:loc>
       <image:title>Recepce Fit Pilates s logem</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-26-ladder-barrel-full.jpg</image:loc>
+      <image:title>Ladder Barrel se Spine Corrector boxem — Fit Pilates Praha 10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-27-wunda-chair-full.jpg</image:loc>
+      <image:title>Wunda Chair s pedálem a arm springs — Fit Pilates Praha 10</image:title>
     </image:image>
   </url>
 </urlset>
