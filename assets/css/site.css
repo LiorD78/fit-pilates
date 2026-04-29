@@ -34,10 +34,13 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
   .page-hero .lph-bc{font-size:.78rem;line-height:1.5}
 
   /* Hero photo: shift focal point left so subject (Stefan) stays visible on narrow viewport */
+  /* Stefan stands on the RIGHT side of these wide photos. */
+  /* On mobile (cover crop to ~380px wide), shift focus to 70% so he stays visible. */
   .page-hero.hero-fitness::before,
+  .page-hero.hero-portrait::before{background-position:70% 30% !important}
+  /* Vertical portraits: Stefan is centered/slightly right — keep default center crop. */
   .page-hero.hero-handstand::before,
-  .page-hero.hero-portrait::before,
-  .page-hero.hero-doorway::before{background-position:30% 30%}
+  .page-hero.hero-doorway::before{background-position:55% 30% !important}
   /* For boxing & studio (wider scenes) leave them centered */
 }
 
