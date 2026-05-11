@@ -33,6 +33,15 @@ jobs:
           url-list: |
             https://fitpilates.cz/
             https://fitpilates.cz/pilates-allegro/
-            https://fitpilates.cz/gdpr.html
+            https://fitpilates.cz/silovy-trenink/
+            https://fitpilates.cz/kondicni-box/
+            https://fitpilates.cz/pilates-praha-10/
+            https://fitpilates.cz/o-stefanovi/
+            https://fitpilates.cz/studio/
+            https://fitpilates.cz/blog/
+            https://fitpilates.cz/blog/co-je-reformer-pilates/
+            https://fitpilates.cz/blog/pilates-pro-zacatecniky/
+            https://fitpilates.cz/blog/pilates-apparatus-stroje/
+            https://fitpilates.cz/blog/reformer-pilates-praha/
           ping-google-sitemap: 'true'
           fail-on-error: 'false'
