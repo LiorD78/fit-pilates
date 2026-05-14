@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online rezervace lekce | Fit Pilates Praha 10</title>
-  <meta name="description" content="Rezervujte si lekci Reformer Pilates, silového tréninku nebo kondičního boxu u Štefana Bitta. Studio Praha 10 – Strašnice. Zkušební lekce 590 Kč.">
+  <meta name="description" content="Rezervujte si lekci Reformer Pilates u Štefana Bitta. Zkušební lekce 590 Kč, skupinová 790 Kč, individuální 1 290 Kč. Studio Praha 10 – Strašnice.">
   <meta name="keywords" content="rezervace pilates praha, online rezervace fit pilates, rezervovat reformer pilates, fitpilates rezervace">
   <meta name="author" content="Štefan Bitto">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -21,12 +21,12 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Online rezervace lekce | Fit Pilates Praha 10">
-  <meta property="og:description" content="Rezervujte si lekci Reformer Pilates, silového tréninku nebo kondičního boxu u Štefana Bitta. Studio Praha 10 – Strašnice.">
+  <meta property="og:description" content="Rezervujte si lekci Reformer Pilates u Štefana Bitta. Studio Praha 10 – Strašnice.">
   <meta property="og:url" content="https://fitpilates.cz/rezervace/">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="Fit Pilates">
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=14052026">
+  <link rel="stylesheet" href="/assets/css/site.css?v=14052026-2">
 
   <!-- Schema: BreadcrumbList -->
   <script type="application/ld+json">
@@ -56,7 +56,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Online rezervace lekce | Fit Pilates Praha 10",
-    "description": "Rezervujte si lekci Reformer Pilates, silového tréninku nebo kondičního boxu u Štefana Bitta.",
+    "description": "Rezervujte si lekci Reformer Pilates u Štefana Bitta.",
     "url": "https://fitpilates.cz/rezervace/",
     "inLanguage": "cs-CZ",
     "isPartOf": {
@@ -66,7 +66,7 @@
     },
     "potentialAction": {
       "@type": "ReserveAction",
-      "target": "https://fitpilates.cz/rezervace/",
+      "target": "https://fit-pilates2.reservio.com",
       "result": {
         "@type": "Reservation",
         "name": "Rezervace lekce ve studiu Fit Pilates"
@@ -76,47 +76,140 @@
   </script>
 
   <style>
-    /* Specifika pro rezervační stránku */
-    .reservation-frame-wrap {
-      margin: 32px 0 24px;
-      padding: 0;
-      background: var(--c-cream, #f8f5f0);
-      border-radius: var(--radius, 12px);
-      overflow: hidden;
-      box-shadow: var(--shadow, 0 2px 8px rgba(0,0,0,.06));
-    }
-    .reservation-frame-wrap iframe {
-      display: block;
-      width: 100%;
-      min-height: 800px;
-      height: 1200px;
-      border: 0;
-    }
-    .reservation-meta {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin: 32px 0;
-    }
-    .reservation-meta-item {
-      padding: 16px 18px;
-      background: var(--c-cream, #f8f5f0);
-      border-left: 3px solid var(--c-accent, #c89a3c);
-      border-radius: 4px;
-    }
-    .reservation-meta-item strong {
-      display: block;
-      font-size: 14px;
-      letter-spacing: .08em;
+    /* Lokální drobnosti specifické pro rezervační stránku.
+       Vše ostatní jede přes globální site.css třídy. */
+    .res-meta {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--c-accent, #c89a3c);
-      margin-bottom: 4px;
+      color: var(--grey);
+      margin-bottom: 18px;
     }
-    @media (max-width: 720px) {
-      .reservation-frame-wrap iframe {
-        min-height: 700px;
-        height: 1400px;
-      }
+    .res-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .res-meta span::before {
+      content: '';
+      width: 5px; height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+    .res-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1;
+      margin: 18px 0 6px;
+    }
+    .res-price em {
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--lgrey);
+      letter-spacing: 1px;
+    }
+    /* Make .prog clickable & hoverable as a card (since these are <a> tags) */
+    .prog.res-card { display: flex; flex-direction: column; }
+    .prog.res-card .prog-tags { margin-bottom: 8px; }
+    .prog.res-card .prog-link { margin-top: auto; }
+
+    /* Dark "jak se dostanete" tile grid */
+    .res-access-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 48px;
+    }
+    .res-access-tile {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 4px;
+      padding: 32px 26px;
+      transition: all .3s;
+    }
+    .res-access-tile:hover {
+      border-color: var(--gold);
+      background: rgba(196,154,60,.06);
+    }
+    .res-access-icon {
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 18px;
+      display: block;
+      width: 28px;
+      height: 28px;
+    }
+    .res-access-icon svg { width: 100%; height: 100%; }
+    .res-access-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 8px;
+    }
+    .res-access-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+    .res-access-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+      line-height: 1.6;
+    }
+    .res-address-bar {
+      background: rgba(196,154,60,.08);
+      border-left: 2px solid var(--gold);
+      padding: 18px 24px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: rgba(255,255,255,.85);
+      letter-spacing: .3px;
+    }
+    .res-address-bar strong {
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-right: 10px;
+    }
+
+    /* Fallback callout — premium dark variant */
+    .res-fallback {
+      background: var(--charcoal);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 32px 36px;
+      color: rgba(255,255,255,.85);
+      margin-top: 64px;
+    }
+    .res-fallback strong { color: var(--white); }
+    .res-fallback a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(196,154,60,.3); transition: border-color .25s; }
+    .res-fallback a:hover { border-bottom-color: var(--gold); }
+    .res-fallback .res-fallback-t {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--white);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .res-fallback p { font-size: 14px; line-height: 1.7; margin: 0; }
+
+    @media (max-width: 900px) {
+      .res-access-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .res-access-grid { grid-template-columns: 1fr; }
+      .res-price { font-size: 32px; }
     }
   </style>
 </head>
@@ -164,74 +257,176 @@
       <a href="/">Domů</a> &nbsp;›&nbsp; <span>Online rezervace</span>
     </nav>
     <h1>Rezervujte si lekci<br><em>se Štefanem</em></h1>
-    <p class="lead">Vyberte si typ lekce a termín. Po rezervaci dostanete potvrzení e-mailem a den před lekcí připomínku. Bez stresu, bez telefonování — kdykoliv vám to vyhovuje.</p>
+    <p class="lead">Vyberte si typ lekce, který vám sedí. Termín si pak zvolíte v rezervačním systému — potvrzení přijde e-mailem, den před lekcí dostanete připomínku. Bez stresu, bez telefonování.</p>
   </div>
 </section>
 
-<!-- OBSAH -->
-<article class="container section">
+<!-- LEKCE — karty ve stylu .prog z homepage -->
+<div class="progs-bg">
+  <div class="sec wrap">
+    <div class="progs-header rv">
+      <div>
+        <div class="tag">Vyberte si lekci</div>
+        <h2>Tři způsoby,<br><em>jak začít.</em></h2>
+      </div>
+      <p class="lead" style="max-width:340px;">Každá lekce trvá 60 minut. Pokud váháte, začněte zkušební — projdeme spolu vaše cíle a vyzkoušíme reformer.</p>
+    </div>
 
-  <div class="reservation-meta">
-    <div class="reservation-meta-item">
-      <strong>Zkušební lekce</strong>
-      590 Kč · 60 minut · první návštěva s konzultací
+    <div class="progs-grid rv">
+
+      <!-- 01 — ZKUŠEBNÍ -->
+      <a href="https://fit-pilates2.reservio.com" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
+        <div class="prog-bar"></div>
+        <span class="prog-num">01</span>
+        <img src="/images/allegro-hero-w800.jpg" srcset="/images/allegro-hero-w800.jpg 800w, /images/allegro-hero-w1200.jpg 1200w" sizes="(max-width:768px) 100vw, 33vw" alt="Zkušební lekce reformer pilates ve studiu Fit Pilates Praha 10" class="prog-img" loading="lazy" decoding="async" width="1200" height="800">
+        <div class="prog-name">Zkušební lekce</div>
+        <div class="prog-en">First visit</div>
+        <div class="res-meta">
+          <span>60 min</span>
+          <span>1 osoba</span>
+        </div>
+        <div class="res-price">590 Kč <em>/ první lekce</em></div>
+        <p class="prog-desc">První návštěva s konzultací. Projdeme spolu vaše cíle, ukážeme vám reformer i Tower a uděláme krátkou lekci na míru. Bez závazku, bez tlaku.</p>
+        <div class="prog-tags">
+          <span class="prog-tag">Začátečníci</span>
+          <span class="prog-tag">Konzultace</span>
+          <span class="prog-tag">Reformer</span>
+        </div>
+        <div class="prog-link">Rezervovat zkušební</div>
+      </a>
+
+      <!-- 02 — SKUPINOVÁ -->
+      <a href="https://fit-pilates2.reservio.com" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
+        <div class="prog-bar"></div>
+        <span class="prog-num">02</span>
+        <img src="/images/pilates-w900.jpg" srcset="/images/pilates-w600.jpg 600w, /images/pilates-w900.jpg 900w, /images/pilates.jpg 1400w" sizes="(max-width:768px) 100vw, 33vw" alt="Skupinová lekce pilates pro maximálně 3 osoby v Praze 10" class="prog-img" loading="lazy" decoding="async" width="1400" height="859">
+        <div class="prog-name">Skupinová lekce</div>
+        <div class="prog-en">Small group · Max 3</div>
+        <div class="res-meta">
+          <span>60 min</span>
+          <span>Max 3 osoby</span>
+        </div>
+        <div class="res-price">790 Kč <em>/ lekce</em></div>
+        <p class="prog-desc">Sdílená lekce s osobním přístupem. Tři reformery, tři lidé, jeden trenér. Dostatek prostoru i pozornosti — žádné davy, žádný ruch.</p>
+        <div class="prog-tags">
+          <span class="prog-tag">Pokročilejší</span>
+          <span class="prog-tag">Allegro</span>
+          <span class="prog-tag">Skupina</span>
+        </div>
+        <div class="prog-link">Rezervovat skupinovou</div>
+      </a>
+
+      <!-- 03 — INDIVIDUÁLNÍ -->
+      <a href="https://fit-pilates2.reservio.com" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
+        <div class="prog-bar"></div>
+        <span class="prog-num">03</span>
+        <img src="/images/cadillac-detail-w800.jpg" srcset="/images/cadillac-detail-w800.jpg 800w, /images/cadillac-detail-w1200.jpg 1200w" sizes="(max-width:768px) 100vw, 33vw" alt="Individuální lekce na Cadillac apparatus ve studiu Fit Pilates" class="prog-img" loading="lazy" decoding="async" width="1200" height="800">
+        <div class="prog-name">Individuální lekce</div>
+        <div class="prog-en">One-on-one</div>
+        <div class="res-meta">
+          <span>60 min</span>
+          <span>1 osoba</span>
+        </div>
+        <div class="res-price">1 290 Kč <em>/ lekce</em></div>
+        <p class="prog-desc">Lektor jen pro vás. Plný přístup ke všem strojům — Cadillac, Wunda Chair, Ladder Barrel, Allegro. Ideální pro rehabilitaci, postnatální péči nebo specifické cíle.</p>
+        <div class="prog-tags">
+          <span class="prog-tag">Premium</span>
+          <span class="prog-tag">Cadillac</span>
+          <span class="prog-tag">Apparatus</span>
+          <span class="prog-tag">Rehabilitace</span>
+        </div>
+        <div class="prog-link">Rezervovat individuální</div>
+      </a>
+
     </div>
-    <div class="reservation-meta-item">
-      <strong>Individuální lekce</strong>
-      1 290 Kč · 60 minut · lektor jen pro vás
+
+    <!-- Fallback callout — dark, premium -->
+    <div class="res-fallback rv">
+      <span class="res-fallback-t">Nedaří se vám rezervovat online?</span>
+      <p>
+        Zavolejte přímo Štefanovi na <a href="tel:+420604925249"><strong>+420 604 925 249</strong></a>
+        nebo přes <a href="https://wa.me/420604925249" target="_blank" rel="noopener">WhatsApp</a>,
+        případně napište na <a href="mailto:stefanbitto@seznam.cz">stefanbitto@seznam.cz</a>.
+        Odpovídáme zpravidla do 2 hodin.
+      </p>
     </div>
-    <div class="reservation-meta-item">
-      <strong>Skupinová lekce</strong>
-      790 Kč · 60 minut · max 3 osoby
-    </div>
-    <div class="reservation-meta-item">
-      <strong>Permanentky</strong>
-      Skupinová 6 990 Kč · Individuální 11 490 Kč
-    </div>
+
+  </div>
+</div>
+
+<!-- CO SE DĚJE PO REZERVACI — .ps grid (counter-prefixed steps) -->
+<div class="sec wrap">
+  <div class="rv" style="max-width:580px;">
+    <div class="tag">Co následuje</div>
+    <h2>Po rezervaci<br><em>nemusíte nic řešit.</em></h2>
+    <p class="lead" style="margin-top:18px;">Vše ostatní zařídíme my. Vy se jen těšte na lekci.</p>
   </div>
 
-  <!-- ====================================================== -->
-  <!-- REZERVAČNÍ WIDGET — Reservio iframe                    -->
-  <!-- Business ID: 6ed3d57e-2755-43b6-84be-0b9bfaa3291d      -->
-  <!-- Reservio admin: app.reservio.com/business/<id>         -->
-  <!-- ====================================================== -->
-  <div class="reservation-frame-wrap">
-    <iframe
-      src="https://fit-pilates2.reservio.com"
-      title="Online rezervace lekce — Fit Pilates"
-      loading="lazy"
-      allow="payment"
-      referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
+  <div class="ps-grid rv">
+    <div class="ps">
+      <div class="ps-t">Potvrzení e-mailem</div>
+      <p class="ps-d">Okamžitě po dokončení rezervace dostanete e-mail s detaily lekce, adresou studia a kalendářovým souborem (.ics) pro Google Calendar nebo iCloud.</p>
+    </div>
+    <div class="ps">
+      <div class="ps-t">Připomínka 24h předem</div>
+      <p class="ps-d">Den před lekcí vám pošleme jemnou připomínku e-mailem nebo SMS. Nemusíte si pamatovat ani vést kalendář — my hlídáme za vás.</p>
+    </div>
+    <div class="ps">
+      <div class="ps-t">Zrušení zdarma do 24h</div>
+      <p class="ps-d">Pokud nemůžete přijít, zrušte rezervaci přes odkaz v e-mailu. Pozdější zrušení bohužel nemůžeme refundovat — kapacita studia je omezená.</p>
+    </div>
   </div>
+</div>
 
-  <div class="callout" style="margin-top: 32px;">
-    <strong>Nedaří se vám rezervovat online?</strong>
-    <p style="margin: 8px 0 0;">
-      Zavolejte přímo Štefanovi na <a href="tel:+420604925249"><strong>+420 604 925 249</strong></a>
-      (nebo přes <a href="https://wa.me/420604925249" target="_blank" rel="noopener">WhatsApp</a>),
-      případně napište e-mail na <a href="mailto:stefanbitto@seznam.cz">stefanbitto@seznam.cz</a>.
-      Odpovídáme zpravidla do 2 hodin.
-    </p>
+<!-- JAK SE KE STUDIU DOSTANETE — dark sekce s tile cards -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="rv" style="max-width:580px;">
+      <div class="tag">Jak se k nám dostanete</div>
+      <h2 style="color:var(--white);">U Trati 886/52,<br><em>Praha 10 – Strašnice.</em></h2>
+      <p class="lead" style="color:rgba(255,255,255,.65); margin-top:18px;">Studio leží mezi Strašnicemi a Vršovicemi. Pět minut od tramvaje, deset od metra, parkování zdarma přímo před domem.</p>
+    </div>
+
+    <div class="res-access-grid rv">
+      <div class="res-access-tile">
+        <span class="res-access-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="2"/><path d="M8 17l-2 4"/><path d="M16 17l2 4"/><circle cx="9" cy="13" r=".6" fill="currentColor"/><circle cx="15" cy="13" r=".6" fill="currentColor"/><path d="M5 8h14"/></svg>
+        </span>
+        <div class="res-access-label">Tramvaj</div>
+        <div class="res-access-name">Radošovická</div>
+        <div class="res-access-desc">Linky 7, 22, 26<br>3 minuty pěšky</div>
+      </div>
+      <div class="res-access-tile">
+        <span class="res-access-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10z"/><path d="M5 11h14"/><path d="M8 17v3"/><path d="M16 17v3"/><circle cx="8.5" cy="14" r=".7" fill="currentColor"/><circle cx="15.5" cy="14" r=".7" fill="currentColor"/></svg>
+        </span>
+        <div class="res-access-label">Autobus</div>
+        <div class="res-access-name">Korytná</div>
+        <div class="res-access-desc">Přímé spojení<br>z Vršovic a Strašnic</div>
+      </div>
+      <div class="res-access-tile">
+        <span class="res-access-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M7 16l2-8 3 5 3-5 2 8"/></svg>
+        </span>
+        <div class="res-access-label">Metro</div>
+        <div class="res-access-name">A · Strašnická</div>
+        <div class="res-access-desc">Linka A<br>10 minut pěšky</div>
+      </div>
+      <div class="res-access-tile">
+        <span class="res-access-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M10 17V8h3.5a2.5 2.5 0 0 1 0 5H10"/></svg>
+        </span>
+        <div class="res-access-label">Auto</div>
+        <div class="res-access-name">Parkování zdarma</div>
+        <div class="res-access-desc">Ulice U Trati<br>žádná modrá ani fialová zóna</div>
+      </div>
+    </div>
+
+    <div class="res-address-bar rv">
+      <strong>Adresa</strong> U Trati 886/52, Praha 10 – Strašnice · <a href="https://mapy.com/s/cumakebobu" target="_blank" rel="noopener" style="color:var(--gold);">Otevřít v mapě →</a>
+    </div>
   </div>
-
-  <h2 style="margin-top: 48px;">Co se děje po rezervaci</h2>
-  <ol class="content-prose" style="padding-left: 1.4em;">
-    <li><strong>Potvrzení e-mailem</strong> — okamžitě po dokončení rezervace přijde e-mail s detaily lekce, adresou studia a kalendářovým souborem (.ics) pro Google/Apple Calendar.</li>
-    <li><strong>Připomínka 24 hodin předem</strong> — den před lekcí dostanete připomínku e-mailem nebo SMS.</li>
-    <li><strong>Zrušení zdarma do 24 hodin</strong> — pokud nemůžete přijít, zrušte rezervaci přes odkaz v e-mailu. Pozdější zrušení bohužel nemůžeme refundovat.</li>
-    <li><strong>Platba na místě nebo online</strong> — u zkušební a individuální lekce si vyberete; skupinové lekce se platí online dopředu (pro zachování kapacity).</li>
-  </ol>
-
-  <h2>Jak se ke studiu dostanete</h2>
-  <p class="content-prose"><strong>Adresa:</strong> U Trati 886/52, Praha 10 – Strašnice</p>
-  <ul class="content-prose">
-    <li>🚊 <strong>Tram Radošovická</strong> (linky 7, 22, 26) — 3 minuty pěšky</li>
-    <li>🚌 <strong>Bus Korytná</strong> — přímé spojení z Vršovic</li>
-    <li>🚇 <strong>Metro A Strašnická</strong> — 10 minut pěšky</li>
-    <li>🅿️ <strong>Parkování zdarma</strong> v ulici U Trati a okolí (žádná modrá ani fialová zóna)</li>
-  </ul>
-</article>
+</section>
 
 <!-- FOOTER (kopíruje strukturu ostatních stránek) -->
 <footer>
@@ -294,6 +489,6 @@
 </footer>
 
 <!-- Mobile nav overlay + JS (společné pro všechny stránky) -->
-<script src="/assets/js/site.js?v=14052026" defer></script>
+<script src="/assets/js/site.js?v=14052026-2" defer></script>
 </body>
 </html>
