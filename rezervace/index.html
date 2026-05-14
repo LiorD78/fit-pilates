@@ -9,7 +9,9 @@
   <meta name="author" content="Štefan Bitto">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#1a1b1e">
-  <style>#nav-overlay{display:none}.nav-burger{display:none}@media(max-width:900px){.nav-burger{display:block}nav .btn-d,nav .nav-cta,nav>a.btn-d,nav>a.nav-cta{display:none!important}.nav-l{display:none!important}}</style>
+  <style>#nav-overlay{display:none}.nav-burger{display:none}@media(max-width:900px){.nav-burger{display:block}nav .btn-d,nav .nav-cta,nav>a.btn-d,nav>a.nav-cta{display:none!important}.nav-l{display:none!important}}
+  /* Always show .rv content on this page — fallback if IntersectionObserver fails (e.g. iOS Safari) */
+  .rv{opacity:1 !important;transform:none !important}</style>
 
   <link rel="canonical" href="https://fitpilates.cz/rezervace/">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -26,7 +28,7 @@
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="Fit Pilates">
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=14052026-2">
+  <link rel="stylesheet" href="/assets/css/site.css?v=14052026-3">
 
   <!-- Schema: BreadcrumbList -->
   <script type="application/ld+json">
@@ -489,6 +491,6 @@
 </footer>
 
 <!-- Mobile nav overlay + JS (společné pro všechny stránky) -->
-<script src="/assets/js/site.js?v=14052026-2" defer></script>
+<script src="/assets/js/site.js?v=14052026-3" defer></script>
 </body>
 </html>
