@@ -1,66 +1,91 @@
 # Fit Pilates
 
-> Pilates, silový trénink a kondiční box pod jednou střechou. Studio v Praze 10 – Strašnice. Vede ACI trenér fitness I. třídy Štefan Bitto s 24+ lety praxe (osobní trenér od 2001, certifikovaný instruktor pilates).
+Fit Pilates je privátní studio poskytující strategický přístup k pohybu pro náročnou klientelu. Vytváříme na míru sestavené programy, které respektují časovou investici a přinášejí měřitelné výsledky v oblasti síly, mobility a celkové fyzické kondice.
+
+## Pro koho je studio
+
+Pro časově vytížené profesionály, manažery a podnikatele ve věku 35-55 let, kteří hledají efektivní, diskrétní a individuální přístup ke svému fyzickému rozvoji. Pro ty, kteří vnímají své tělo jako investici a vyžadují partnera, nikoli pouze trenéra.
 
 ## Co studio nabízí
 
-Tři disciplíny pod jednou střechou s jedním lektorem (Štefan Bitto):
+Naše metodika je založena na individuální strategii, která využívá následující nástroje:
 
-- **Reformer pilates** na třech profesionálních Balanced Body Allegro reformerech (jeden vybavený přídavnou věží Tower) plus plný Cadillac (Trapeze Table) Balanced Body. Klasický pilates s důrazem na kontrolu pohybu, stabilitu středu těla, mobilitu páteře a precizní techniku. Vhodný pro začátečníky, pokročilé, sportovce, lidi v rehabilitaci, postnatální klientky.
-- **Silový a funkční trénink** v kompletní silové zóně: TuffStuff squat rack, sada Jordan činek (UK profi standard), olympijská osa, nastavitelná lavička, kettlebelly Escape, TRX závěsný systém, BOSU Elite. Trénink šitý na míru klientovi — od základů techniky až po pokročilé compound exercises.
-- **Kondiční box (fitness boxing)** s profesionálním vybavením: boxerské rukavice Windy a King (thajské brandy), focus mitts Twins, boxerský pytel Everlast. Bez sparringu — žádný kontakt mezi cvičenci. Technika úderů, stínový box, práce na pytli, lapování s trenérem.
+- **Privátní pilates na strojích:** Využití kompletního aparátu Balanced Body pro přesné a efektivní formování postavy, zlepšení síly a flexibility.
+- **Strategický silový a funkční trénink:** Programy zaměřené na budování funkční síly pro výkon v profesním i osobním životě.
+- **Individuální kondiční box:** Nástroj pro rozvoj dynamiky, vytrvalosti a mentálního uvolnění.
 
-## Lektor
+Všechny programy probíhají výhradně ve formátu 1:1 nebo 1:2 (dvojice). Skupinové lekce neposkytujeme.
 
-**Štefan Bitto** — ACI trenér fitness I. třídy od roku 2000. Osobní trenér od 2001 (24+ let praxe). Certifikovaný instruktor pilates. Specializuje se na silový a funkční trénink, kondiční box a pilates reformer.
+## Vybavení
 
-## Kontakt a poloha
+Studio je plně vybaveno prémiovými stroji Balanced Body, které umožňují realizaci kompletního klasického repertoáru pilates. K dispozici je 3× Allegro Reformer (1 s Tower), Cadillac Speed-Rail, Ladder Barrel, Spine Corrector a Wunda Combo Chair. Doplňkové vybavení zahrnuje BOSU Elite, kettlebelly Jordan, TRX a boxovací aparát Everlast.
 
-- **Adresa**: U Trati 886/52, 100 00 Praha 10 – Strašnice
-- **GPS**: 50.0653696, 14.4951578
-- **Telefon**: +420 604 925 249 (i WhatsApp)
-- **E-mail**: stefanbitto@seznam.cz
-- **Otevřeno**: Po–Pá 7:00–20:00, So–Ne dle dohody
-- **MHD**: Tram Radošovická, Bus Korytná
-- **Parkování**: zdarma v ulici
+## Štefan Bitto
+
+Štefan Bitto je strategickým partnerem pro váš fyzický rozvoj s více než 24 lety praxe. Je držitelem nejvyšší trenérské licence ACI Trenér fitness I. třídy (od roku 2000) a certifikovaným instruktorem pilates. Jeho přístup je založen na hlubokém porozumění biomechanice a individuálním potřebám klienta.
+
+> "Cvičení není trest za to, co jste snědli. Je to oslava toho, co vaše tělo dokáže."
+
+## Kontakt
+
+- **Adresa:** U Trati 886/52, 100 00 Praha 10 – Strašnice
+- **GPS:** 50.0653696, 14.4951578
+- **Telefon:** +420 604 925 249
+- **E-mail:** stefanbitto@seznam.cz
+- **MHD:** Tramvajová zastávka Radošovická, autobusová zastávka Korytná.
+- **Parkování:** Bezplatné parkování přímo u studia.
+- **Otevírací doba:** Po-Pá 7:00-11:00 a 14:00-20:00, So-Ne zavřeno (pouze pro objednané klienty).
 
 ## Cena
 
-- Vstupní zkušební lekce: 590 Kč (60 minut, individuální)
-- Permanentky a další ceny: viz https://fitpilates.cz/#cenik
+- **Úvodní diagnostická konzultace: 590 Kč / 60 minut.** Zahrnuje analýzu pohybových vzorců, stanovení cílů a návrh strategického plánu.
+- **Cena privátních lekcí:** Stanovuje se individuálně na základě navržené strategie a frekvence po úvodní konzultaci.
+- Kapacita studia je omezená pro zajištění maximální kvality a soukromí.
 
 ## Klíčové stránky
 
 - [Hlavní stránka](https://fitpilates.cz/): Přehled studia, programů, ceník
-- [Reformer pilates a Allegro](https://fitpilates.cz/pilates-allegro/): Detailní popis reformer pilates, Allegro reformerů a Tower modulu
-- [Silový a funkční trénink](https://fitpilates.cz/silovy-trenink/): Detailní popis silového tréninku, vybavení, FAQ
-- [Kondiční box](https://fitpilates.cz/kondicni-box/): Detailní popis kondičního boxu, vybavení, FAQ
-- [Pilates Praha 10](https://fitpilates.cz/pilates-praha-10/): Lokální landing page (MHD, parkování, dostupnost)
+- [Pilates na strojích](https://fitpilates.cz/pilates-na-strojich/): Kompletní apparatus Balanced Body, premium service page
+- [Reformer pilates a Allegro](https://fitpilates.cz/pilates-allegro/): Detail Allegro reformerů a Tower modulu
+- [Silový a funkční trénink](https://fitpilates.cz/silovy-trenink/): Detailní popis, vybavení, FAQ
+- [Kondiční box](https://fitpilates.cz/kondicni-box/): Detailní popis, vybavení, FAQ
+- [Pilates Praha 10](https://fitpilates.cz/pilates-praha-10/): Lokální landing page
 - [O Štefanovi](https://fitpilates.cz/o-stefanovi/): Profil lektora, kvalifikace, timeline kariéry
-- [Studio](https://fitpilates.cz/studio/): Fotogalerie studia (25 fotek)
-- [Co je reformer pilates](https://fitpilates.cz/blog/co-je-reformer-pilates/): Pillar article — kompletní průvodce reformer pilates
-- [Pilates pro začátečníky](https://fitpilates.cz/blog/pilates-pro-zacatecniky/): Pillar article — průvodce začátečníků s 30denním plánem
+- [Studio](https://fitpilates.cz/studio/): Fotogalerie studia
+- [Co je reformer pilates](https://fitpilates.cz/blog/co-je-reformer-pilates/): Pillar — kompletní průvodce
+- [Pilates pro začátečníky](https://fitpilates.cz/blog/pilates-pro-zacatecniky/): Pillar — 5 cviků správně + 30denní plán
+- [Pilates aparáty: Reformer, Cadillac, Chair, Ladder Barrel](https://fitpilates.cz/blog/pilates-apparatus-stroje/): Pillar — srovnání 4 klasických strojů
+- [Reformer Pilates v Praze](https://fitpilates.cz/blog/reformer-pilates-praha/): Pillar — kontext pražského pilates segmentu
 
-## Hlavní výhoda (USP)
+## Hlavní rozlišovací znaky (USP)
 
-Žádné jiné studio v Praze 10 nenabízí kombinaci tří disciplín (pilates + silový trénink + kondiční box) s jedním lektorem. Většina studií dělá jen jednu věc — pilates studio jen pilates, posilovna jen činky, boxovna jen box. Fit Pilates kombinuje všechny tři, což umožňuje komplexní rozvoj těla v jednom místě.
+- **Kompletní aparát Balanced Body:** Jedno z mála studií v ČR s plným vybavením pro klasickou metodu pilates.
+- **Výhradně privátní formát:** Lekce 1:1 nebo 1:2 zaručují absolutní soukromí a individuální přístup.
+- **Garantovaná expertíza:** Veškeré lekce vede jeden lektor, Štefan Bitto, s 24+ lety praxe.
+- **Lokalita a dostupnost:** Klidná část Prahy 10 – Strašnice s bezproblémovým parkováním.
 
-## Časté otázky (FAQ)
+## FAQ
 
-**Jaká je cena vstupní lekce?**
-Vstupní zkušební lekce stojí 590 Kč a trvá 60 minut. Je individuální (1 cvičenec) pod osobním vedením Štefana Bitta.
+**Proč neposkytujete skupinové lekce?**
+Naším cílem je maximální efektivita a preciznost. Privátní formát 1:1 nebo 1:2 umožňuje plně se věnovat individuálním potřebám, korigovat techniku v reálném čase a přizpůsobit program specifickým cílům klienta, což ve skupině není možné.
 
-**Co je Allegro reformer?**
-Allegro je řada profesionálních reformerů od značky Balanced Body (USA). Není to samostatný typ stroje ani „pokročilejší forma" pilates — je to brand a model reformeru. Disciplína, kterou se na něm cvičí, je reformer pilates.
+**V čem se liší diagnostická konzultace od první lekce?**
+Konzultace není primárně trénink. Je to strategická schůzka, kde provedeme diagnostiku pohybového aparátu, prodiskutujeme vaše cíle a historii a na základě toho navrhneme konkrétní, dlouhodobě udržitelný plán.
 
-**Co je Tower a jak souvisí s Allegro reformerem?**
-Tower je přídavný modul (vertikální rám s pružinami a tyčemi), který lze připevnit k Allegro reformeru. Rozšiřuje cvičení o vertikální variace. Ve Fit Pilates máme tři Allegro reformery, jeden z nich má přidanou věž (Tower).
+**Jak rychle uvidím výsledky?**
+Efektivita je naší prioritou. První pozitivní změny v držení těla a vnímání vlastního těla klienti často pociťují již po několika lekcích. Měřitelné výsledky závisí na stanovených cílech, frekvenci a vaší konzistentnosti. Konkrétní časový rámec je součástí strategického plánu.
 
-**Je v lekci kondičního boxu sparring?**
-Ne. Kondiční box (fitness boxing) je forma boxu zaměřená na techniku, kondici a kardio — bez kontaktu mezi cvičenci. Cvičí se technika úderů, stínový box, práce na pytli a lapování s trenérem.
+**Mám sedavé zaměstnání a bolesti zad. Je pro mě program vhodný?**
+Ano. Naše metodika se silně zaměřuje na posílení hlubokého stabilizačního systému, korekci posturálních dysbalancí a zlepšení mobility páteře, což jsou klíčové faktory pro kompenzaci negativních dopadů sedavého zaměstnání.
 
-**Jsou lekce vhodné pro začátečníky?**
-Ano, všechny tři disciplíny jsou vhodné pro začátečníky. Štefan staví trénink od základů — naučí správnou techniku, postupně přidává náročnost. 24+ let praxe znamená, že umí vést jak úplné začátečníky, tak pokročilé cvičence i sportovce.
+**Nikdy jsem na pilates strojích necvičil. Je to pro mě?**
+Ano. Privátní formát je ideální pro začátečníky. Štefan Bitto vás provede základy techniky a zajistí, že každý pohyb provádíte správně a bezpečně. Program je plně adaptován vaší aktuální kondici.
+
+**Jaká je politika rušení lekcí?**
+Respektujeme čas našich klientů i náš. Lekci je možné bezplatně zrušit 24 hodin předem. Chápeme nepředvídatelnost vytíženého harmonogramu a snažíme se vyjít vstříc v nalezení náhradního termínu.
+
+**Je studio diskrétní?**
+Absolutní diskrétnost je základem naší služby. Studio je neveřejné, přístupné pouze objednaným klientům. Během vaší lekce je zaručeno naprosté soukromí.
 
 ## Politika
 

@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://fitpilates.cz/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/blog/pilates-pro-zacatecniky/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/blog/pilates-apparatus-stroje/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -184,6 +184,28 @@
     <image:image>
       <image:loc>https://fitpilates.cz/images/gallery/gallery-27-wunda-chair-full.jpg</image:loc>
       <image:title>Wunda Chair s pedálem a arm springs — Fit Pilates Praha 10</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/pilates-na-strojich/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-04-reformers-full.jpg</image:loc>
+      <image:title>Pilates na strojích Praha 10 — kompletní apparatus Balanced Body</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/cadillac-detail.jpg</image:loc>
+      <image:title>Cadillac Speed-Rail — pilates apparatus</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-26-ladder-barrel-full.jpg</image:loc>
+      <image:title>Ladder Barrel se Spine Corrector boxem</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-27-wunda-chair-full.jpg</image:loc>
+      <image:title>Wunda Chair (Combo Chair) — Balanced Body</image:title>
     </image:image>
   </url>
   <url>
