@@ -110,6 +110,7 @@
     .stefan-gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 300px; gap: 12px; }
     .stefan-gallery-grid .gi { overflow: hidden; border-radius: 6px; }
     .stefan-gallery-grid .gi.tall { grid-row: span 2; }
+    .stefan-gallery-grid .gi.tall img { object-position: center 25%; }
     .stefan-gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; display: block; }
     .stefan-gallery-grid .gi:hover img { transform: scale(1.05); }
     @media (max-width: 768px) {
@@ -121,7 +122,8 @@
       .timeline-year { font-size: 1.2rem; }
       .credentials { padding: 48px 24px; }
       .stefan-gallery { padding: 48px 24px; }
-      .stefan-gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 220px; }
+      .stefan-gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 240px; gap: 8px; }
+      .stefan-gallery-grid .gi.tall { grid-row: auto; }
     }
   </style>
 </head>
