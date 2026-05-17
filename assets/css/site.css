@@ -231,3 +231,8 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
     width:100%; height:100%; object-fit:cover; display:block;
   }
 }
+
+/* Hero pills as anchor links — interactive hover */
+a.pill{cursor:pointer;transition:all .25s ease;text-decoration:none;display:inline-block}
+a.pill:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.5);color:#fff;transform:translateY(-1px)}
+a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);color:var(--gold-l)}
