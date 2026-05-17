@@ -203,7 +203,32 @@
   </script>
 
   <!-- Shared article styles -->
-  <link rel="stylesheet" href="/assets/css/site.css?v=14052026">
+<style id="critical-css">
+/* Critical CSS — FOUC prevention + nav layout safety defaults.
+   Full styling in /assets/css/site.css. Inline styles on nav elements
+   are the third-line defense. */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:#2b2e33;background:#fff;overflow-x:hidden;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+.site-nav__menu a{color:#fff;text-decoration:none;font-size:14px;letter-spacing:.02em;font-weight:500}
+.site-nav__menu a:hover{opacity:.75}
+.site-nav__overlay{display:none}
+.site-nav__overlay.is-open{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;position:fixed;inset:0;background:rgba(20,21,24,.97);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);z-index:999;padding:90px 24px 40px}
+.site-nav__overlay ul{list-style:none;display:flex;flex-direction:column;gap:18px;text-align:center}
+.site-nav__overlay a{color:#fff;text-decoration:none;font-size:22px;font-family:Cormorant Garamond,serif;letter-spacing:.02em}
+.site-nav__overlay-cta{display:inline-block;padding:14px 32px;background:#c49a3c;color:#fff !important;text-decoration:none;border-radius:999px;font-weight:600;font-size:15px;font-family:Inter,sans-serif !important;letter-spacing:.04em;text-transform:uppercase;margin-top:8px}
+.site-nav__overlay-meta{color:rgba(255,255,255,.7);font-size:13px;text-align:center;line-height:1.7;margin-top:24px}
+.site-nav__overlay-meta a{color:rgba(255,255,255,.85);font-size:13px;font-family:Inter,sans-serif !important}
+@media (min-width:901px){
+  .site-nav{padding:14px 56px !important;background:rgba(20,21,24,.32) !important}
+  .site-nav__menu{display:flex !important}
+  .site-nav__burger{display:none !important}
+  .site-nav__logo{height:44px !important}
+  .site-nav__cta{padding:11px 22px !important;font-size:13px !important;letter-spacing:.06em !important;text-transform:uppercase}
+}
+</style>
+  <link rel="stylesheet" href="/assets/css/site.css?v=17052026-nav2">
 
   <style>
     /* Allegro figure — jediná lokální specifikace (img + caption pro článkové obrázky) */
@@ -215,26 +240,25 @@
 <body>
 
 <!-- NAV-START -->
-<nav class="site-nav" id="siteNav">
-  <a href="/" class="site-nav__brand" aria-label="Fit Pilates — domů">
-    <!-- Light: viditelná přes hero (tmavé pozadí, top state) -->
-    <img src="/images/logo-light.png" alt="Fit Pilates" class="site-nav__logo site-nav__logo--light" width="180" height="166" decoding="async" fetchpriority="high">
-    <!-- Dark: po scrollu (světlé glass pozadí) -->
-    <img src="/images/logo-dark.png" alt="" class="site-nav__logo site-nav__logo--dark" width="180" height="166" decoding="async" aria-hidden="true">
+<nav class="site-nav" id="siteNav" style="position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:rgba(20,21,24,.55);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)">
+  <a href="/" class="site-nav__brand" aria-label="Fit Pilates — domů" style="display:flex;align-items:center;text-decoration:none;line-height:0;flex-shrink:0">
+    <img src="/images/logo-light.png" alt="Fit Pilates" class="site-nav__logo" width="180" height="166" decoding="async" fetchpriority="high" style="height:36px;width:auto;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.22))">
   </a>
-  <ul class="site-nav__menu">
+  <ul class="site-nav__menu" style="display:none;list-style:none;margin:0;padding:0;gap:30px;align-items:center">
     <li><a href="/#programy" data-key="programy">Programy</a></li>
     <li><a href="/o-stefanovi/" data-key="stefan">O Štefanovi</a></li>
     <li><a href="/studio/" data-key="studio">Studio</a></li>
     <li><a href="/blog/" data-key="blog">Blog</a></li>
     <li><a href="/#cenik" data-key="cenik">Ceník</a></li>
   </ul>
-  <a href="/rezervace/" class="site-nav__cta" data-key="rezervace">Rezervovat lekci</a>
-  <button class="site-nav__burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="siteNavOverlay">
-    <span></span><span></span><span></span>
+  <a href="/rezervace/" class="site-nav__cta" data-key="rezervace" style="display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;background:#c49a3c;color:#fff;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:.01em;margin-left:auto;white-space:nowrap;line-height:1">Rezervovat</a>
+  <button class="site-nav__burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="siteNavOverlay" style="display:block;background:transparent;border:0;cursor:pointer;padding:8px;width:40px;height:40px;flex-shrink:0">
+    <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
+    <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
+    <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
   </button>
 </nav>
-<div class="site-nav__overlay" id="siteNavOverlay" role="dialog" aria-label="Hlavní menu" aria-modal="true">
+<div class="site-nav__overlay" id="siteNavOverlay" role="dialog" aria-label="Hlavní menu" aria-modal="true" hidden style="display:none">
   <ul>
     <li><a href="/#programy">Programy</a></li>
     <li><a href="/o-stefanovi/">O Štefanovi</a></li>
@@ -577,6 +601,6 @@
 </footer>
 <!-- FOOTER-END -->
 
-<script src="/assets/js/site.js?v=14052026" defer></script>
+<script src="/assets/js/site.js?v=17052026-nav2" defer></script>
 </body>
 </html>

@@ -61,40 +61,38 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
 
 .site-nav{
   position:fixed; top:0; left:0; right:0; z-index:1000;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px clamp(20px, 4vw, 56px);
-  background:rgba(20,21,24,.32);
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:10px 16px;
+  background:rgba(20,21,24,.55);
   -webkit-backdrop-filter:blur(16px) saturate(140%);
   backdrop-filter:blur(16px) saturate(140%);
   border-bottom:1px solid rgba(255,255,255,.08);
   transition:background-color .35s ease, border-color .35s ease, padding .25s ease, box-shadow .35s ease;
 }
 .site-nav.is-scrolled{
-  background:rgba(252,252,250,.78);
+  background:rgba(252,252,250,.92);
   border-bottom-color:rgba(0,0,0,.06);
-  padding:10px clamp(20px, 4vw, 56px);
+  padding:8px 16px;
   box-shadow:0 4px 24px rgba(0,0,0,.06);
 }
 .site-nav__brand{
-  display:flex; align-items:center; text-decoration:none;
-  position:relative; line-height:0;
+  display:flex; align-items:center; text-decoration:none; line-height:0;
+  flex-shrink:0;
 }
 .site-nav__logo{
-  height:44px; width:auto; display:block;
-  transition:opacity .35s ease;
-  filter:drop-shadow(0 1px 2px rgba(0,0,0,.18));
+  height:36px; width:auto; display:block;
+  transition:filter .35s ease, opacity .35s ease;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.22));
 }
-.site-nav__logo--dark{
-  position:absolute; top:0; left:0; opacity:0;
-  filter:drop-shadow(0 1px 2px rgba(0,0,0,.08));
+/* On scroll (light background) switch logo to dark version via brightness inversion + saturation tweak.
+   The logo PNG is already partly dark — combination keeps wood color and turns white into charcoal. */
+.site-nav.is-scrolled .site-nav__logo{
+  filter:brightness(.18) drop-shadow(0 1px 2px rgba(0,0,0,.08));
 }
-.site-nav.is-scrolled .site-nav__logo--light{opacity:0}
-.site-nav.is-scrolled .site-nav__logo--dark{opacity:1}
 .site-nav__brand:hover .site-nav__logo{opacity:.82}
-.site-nav.is-scrolled .site-nav__brand:hover .site-nav__logo--dark{opacity:.82}
 
 .site-nav__menu{
-  display:flex; gap:30px; align-items:center; list-style:none;
+  display:none; gap:30px; align-items:center; list-style:none;
   margin:0; padding:0;
 }
 .site-nav__menu a{
@@ -105,28 +103,33 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
 .site-nav.is-scrolled .site-nav__menu a{color:var(--charcoal)}
 .site-nav__menu a:hover{color:var(--gold)}
 
+/* CTA: visible on all viewports (mobile = compact pill, desktop = uppercase rectangle).
+   Lives between menu/brand and burger. */
 .site-nav__cta{
-  padding:11px 22px; border-radius:2px;
-  font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
-  text-decoration:none;
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:9px 16px; border-radius:999px;
+  font-size:13px; font-weight:600; letter-spacing:.01em;
+  text-decoration:none; white-space:nowrap; line-height:1;
   background:var(--gold); color:#fff;
+  margin-left:auto;
   transition:background .3s ease, transform .15s ease;
 }
-.site-nav__cta:hover{background:var(--gold-l); transform:translateY(-1px)}
+.site-nav__cta:hover{background:var(--gold-l); transform:translateY(-1px); color:#fff}
 
 .site-nav__burger{
-  display:none; background:transparent; border:0; cursor:pointer;
-  padding:8px; width:44px; height:44px; position:relative; z-index:1001;
+  display:block; background:transparent; border:0; cursor:pointer;
+  padding:8px; width:40px; height:40px; position:relative; z-index:1001;
+  flex-shrink:0;
 }
 .site-nav__burger span{
-  display:block; width:24px; height:2px; background:#fff;
-  margin:5px auto; border-radius:2px;
+  display:block; width:22px; height:2px; background:#fff;
+  margin:4px auto; border-radius:2px;
   transition:transform .3s, opacity .2s, background .35s;
 }
 .site-nav.is-scrolled .site-nav__burger span{background:var(--charcoal)}
-.site-nav__burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.site-nav__burger.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .site-nav__burger.is-open span:nth-child(2){opacity:0}
-.site-nav__burger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.site-nav__burger.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
 .site-nav__overlay{
   display:none; position:fixed; inset:0; z-index:999;
@@ -149,33 +152,36 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
 }
 .site-nav__overlay ul li a:hover{color:var(--gold)}
 .site-nav__overlay-cta{
-  display:inline-block; background:var(--gold); color:#000;
-  padding:14px 32px; border-radius:2px;
-  font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
+  display:inline-block; background:var(--gold); color:#fff;
+  padding:14px 32px; border-radius:999px;
+  font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
   text-decoration:none; margin-top:24px;
   transition:background .2s;
 }
-.site-nav__overlay-cta:hover{background:var(--gold-l)}
+.site-nav__overlay-cta:hover{background:var(--gold-l); color:#fff}
 .site-nav__overlay-meta{
   margin-top:32px; font-size:12px; color:rgba(255,255,255,.5);
   text-align:center; line-height:1.7;
 }
 .site-nav__overlay-meta a{color:var(--gold); text-decoration:none}
 
-/* Mobile: skrýt desktop menu, ukázat burger */
-@media (max-width:900px){
-  .site-nav__menu{display:none}
-  .site-nav__cta{display:none}
-  .site-nav__burger{display:block}
-  .site-nav{padding:12px 20px}
-  .site-nav.is-scrolled{padding:10px 20px}
-  .site-nav__logo{height:36px}
+/* Desktop: show menu, hide burger, expand CTA to traditional rectangle */
+@media (min-width:901px){
+  .site-nav{padding:14px clamp(20px, 4vw, 56px); gap:0}
+  .site-nav.is-scrolled{padding:10px clamp(20px, 4vw, 56px)}
+  .site-nav__logo{height:44px}
+  .site-nav__menu{display:flex}
+  .site-nav__burger{display:none}
+  .site-nav__cta{
+    padding:11px 22px; border-radius:2px;
+    font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+  }
 }
 
 /* Fallback bez backdrop-filter (starší Android) */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
-  .site-nav{background:rgba(20,21,24,.85)}
-  .site-nav.is-scrolled{background:rgba(252,252,250,.95)}
+  .site-nav{background:rgba(20,21,24,.92)}
+  .site-nav.is-scrolled{background:rgba(252,252,250,.97)}
 }
 
 /* ============================================================

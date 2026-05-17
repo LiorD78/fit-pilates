@@ -88,11 +88,13 @@
   if(burger && overlay){
     function close(){
       overlay.classList.remove('is-open');
+      overlay.setAttribute('hidden', '');
       burger.classList.remove('is-open');
       burger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }
     function open(){
+      overlay.removeAttribute('hidden');
       overlay.classList.add('is-open');
       burger.classList.add('is-open');
       burger.setAttribute('aria-expanded', 'true');

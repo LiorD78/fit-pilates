@@ -1,23 +1,22 @@
-<nav class="site-nav" id="siteNav">
-  <a href="/" class="site-nav__brand" aria-label="Fit Pilates — domů">
-    <!-- Light: viditelná přes hero (tmavé pozadí, top state) -->
-    <img src="/images/logo-light.png" alt="Fit Pilates" class="site-nav__logo site-nav__logo--light" width="180" height="166" decoding="async" fetchpriority="high">
-    <!-- Dark: po scrollu (světlé glass pozadí) -->
-    <img src="/images/logo-dark.png" alt="" class="site-nav__logo site-nav__logo--dark" width="180" height="166" decoding="async" aria-hidden="true">
+<nav class="site-nav" id="siteNav" style="position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:rgba(20,21,24,.55);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)">
+  <a href="/" class="site-nav__brand" aria-label="Fit Pilates — domů" style="display:flex;align-items:center;text-decoration:none;line-height:0;flex-shrink:0">
+    <img src="/images/logo-light.png" alt="Fit Pilates" class="site-nav__logo" width="180" height="166" decoding="async" fetchpriority="high" style="height:36px;width:auto;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.22))">
   </a>
-  <ul class="site-nav__menu">
+  <ul class="site-nav__menu" style="display:none;list-style:none;margin:0;padding:0;gap:30px;align-items:center">
     <li><a href="/#programy" data-key="programy">Programy</a></li>
     <li><a href="/o-stefanovi/" data-key="stefan">O Štefanovi</a></li>
     <li><a href="/studio/" data-key="studio">Studio</a></li>
     <li><a href="/blog/" data-key="blog">Blog</a></li>
     <li><a href="/#cenik" data-key="cenik">Ceník</a></li>
   </ul>
-  <a href="/rezervace/" class="site-nav__cta" data-key="rezervace">Rezervovat lekci</a>
-  <button class="site-nav__burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="siteNavOverlay">
-    <span></span><span></span><span></span>
+  <a href="/rezervace/" class="site-nav__cta" data-key="rezervace" style="display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;background:#c49a3c;color:#fff;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:.01em;margin-left:auto;white-space:nowrap;line-height:1">Rezervovat</a>
+  <button class="site-nav__burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="siteNavOverlay" style="display:block;background:transparent;border:0;cursor:pointer;padding:8px;width:40px;height:40px;flex-shrink:0">
+    <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
+    <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
+    <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
   </button>
 </nav>
-<div class="site-nav__overlay" id="siteNavOverlay" role="dialog" aria-label="Hlavní menu" aria-modal="true">
+<div class="site-nav__overlay" id="siteNavOverlay" role="dialog" aria-label="Hlavní menu" aria-modal="true" hidden style="display:none">
   <ul>
     <li><a href="/#programy">Programy</a></li>
     <li><a href="/o-stefanovi/">O Štefanovi</a></li>
