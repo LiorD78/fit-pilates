@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>#nav-overlay{display:none}.nav-burger{display:none}@media(max-width:900px){.nav-burger{display:block}nav .btn-d,nav .nav-cta,nav>a.btn-d,nav>a.nav-cta{display:none!important}.nav-l{display:none!important}}</style>
 
   <title>Co je reformer pilates? Kompletní průvodce | Fit Pilates Praha 10</title>
   <meta name="description" content="Co je reformer pilates, jak funguje, pro koho je vhodný a co čekat od první lekce. Praktický průvodce od lektora s 24 lety praxe v Praze 10.">
@@ -158,25 +157,27 @@
 </head>
 <body>
 
-<nav id="nav" class="nav-solid">
-  <a href="/" class="logo" aria-label="Fit Pilates – domů">
-    <img src="/images/logo-light.png" alt="Fit Pilates" width="180" height="166" decoding="async">
+<!-- NAV-START -->
+<nav class="site-nav" id="siteNav">
+  <a href="/" class="site-nav__brand" aria-label="Fit Pilates — domů">
+    <!-- Light: viditelná přes hero (tmavé pozadí, top state) -->
+    <img src="/images/logo-light.png" alt="Fit Pilates" class="site-nav__logo site-nav__logo--light" width="180" height="166" decoding="async" fetchpriority="high">
+    <!-- Dark: po scrollu (světlé glass pozadí) -->
+    <img src="/images/logo-dark.png" alt="" class="site-nav__logo site-nav__logo--dark" width="180" height="166" decoding="async" aria-hidden="true">
   </a>
-  <ul class="nav-l">
-    <li><a href="/#programy">Programy</a></li>
-    <li><a href="/o-stefanovi/">O Štefanovi</a></li>
-    <li><a href="/studio/">Studio</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/#cenik">Ceník</a></li>
-    <li><a href="/rezervace/" class="nav-cta">Rezervovat lekci</a></li>
+  <ul class="site-nav__menu">
+    <li><a href="/#programy" data-key="programy">Programy</a></li>
+    <li><a href="/o-stefanovi/" data-key="stefan">O Štefanovi</a></li>
+    <li><a href="/studio/" data-key="studio">Studio</a></li>
+    <li><a href="/blog/" data-key="blog">Blog</a></li>
+    <li><a href="/#cenik" data-key="cenik">Ceník</a></li>
   </ul>
-  <button class="nav-burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav-overlay">
-    <span></span>
-    <span></span>
-    <span></span>
+  <a href="/rezervace/" class="site-nav__cta" data-key="rezervace">Rezervovat lekci</a>
+  <button class="site-nav__burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="siteNavOverlay">
+    <span></span><span></span><span></span>
   </button>
 </nav>
-<div id="nav-overlay" role="dialog" aria-label="Hlavní menu" aria-modal="true">
+<div class="site-nav__overlay" id="siteNavOverlay" role="dialog" aria-label="Hlavní menu" aria-modal="true">
   <ul>
     <li><a href="/#programy">Programy</a></li>
     <li><a href="/o-stefanovi/">O Štefanovi</a></li>
@@ -184,12 +185,13 @@
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/#cenik">Ceník</a></li>
   </ul>
-  <a href="/rezervace/" class="ov-cta">Rezervovat lekci</a>
-  <div class="ov-meta">
+  <a href="/rezervace/" class="site-nav__overlay-cta">Rezervovat lekci</a>
+  <div class="site-nav__overlay-meta">
     <a href="tel:+420604925249">+420 604 925 249</a> · <a href="mailto:stefanbitto@seznam.cz">stefanbitto@seznam.cz</a><br>
-    U Trati 886/52, Praha 10
+    U Trati 886/52, Praha 10 – Strašnice
   </div>
 </div>
+<!-- NAV-END -->
 
 
 <section class="page-hero hero-stretch">
@@ -676,13 +678,14 @@
 
 </article>
 
-<footer>
+<!-- FOOTER-START -->
+<footer class="site-footer">
   <div class="f-top">
     <div>
       <div class="f-logo">
         <img src="/images/logo-light.png" alt="Fit Pilates" loading="lazy" decoding="async" width="180" height="166" style="height:52px;width:auto;opacity:.85;">
       </div>
-      <p class="f-desc">Pilates, funkční trénink a kondiční box pod jednou střechou. Praha 10 — Strašnice.</p>
+      <p class="f-desc">Pilates, funkční trénink a kondiční box pod jednou střechou. Praha 10 – Strašnice.</p>
       <div class="f-social">
         <a href="https://www.instagram.com/stefanbitto" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Fit Pilates na Instagramu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -708,15 +711,14 @@
     <div>
       <div class="f-col-t">Studio</div>
       <ul class="f-links">
-        <li><a href="/#o-nas">O nás</a></li>
         <li><a href="/o-stefanovi/">O Štefanovi</a></li>
         <li><a href="/studio/">Fotogalerie studia</a></li>
         <li><a href="/pilates-praha-10/">Pilates Praha 10</a></li>
         <li><a href="/blog/co-je-reformer-pilates/">Co je reformer pilates</a></li>
         <li><a href="/blog/pilates-pro-zacatecniky/">Pilates pro začátečníky</a></li>
+        <li><a href="/blog/pilates-apparatus-stroje/">Pilates Apparatus — 4 stroje</a></li>
+        <li><a href="/blog/reformer-pilates-praha/">Reformer pilates Praha</a></li>
         <li><a href="/pilates-allegro/">Pilates Allegro</a></li>
-        <li><a href="/#cenik">Ceník</a></li>
-        <li><a href="/#kontakt">Kontakt</a></li>
       </ul>
     </div>
     <div>
@@ -740,6 +742,7 @@
     <span>Pilates · Fitness · Box</span>
   </div>
 </footer>
+<!-- FOOTER-END -->
 
 <script src="/assets/js/site.js?v=14052026" defer></script>
 </body>
