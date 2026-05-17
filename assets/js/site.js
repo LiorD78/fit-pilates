@@ -68,3 +68,44 @@
     initNavScroll();
   }
 })();
+
+/* ============================================================
+   SITE-NAV: scroll state + burger toggle
+   Aktualizováno: 17.5.2026 — liquid glass nav
+   ============================================================ */
+(function(){
+  var nav = document.querySelector('.site-nav');
+  if(!nav) return;
+
+  function onScroll(){
+    nav.classList.toggle('is-scrolled', window.scrollY > 40);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var burger = nav.querySelector('.site-nav__burger');
+  var overlay = document.getElementById('siteNavOverlay');
+  if(burger && overlay){
+    function close(){
+      overlay.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    function open(){
+      overlay.classList.add('is-open');
+      burger.classList.add('is-open');
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    burger.addEventListener('click', function(){
+      if(overlay.classList.contains('is-open')) close(); else open();
+    });
+    overlay.addEventListener('click', function(e){
+      if(e.target === overlay || e.target.tagName === 'A') close();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+    });
+  }
+})();
