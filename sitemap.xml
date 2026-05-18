@@ -209,6 +209,25 @@
     </image:image>
   </url>
   <url>
+    <loc>https://fitpilates.cz/pribeh-libor/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/libor-story/libor-timeline.jpg</image:loc>
+      <image:title>20 let s jedním trenérem — příběh Libora Dospěla, klienta Štefana Bitta</image:title>
+      <image:caption>Libor Dospěl ve třech fázích — 25, 33 a 40 let. Transformace dlouholetého klienta Fit Pilates Praha 10.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/libor-story/stefan-reformer-action.jpg</image:loc>
+      <image:title>Štefan Bitto na Allegro reformeru — Fit Pilates Praha 10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/libor-story/libor-45.jpg</image:loc>
+      <image:title>Libor Dospěl ve 45 letech — dvacet let s Fit Pilates</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://fitpilates.cz/rezervace/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
