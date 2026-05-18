@@ -43,11 +43,11 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
   .page-hero.hero-doorway::before{background-position:55% 15% !important}
   /* For boxing & studio (wider scenes) leave them centered */
 
-  /* Homepage hero: match .page-hero pattern from subpages.
-     flex-end (content sits at bottom of hero) + padding-top as nav-clearance.
-     Hero stays at 100vh, photo breathes on top, h1 anchors at bottom.
-     Allegro/Stefan/Studio use the same compositional pattern. */
-  .hero{min-height:560px}
+  /* Homepage hero: on mobile, force content to TOP (flex-start) and let hero
+     grow with content (height:auto + min-height). Without this override,
+     hero's default flex-end + 100vh height pushes content UP behind nav
+     when content is taller than viewport. */
+  .hero{height:auto !important;min-height:100vh;align-items:flex-start !important}
   .hero-content{padding:100px 20px 48px;max-width:100%}
   .hero h1{font-size:clamp(38px,9vw,56px);line-height:1}
   .hero-sub{font-size:14px;margin-bottom:28px;line-height:1.65}
