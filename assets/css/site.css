@@ -44,10 +44,10 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
   /* For boxing & studio (wider scenes) leave them centered */
 
   /* Homepage hero: prevent h1 overflow into fixed nav on small viewports.
-     Hero has flex-end alignment so tall content gets pushed UP behind the nav.
-     Add padding-top to ensure h1 starts below nav, and reduce h1 size. */
-  .hero{min-height:560px;align-items:center}
-  .hero-content{padding:90px 20px 48px;max-width:100%}
+     Use flex-start + padding-top so content starts BELOW nav and grows down.
+     Allow hero to grow taller than 100vh if content needs it (scrollable). */
+  .hero{height:auto;min-height:100vh;align-items:flex-start}
+  .hero-content{padding:100px 20px 48px;max-width:100%}
   .hero h1{font-size:clamp(38px,9vw,56px);line-height:1}
   .hero-sub{font-size:14px;margin-bottom:28px;line-height:1.65}
   .hero-tag{margin-bottom:16px;font-size:10px}
