@@ -42,6 +42,18 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
   .page-hero.hero-handstand::before,
   .page-hero.hero-doorway::before{background-position:55% 15% !important}
   /* For boxing & studio (wider scenes) leave them centered */
+
+  /* Homepage hero: prevent h1 overflow into fixed nav on small viewports.
+     Hero has flex-end alignment so tall content gets pushed UP behind the nav.
+     Add padding-top to ensure h1 starts below nav, and reduce h1 size. */
+  .hero{min-height:560px;align-items:center}
+  .hero-content{padding:90px 20px 48px;max-width:100%}
+  .hero h1{font-size:clamp(38px,9vw,56px);line-height:1}
+  .hero-sub{font-size:14px;margin-bottom:28px;line-height:1.65}
+  .hero-tag{margin-bottom:16px;font-size:10px}
+  .hero-pills{margin-top:24px;gap:8px}
+  .pill{font-size:10px;padding:6px 12px}
+  .hero-stats{display:none}
 }
 
 /* On very small screens, reduce hero h1 a touch */
@@ -49,6 +61,8 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
   .page-hero h1{font-size:clamp(40px,12vw,52px)}
   .page-hero .lead{font-size:14px;margin-bottom:28px}
   .page-hero-inner{padding-bottom:48px}
+  .hero h1{font-size:clamp(34px,10vw,46px)}
+  .hero-content{padding-top:80px;padding-bottom:36px}
 }
 
 /* ============================================================
