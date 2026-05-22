@@ -50,7 +50,7 @@ img{max-width:100%;height:auto;display:block}
   .site-nav__cta{padding:11px 22px !important;font-size:13px !important;letter-spacing:.06em !important;text-transform:uppercase}
 }
 </style>
-  <link rel="stylesheet" href="/assets/css/site.css?v=21052026-rvfix">
+  <link rel="stylesheet" href="/assets/css/site.css?v=21052026-widget">
 
   <!-- Schema: BreadcrumbList -->
   <script type="application/ld+json">
@@ -139,6 +139,43 @@ img{max-width:100%;height:auto;display:block}
     .prog.res-card { display: flex; flex-direction: column; }
     .prog.res-card .prog-tags { margin-bottom: 8px; }
     .prog.res-card .prog-link { margin-top: auto; }
+
+    /* Reservio booking widget */
+    .res-widget-wrap {
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+    .res-widget-header {
+      max-width: 580px;
+      margin-bottom: 32px;
+    }
+    .res-widget-frame {
+      position: relative;
+      width: 100%;
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.08);
+      overflow: hidden;
+    }
+    .res-widget-frame iframe {
+      display: block;
+      width: 100%;
+      height: 900px;
+      border: 0;
+    }
+    .res-widget-note {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--lgrey);
+      text-align: center;
+    }
+    .res-widget-note a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .res-widget-frame iframe { height: 760px; }
+    }
 
     /* Dark "jak se dostanete" tile grid */
     .res-access-grid {
@@ -283,17 +320,40 @@ img{max-width:100%;height:auto;display:block}
       <a href="/">Domů</a> &nbsp;›&nbsp; <span>Online rezervace</span>
     </nav>
     <h1>Rezervujte si lekci<br><em>se Štefanem</em></h1>
-    <p class="lead">Vyberte si typ lekce, který vám sedí. Termín si pak zvolíte v rezervačním systému — potvrzení přijde e-mailem, den před lekcí dostanete připomínku. Bez stresu, bez telefonování.</p>
+    <p class="lead">Vyberte termín v kalendáři níže. Potvrzení přijde e-mailem, den před lekcí dostanete připomínku. Bez stresu, bez telefonování.</p>
   </div>
 </section>
 
-<!-- LEKCE — karty ve stylu .prog z homepage -->
+<!-- REZERVAČNÍ WIDGET — primární CTA -->
+<div class="sec wrap">
+  <div class="res-widget-wrap">
+    <div class="res-widget-header rv">
+      <div class="tag">Vyberte termín</div>
+      <h2>Rezervační kalendář<br><em>Fit Pilates.</em></h2>
+      <p class="lead" style="margin-top:18px;">Klikněte na termín, který vám sedí. Pokud kalendář na vašem zařízení nevidíte, použijte <a href="https://fit-pilates2.reservio.com" target="_blank" rel="noopener">externí odkaz</a>.</p>
+    </div>
+    <div class="res-widget-frame rv">
+      <iframe
+        src="https://fit-pilates2.reservio.com"
+        title="Rezervační kalendář Fit Pilates"
+        loading="lazy"
+        allow="payment"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <p class="res-widget-note rv">
+      Rezervace běží přes službu Reservio. Po výběru termínu doplňte jméno, e-mail a telefon — to je vše.
+    </p>
+  </div>
+</div>
+
+<!-- LEKCE — karty ve stylu .prog z homepage (sekundární info: typy lekcí + ceny) -->
 <div class="progs-bg">
   <div class="sec wrap">
     <div class="progs-header rv">
       <div>
-        <div class="tag">Vyberte si lekci</div>
-        <h2>Tři způsoby,<br><em>jak začít.</em></h2>
+        <div class="tag">Typy lekcí</div>
+        <h2>Co si můžete<br><em>rezervovat.</em></h2>
       </div>
       <p class="lead" style="max-width:340px;">Každá lekce trvá 60 minut. Pokud váháte, začněte zkušební — projdeme spolu vaše cíle a vyzkoušíme reformer.</p>
     </div>
@@ -522,6 +582,6 @@ img{max-width:100%;height:auto;display:block}
 <!-- FOOTER-END -->
 
 <!-- Mobile nav overlay + JS (společné pro všechny stránky) -->
-<script src="/assets/js/site.js?v=21052026-rvfix" defer></script>
+<script src="/assets/js/site.js?v=21052026-widget" defer></script>
 </body>
 </html>
