@@ -251,3 +251,7 @@ nav.nav-solid .nav-burger span{background:var(--gold)}
 a.pill{cursor:pointer;transition:all .25s ease;text-decoration:none;display:inline-block}
 a.pill:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.5);color:#fff;transform:translateY(-1px)}
 a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);color:var(--gold-l)}
+
+/* ── CTA pills — sjednocení 5.6.2026 ── */
+.btn-d,.btn-o,.btn-dark,.btn-light,.btn-w,.btn-gold,.btn-b,.nav-cta,.cta-btn,.cookie-btn,#nav-overlay .ov-cta,.site-nav__cta,.site-nav__overlay-cta{border-radius:999px}
+@media (max-width:900px){.site-nav__cta{border-radius:999px}}
