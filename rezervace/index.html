@@ -90,7 +90,7 @@ img{max-width:100%;height:auto;display:block}
     },
     "potentialAction": {
       "@type": "ReserveAction",
-      "target": "https://fit-pilates2.reservio.com",
+      "target": "https://fitpilates.isportsystem.cz/",
       "result": {
         "@type": "Reservation",
         "name": "Rezervace lekce ve studiu Fit Pilates"
@@ -140,7 +140,7 @@ img{max-width:100%;height:auto;display:block}
     .prog.res-card .prog-tags { margin-bottom: 8px; }
     .prog.res-card .prog-link { margin-top: auto; }
 
-    /* Reservio booking widget */
+    /* Rezervační CTA */
     .res-widget-wrap {
       margin: 0 auto;
       max-width: 1100px;
@@ -173,6 +173,15 @@ img{max-width:100%;height:auto;display:block}
       color: var(--gold);
       text-decoration: underline;
     }
+    .res-cta-open {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 30px; padding: 18px 42px;
+      background: var(--gold); color: #fff; text-decoration: none;
+      border-radius: 999px; font-weight: 600; font-size: 16px; letter-spacing: .02em;
+      box-shadow: 0 10px 28px rgba(196,154,60,.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .res-cta-open:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(196,154,60,.45); }
     @media (max-width: 768px) {
       .res-widget-frame iframe { height: 760px; }
     }
@@ -297,7 +306,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
     <li><a href="/blog/" data-key="blog">Blog</a></li>
     <li><a href="/#cenik" data-key="cenik">Ceník</a></li>
   </ul>
-  <a href="/rezervace/" class="site-nav__cta" data-key="rezervace" style="display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;background:#c49a3c;color:#fff;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:.01em;margin-left:auto;white-space:nowrap;line-height:1">Rezervovat</a>
+  <a href="https://fitpilates.isportsystem.cz/" target="_blank" rel="noopener" class="site-nav__cta" data-key="rezervace" style="display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;background:#c49a3c;color:#fff;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:.01em;margin-left:auto;white-space:nowrap;line-height:1">Rezervovat</a>
   <button class="site-nav__burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="siteNavOverlay" style="display:block;background:transparent;border:0;cursor:pointer;padding:8px;width:40px;height:40px;flex-shrink:0">
     <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
     <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
@@ -312,7 +321,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/#cenik">Ceník</a></li>
   </ul>
-  <a href="/rezervace/" class="site-nav__overlay-cta">Rezervovat lekci</a>
+  <a href="https://fitpilates.isportsystem.cz/" target="_blank" rel="noopener" class="site-nav__overlay-cta">Rezervovat lekci</a>
   <div class="site-nav__overlay-meta">
     <a href="tel:+420604925249">+420 604 925 249</a> · <a class="fp-email" data-u="stefanbitto" data-d="seznam.cz" href="#" rel="nofollow">stefanbitto&#64;seznam.cz</a><br>
     U Trati 886/52, Praha 10 – Strašnice
@@ -323,9 +332,6 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
 <!-- HERO -->
 <section class="page-hero">
   <div class="page-hero-inner">
-    <nav class="lph-bc" aria-label="Drobečková navigace">
-      <a href="/">Domů</a> &nbsp;›&nbsp; <span>Online rezervace</span>
-    </nav>
     <h1>Rezervujte si lekci<br><em>se Štefanem</em></h1>
     <p class="lead">Vyberte termín v kalendáři níže. Potvrzení přijde e-mailem, den před lekcí dostanete připomínku. Bez stresu, bez telefonování.</p>
   </div>
@@ -335,21 +341,15 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
 <div class="sec wrap">
   <div class="res-widget-wrap">
     <div class="res-widget-header rv">
-      <div class="tag">Vyberte termín</div>
+      <div class="tag">Online rezervace</div>
       <h2>Rezervační kalendář<br><em>Fit Pilates.</em></h2>
-      <p class="lead" style="margin-top:18px;">Klikněte na termín, který vám sedí. Pokud kalendář na vašem zařízení nevidíte, použijte <a href="https://fit-pilates2.reservio.com" target="_blank" rel="noopener">externí odkaz</a>.</p>
+      <p class="lead" style="margin-top:18px;">Otevřete kalendář, vyberte volný termín a doplňte jméno, e-mail a telefon. Potvrzení vám přijde e-mailem — to je vše.</p>
     </div>
-    <div class="res-widget-frame rv">
-      <iframe
-        src="https://fit-pilates2.reservio.com"
-        title="Rezervační kalendář Fit Pilates"
-        loading="lazy"
-        allow="payment"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <div style="text-align:center;">
+      <a href="https://fitpilates.isportsystem.cz/" target="_blank" rel="noopener" class="res-cta-open">Otevřít rezervační kalendář &nbsp;→</a>
     </div>
     <p class="res-widget-note rv">
-      Rezervace běží přes službu Reservio. Po výběru termínu doplňte jméno, e-mail a telefon — to je vše.
+      Kalendář se otevře v novém okně. Rezervace běží přes náš online rezervační systém.
     </p>
   </div>
 </div>
@@ -368,7 +368,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
     <div class="progs-grid rv">
 
       <!-- 01 — ZKUŠEBNÍ -->
-      <a href="https://fit-pilates2.reservio.com" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
+      <a href="https://fitpilates.isportsystem.cz/" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
         <div class="prog-bar"></div>
         <span class="prog-num">01</span>
         <img src="/images/allegro-hero-w800.jpg" srcset="/images/allegro-hero-w800.jpg 800w, /images/allegro-hero-w1200.jpg 1200w" sizes="(max-width:768px) 100vw, 33vw" alt="Zkušební lekce reformer pilates ve studiu Fit Pilates Praha 10" class="prog-img" loading="lazy" decoding="async" width="1200" height="800">
@@ -389,7 +389,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
       </a>
 
       <!-- 02 — SKUPINOVÁ -->
-      <a href="https://fit-pilates2.reservio.com" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
+      <a href="https://fitpilates.isportsystem.cz/" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
         <div class="prog-bar"></div>
         <span class="prog-num">02</span>
         <img src="/images/pilates-w900.jpg" srcset="/images/pilates-w600.jpg 600w, /images/pilates-w900.jpg 900w, /images/pilates.jpg 1400w" sizes="(max-width:768px) 100vw, 33vw" alt="Skupinová lekce pilates pro maximálně 3 osoby v Praze 10" class="prog-img" loading="lazy" decoding="async" width="1400" height="859">
@@ -410,7 +410,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
       </a>
 
       <!-- 03 — INDIVIDUÁLNÍ -->
-      <a href="https://fit-pilates2.reservio.com" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
+      <a href="https://fitpilates.isportsystem.cz/" target="_blank" rel="noopener" class="prog res-card" style="text-decoration:none;color:inherit;">
         <div class="prog-bar"></div>
         <span class="prog-num">03</span>
         <img src="/images/cadillac-detail-w800.jpg" srcset="/images/cadillac-detail-w800.jpg 800w, /images/cadillac-detail-w1200.jpg 1200w" sizes="(max-width:768px) 100vw, 33vw" alt="Individuální lekce na Cadillac apparatus ve studiu Fit Pilates" class="prog-img" loading="lazy" decoding="async" width="1200" height="800">
