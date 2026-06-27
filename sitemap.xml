@@ -43,6 +43,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://fitpilates.cz/blog/pilates-cviky/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/allegro-hero.jpg</image:loc>
+      <image:title>Pilates cviky — 8 základních cviků a technika krok za krokem, Fit Pilates Praha 10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/cadillac-detail.jpg</image:loc>
+      <image:title>Cadillac (Trapeze Table) — pilates apparatus, Fit Pilates Praha 10</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://fitpilates.cz/blog/co-je-reformer-pilates/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -162,6 +176,34 @@
     <image:image>
       <image:loc>https://fitpilates.cz/images/stefan-portrait.jpg</image:loc>
       <image:title>Štefan Bitto — privátní osobní trenér, Fit Pilates Praha 10</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/bolest-zad-praha/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/pillar-stretch.jpg</image:loc>
+      <image:title>Cvičení na bolest zad Praha 10 — Fit Pilates Strašnice</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/trainer-pilates.jpg</image:loc>
+      <image:title>Vedené cvičení na reformeru — Fit Pilates Praha 10</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/restart-po-40/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/trainer-fitness.jpg</image:loc>
+      <image:title>Cvičení po 40 — restart kondice, Fit Pilates Praha 10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/trainer-reformer.jpg</image:loc>
+      <image:title>Privátní lekce na reformeru — Fit Pilates Praha 10</image:title>
     </image:image>
   </url>
   <url>
