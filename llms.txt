@@ -52,6 +52,7 @@ Studio je plně vybaveno prémiovými stroji Balanced Body, které umožňují r
 - [Pilates Praha 10](https://fitpilates.cz/pilates-praha-10/): Lokální landing page
 - [O Štefanovi](https://fitpilates.cz/o-stefanovi/): Profil lektora, kvalifikace, timeline kariéry
 - [Studio](https://fitpilates.cz/studio/): Fotogalerie studia
+- [Pilates cviky](https://fitpilates.cz/blog/pilates-cviky/): Pillar — 8 základních cviků, technika krok za krokem, cviky na záda, reformer
 - [Co je reformer pilates](https://fitpilates.cz/blog/co-je-reformer-pilates/): Pillar — kompletní průvodce
 - [Pilates pro začátečníky](https://fitpilates.cz/blog/pilates-pro-zacatecniky/): Pillar — 5 cviků správně + 30denní plán
 - [Pilates aparáty: Reformer, Cadillac, Chair, Ladder Barrel](https://fitpilates.cz/blog/pilates-apparatus-stroje/): Pillar — srovnání 4 klasických strojů
