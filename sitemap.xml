@@ -43,6 +43,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://fitpilates.cz/blog/pilates-cviky/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/allegro-hero.jpg</image:loc>
+      <image:title>Pilates cviky — 8 základních cviků a technika krok za krokem, Fit Pilates Praha 10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/cadillac-detail.jpg</image:loc>
+      <image:title>Cadillac (Trapeze Table) — pilates apparatus, Fit Pilates Praha 10</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://fitpilates.cz/blog/co-je-reformer-pilates/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
