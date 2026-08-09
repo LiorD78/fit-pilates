@@ -275,3 +275,37 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
   color:var(--gold) !important;
   border-bottom-color:var(--gold);
 }
+
+/* ── 10.8.2026: reálné recenze na homepage (nahradilo review slider) ── */
+.rev-rating{
+  display:flex; align-items:center; flex-wrap:wrap; gap:10px 28px;
+  margin-top:28px; padding-bottom:24px; border-bottom:1px solid var(--border);
+}
+.rev-rating__score{display:flex; align-items:baseline; gap:10px}
+.rev-rating__stars{color:var(--gold); font-size:17px; letter-spacing:3px}
+.rev-rating__n{
+  font-family:var(--font-serif); font-size:30px; font-weight:600;
+  color:var(--charcoal); line-height:1;
+}
+.rev-rating__txt{font-size:13px; color:var(--grey); margin:0}
+.rev-links{display:flex; flex-wrap:wrap; gap:8px 24px; margin-left:auto}
+.rev-links a{
+  font-size:12px; font-weight:600; letter-spacing:.5px; color:var(--charcoal);
+  text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:2px;
+  transition:color .2s;
+}
+.rev-links a:hover,
+.rev-links a:focus{color:var(--gold)}
+.rev-grid{
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px; margin-top:32px;
+}
+.rev-grid .rev-card{flex:none; margin-right:0}
+.rev-src{
+  display:block; margin-top:4px; font-size:11px; letter-spacing:1px;
+  text-transform:uppercase; color:var(--gold);
+}
+@media (max-width:768px){
+  .rev-grid{grid-template-columns:1fr}
+  .rev-links{margin-left:0}
+}
