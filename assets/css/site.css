@@ -255,3 +255,23 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
 /* ── CTA pills — sjednocení 5.6.2026 ── */
 .btn-d,.btn-o,.btn-dark,.btn-light,.btn-w,.btn-gold,.btn-b,.nav-cta,.cta-btn,.cookie-btn,#nav-overlay .ov-cta,.site-nav__cta,.site-nav__overlay-cta{border-radius:999px}
 @media (max-width:900px){.site-nav__cta{border-radius:999px}}
+
+/* ── FIX 10.8.2026: drobečková navigace — chyběly styly odkazů ── */
+.lph-bc{
+  font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; font-weight:500;
+  color:rgba(255,255,255,.62); margin-bottom:20px;
+}
+.lph-bc a,
+.lph-bc a:link,
+.lph-bc a:visited{
+  color:rgba(255,255,255,.8) !important;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.2);
+  padding-bottom:1px;
+  transition:color .2s, border-color .2s;
+}
+.lph-bc a:hover,
+.lph-bc a:focus{
+  color:var(--gold) !important;
+  border-bottom-color:var(--gold);
+}

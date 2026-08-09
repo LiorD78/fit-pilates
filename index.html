@@ -420,7 +420,7 @@ img{max-width:100%;height:auto;display:block}
   .site-nav__cta{padding:11px 22px !important;font-size:13px !important;letter-spacing:.06em !important;text-transform:uppercase}
 }
 </style>
-<link rel="stylesheet" href="/assets/css/site.css?v=05062026-pills">
+<link rel="stylesheet" href="/assets/css/site.css?v=10082026-bc">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x2d94kqdkf");</script>
 <!-- Google Consent Mode v2 + GA4 (fitpilates) -->
@@ -819,20 +819,23 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
         <div class="cb-contact" style="opacity:.85;font-size:.95em;">🚊 Tram Radošovická · 🚌 Bus Korytná · 🅿️ Parkování zdarma v ulici</div>
       </div>
     </div>
-    <form class="cb-form rv d1" onsubmit="return false;">
-      <input type="text" placeholder="Vaše jméno" required>
-      <input type="email" placeholder="E-mailová adresa" required>
-      <input type="tel" placeholder="Telefon (nepovinné)">
-      <select>
+    <form class="cb-form rv d1" id="fp-form" name="poptavka" method="POST" action="/dekujeme/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="poptavka">
+      <p style="display:none"><label>Nevyplňujte: <input name="bot-field"></label></p>
+      <input type="text" name="jmeno" placeholder="Vaše jméno" autocomplete="name" required>
+      <input type="email" name="email" placeholder="E-mailová adresa" autocomplete="email" required>
+      <input type="tel" name="telefon" placeholder="Telefon (ozveme se rychleji)" autocomplete="tel">
+      <select name="zajem">
         <option value="" disabled selected>Zájem o... (vyberte program)</option>
-        <option>Reformer Pilates</option>
+        <option>Úvodní diagnostická konzultace</option>
+        <option>Pilates na strojích / Reformer</option>
         <option>Silový a funkční trénink</option>
         <option>Kondiční box</option>
         <option>Kombinace disciplín</option>
-        <option>Zkušební lekce</option>
       </select>
-      <textarea placeholder="Dotaz nebo zpráva (nepovinné)"></textarea>
-      <button class="btn-w" type="submit">Odeslat zprávu →</button>
+      <textarea name="zprava" placeholder="Dotaz nebo zpráva (nepovinné)"></textarea>
+      <button class="btn-w" type="submit">Odeslat nezávaznou poptávku →</button>
+      <p id="fp-form-msg" role="status" aria-live="polite" style="display:none;font-size:13px;line-height:1.6;margin-top:4px;"></p>
     </form>
   </div>
 </div>
@@ -1160,6 +1163,37 @@ document.querySelectorAll('a.fp-email').forEach(function(a){
     a.textContent = addr;
   }
 });
+
+/* ── 9. KONTAKTNÍ FORMULÁŘ (Netlify Forms + AJAX) ── */
+var fpForm = document.getElementById('fp-form');
+if(fpForm){
+  var fpMsg = document.getElementById('fp-form-msg');
+  var fpBtn = fpForm.querySelector('button[type=submit]');
+  var fpOrig = fpBtn ? fpBtn.textContent : '';
+  fpForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!fpForm.checkValidity()){ fpForm.reportValidity(); return; }
+    var body = new URLSearchParams(new FormData(fpForm)).toString();
+    fpBtn.disabled = true; fpBtn.textContent = 'Odesílám…';
+    fpMsg.style.display = 'none';
+    fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body})
+      .then(function(r){
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        fpForm.reset();
+        fpMsg.style.color = '#d4af5a';
+        fpMsg.textContent = 'Děkujeme, zpráva odešla. Štefan se vám ozve zpravidla do 2 hodin. Spěchá to? Zavolejte na +420 604 925 249.';
+        fpMsg.style.display = 'block';
+        fpBtn.textContent = 'Odesláno ✓';
+        if(typeof gtag === 'function'){ gtag('event','generate_lead',{method:'kontaktni_formular'}); }
+      })
+      .catch(function(){
+        fpMsg.style.color = '#ffb4a8';
+        fpMsg.innerHTML = 'Odeslání se nepodařilo. Zavolejte prosím na <a href="tel:+420604925249" style="color:#d4af5a">+420 604 925 249</a>.';
+        fpMsg.style.display = 'block';
+        fpBtn.disabled = false; fpBtn.textContent = fpOrig;
+      });
+  });
+}
 
 })();
 </script>
