@@ -418,3 +418,7 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
 
 /* Nadpis .cta-t je navržený pro tmavé sekce; na světlém pozadí potřebuje tmavý text */
 .cta-t--on-light{color:var(--charcoal)}
+
+/* Položky patičky bez odkazu (otevírací doba) měly zůstat čitelné stejně jako odkazy */
+.f-links li{color:rgba(255,255,255,.72);font-size:13px;line-height:1.5}
+.f-links li:not(:has(a)){padding:7px 0}
