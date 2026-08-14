@@ -415,3 +415,6 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
 .ci{width:16px;height:16px;vertical-align:-3px;margin-right:7px;color:var(--gold);flex:0 0 auto}
 .cb-contact{display:flex;align-items:flex-start;gap:0}
 .cb-contact .ci{margin-top:3px}
+
+/* Nadpis .cta-t je navržený pro tmavé sekce; na světlém pozadí potřebuje tmavý text */
+.cta-t--on-light{color:var(--charcoal)}
