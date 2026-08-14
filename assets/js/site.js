@@ -227,7 +227,6 @@
 
   /* ── Sticky CTA lišta ── */
   function initSticky(){
-    if (window.matchMedia && !window.matchMedia('(max-width:900px)').matches) return;
     if (document.querySelector('.fp-sticky')) return;
 
     var bar = document.createElement('div');
@@ -255,7 +254,23 @@
     requestAnimationFrame(function(){ if(!forced) bar.classList.add('is-visible'); });
   }
 
-  function init(){ initWaPrefill(); initExtraEvents(); initSticky(); }
+  /* Lišta se vytvoří i odstraní podle šířky okna za běhu (bez reloadu) */
+  function syncSticky(){
+    var narrow = !window.matchMedia || window.matchMedia('(max-width:900px)').matches;
+    if (narrow) { initSticky(); return; }
+    var bar = document.querySelector('.fp-sticky');
+    if (bar) { bar.remove(); document.body.classList.remove('has-sticky-cta'); }
+  }
+
+  function initStickyWatcher(){
+    if (!window.matchMedia) { syncSticky(); return; }
+    var mq = window.matchMedia('(max-width:900px)');
+    if (mq.addEventListener) mq.addEventListener('change', syncSticky);
+    else if (mq.addListener) mq.addListener(syncSticky);
+    syncSticky();
+  }
+
+  function init(){ initWaPrefill(); initExtraEvents(); initStickyWatcher(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
