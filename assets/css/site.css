@@ -401,3 +401,17 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
 @supports (padding:env(safe-area-inset-top)){
   .site-nav{padding-top:calc(10px + env(safe-area-inset-top)) !important}
 }
+
+/* ── Doladění po vizuální kontrole — 14.8.2026 ── */
+/* Bílý pruh pod patičkou: mezeru pro sticky lištu drží patička, ne body */
+@media (max-width:900px){
+  body.has-sticky-cta{padding-bottom:0}
+  body.has-sticky-cta footer{padding-bottom:calc(28px + 72px)}
+  body.has-sticky-cta footer.footer-simple{padding-bottom:calc(32px + 72px)}
+}
+/* Sticky CTA: čitelnost pro cílovku 45+ */
+.fp-sticky__main{font-size:12.5px;letter-spacing:.05em}
+/* Inline SVG ikony v kontaktech (náhrada za emoji) */
+.ci{width:16px;height:16px;vertical-align:-3px;margin-right:7px;color:var(--gold);flex:0 0 auto}
+.cb-contact{display:flex;align-items:flex-start;gap:0}
+.cb-contact .ci{margin-top:3px}
