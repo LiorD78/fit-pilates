@@ -309,3 +309,95 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
   .rev-links{margin-left:0}
   .rev-card{flex:0 0 78vw}
 }
+
+/* ════════════════════════════════════════════════════════════
+   MOBILNÍ KONVERZNÍ TRYCHTÝŘ — 14.8.2026
+   Sticky CTA lišta, iOS fixy, LCP, kontrast
+   ════════════════════════════════════════════════════════════ */
+
+/* ── 1. iOS Safari: inputy pod 16px spouští auto-zoom ── */
+.cb-form input,
+.cb-form textarea,
+.cb-form select{font-size:16px}
+@media (min-width:901px){
+  .cb-form input,.cb-form textarea,.cb-form select{font-size:14px}
+}
+
+/* ── 2. Dynamická výška viewportu (mobilní Safari URL bar) ── */
+.hero{height:100vh;height:100svh}
+.page-hero{height:100vh;height:100svh}
+@media (max-width:900px){
+  .hero{height:auto;min-height:88svh}
+  .page-hero{height:auto;min-height:78svh}
+}
+
+/* ── 3. LCP: nadpis a lead nesmí startovat na opacity 0 ── */
+.page-hero h1,.page-hero .lead,
+.hero h1,.hero-sub{opacity:1;animation:none}
+@media (prefers-reduced-motion:reduce){
+  .hero-tag,.hero-acts,.hero-pills,.page-hero .meta,.hero-stats{
+    opacity:1 !important;animation:none !important;transform:none !important}
+}
+
+/* ── 4. Podstránkové hero: lehčí obrázek na mobilu ── */
+@media (max-width:800px){
+  .page-hero::before{background-image:url('/images/hero-w800.jpg')}
+  .page-hero.hero-allegro::before{background-image:url('/images/allegro-hero-w800.jpg')}
+  .page-hero.hero-stretch::before{background-image:url('/images/pillar-stretch-w800.jpg')}
+  .page-hero.hero-handstand::before,
+  .page-hero.hero-portrait::before{background-image:url('/images/stefan-portrait-w800.jpg')}
+  .page-hero.hero-fitness::before{background-image:url('/images/trainer-fitness-w800.jpg')}
+  .page-hero.hero-praha10::before{background-image:url('/images/hero-w800.jpg')}
+  .page-hero.hero-boxing::before{background-image:url('/images/boxing-studio-w600.jpg')}
+}
+
+/* ── 5. CTA řádek v hero podstránek ── */
+.lph-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.lph-acts .btn-d,.lph-acts .btn-o{padding:14px 26px}
+.lph-acts__note{display:block;width:100%;margin-top:12px;font-size:12px;
+  color:rgba(255,255,255,.62);letter-spacing:.02em}
+.lph-acts__wa{color:rgba(255,255,255,.8);font-size:12.5px;text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px}
+.lph-acts__wa:hover,.lph-acts__wa:focus{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ── 6. Sticky CTA lišta (jen mobil) ── */
+.fp-sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:998;display:none;
+  gap:8px;align-items:center;
+  background:rgba(26,27,30,.97);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-top:1px solid rgba(196,154,60,.3);
+  padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+  transform:translateY(105%);transition:transform .28s ease;
+}
+.fp-sticky.is-visible{transform:translateY(0)}
+@media (max-width:900px){.fp-sticky{display:flex}}
+.fp-sticky__main{
+  flex:1 1 auto;min-width:0;background:var(--gold);color:#1a1b1e;
+  font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  text-align:center;text-decoration:none;padding:13px 10px;border-radius:999px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.fp-sticky__icon{
+  flex:0 0 auto;width:46px;height:44px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,.3);border-radius:999px;color:#fff;text-decoration:none;
+}
+.fp-sticky__icon svg{width:19px;height:19px;display:block}
+.fp-sticky__icon:hover,.fp-sticky__icon:focus{border-color:var(--gold);color:var(--gold)}
+/* místo pod obsahem, ať lišta nepřekrývá patičku */
+@media (max-width:900px){
+  body.has-sticky-cta{padding-bottom:72px}
+  body.has-sticky-cta .fp-cc{bottom:calc(78px + env(safe-area-inset-bottom))}
+}
+
+/* ── 7. Patička: kontrast a tap targety (WCAG AA) ── */
+.f-links a{font-size:13px;color:rgba(255,255,255,.72);display:inline-block;padding:7px 0}
+.f-links li{margin-bottom:2px}
+.f-desc{color:rgba(255,255,255,.6)}
+.f-bot{font-size:12px;color:rgba(255,255,255,.55)}
+.f-social a{color:rgba(255,255,255,.6);width:40px;height:40px}
+.cb-form input::placeholder,.cb-form textarea::placeholder{color:rgba(255,255,255,.62)}
+
+/* ── 8. Safe-area pro fixní navigaci ── */
+@supports (padding:env(safe-area-inset-top)){
+  .site-nav{padding-top:calc(10px + env(safe-area-inset-top)) !important}
+}

@@ -169,3 +169,93 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
+
+/* ============================================================
+   Sticky mobilní CTA lišta + WhatsApp prefill + měření
+   Přidáno: 14.8.2026 — mobilní konverzní trychtýř
+   ============================================================ */
+(function(){
+  'use strict';
+  var TEL   = '+420604925249';
+  var WA    = '420604925249';
+  var BOOK  = 'https://fitpilates.isportsystem.cz/';
+
+  function gtag(){ (window.dataLayer=window.dataLayer||[]).push(arguments); }
+  function track(name, params){ gtag('event', name, params||{}); }
+
+  /* ── Předvyplněná WhatsApp zpráva podle stránky ── */
+  var WA_TEXTS = {
+    '/bolest-zad-praha/': 'Dobrý den, řeším bolesti zad ze sedavé práce a zajímá mě úvodní konzultace. Můžeme domluvit termín?',
+    '/restart-po-40/':    'Dobrý den, po delší pauze bych se rád(a) vrátil(a) k pohybu. Zajímá mě úvodní konzultace.',
+    '/pilates-na-strojich/': 'Dobrý den, zajímá mě pilates na strojích. Rád(a) bych domluvil(a) úvodní konzultaci.',
+    '/pilates-allegro/':  'Dobrý den, zajímá mě reformer pilates. Můžeme domluvit úvodní konzultaci?',
+    '/silovy-trenink/':   'Dobrý den, zajímá mě silový a funkční trénink. Můžeme domluvit úvodní konzultaci?',
+    '/kondicni-box/':     'Dobrý den, zajímá mě kondiční box. Můžeme domluvit úvodní konzultaci?',
+    '/osobni-trener-praha-10/': 'Dobrý den, hledám osobního trenéra v Praze 10. Zajímá mě úvodní konzultace.'
+  };
+  function waText(){
+    return WA_TEXTS[location.pathname] ||
+      'Dobrý den, mám zájem o úvodní konzultaci ve Fit Pilates. Můžeme domluvit termín?';
+  }
+  function waHref(){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(waText()); }
+
+  /* Doplní prefill do všech existujících wa.me odkazů bez ?text= */
+  function initWaPrefill(){
+    var links = document.querySelectorAll('a[href*="wa.me/"]');
+    for (var i=0;i<links.length;i++){
+      var h = links[i].getAttribute('href') || '';
+      if (h.indexOf('text=') === -1) links[i].setAttribute('href', waHref());
+    }
+  }
+
+  /* ── Měření: WhatsApp + odeslání formuláře ── */
+  function initExtraEvents(){
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('wa.me/') > -1){
+        track('whatsapp_click', { placement: a.getAttribute('data-fp-place') || 'inline' });
+      }
+    }, true);
+
+    var form = document.getElementById('fp-form');
+    if (form) form.addEventListener('submit', function(){
+      track('form_submit', { form_name: form.getAttribute('name') || 'poptavka' });
+    });
+  }
+
+  /* ── Sticky CTA lišta ── */
+  function initSticky(){
+    if (window.matchMedia && !window.matchMedia('(max-width:900px)').matches) return;
+    if (document.querySelector('.fp-sticky')) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'fp-sticky';
+    bar.innerHTML =
+      '<a class="fp-sticky__main" data-fp-place="sticky" href="' + BOOK + '" target="_blank" rel="noopener">Rezervovat konzultaci</a>' +
+      '<a class="fp-sticky__icon" data-fp-place="sticky" href="tel:' + TEL + '" aria-label="Zavolat Štefanovi">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>' +
+      '</a>' +
+      '<a class="fp-sticky__icon" data-fp-place="sticky" href="' + waHref() + '" target="_blank" rel="noopener" aria-label="Napsat na WhatsApp">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>' +
+      '</a>';
+    document.body.appendChild(bar);
+    document.body.classList.add('has-sticky-cta');
+
+    /* Skryje se u kontaktního formuláře a patičky, ať nepřekrývá obsah */
+    var stop = document.getElementById('kontakt') || document.querySelector('footer');
+    var forced = false;
+    if (stop && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        forced = entries[0].isIntersecting;
+        bar.classList.toggle('is-visible', !forced);
+      }, { rootMargin: '0px 0px -40% 0px' }).observe(stop);
+    }
+    requestAnimationFrame(function(){ if(!forced) bar.classList.add('is-visible'); });
+  }
+
+  function init(){ initWaPrefill(); initExtraEvents(); initSticky(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();

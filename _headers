@@ -69,14 +69,14 @@
 # Content-Type explicit pro jistotu
 # ────────────────────────────────────────────────
 /assets/css/*
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
   Content-Type: text/css; charset=UTF-8
 
 # ────────────────────────────────────────────────
 # JS (nebudeme mít moc, ale pro budoucnost)
 # ────────────────────────────────────────────────
 /assets/js/*
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
 
 # ────────────────────────────────────────────────
 # XML / TXT / JSON metadata
