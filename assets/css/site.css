@@ -422,3 +422,17 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
 /* Položky patičky bez odkazu (otevírací doba) měly zůstat čitelné stejně jako odkazy */
 .f-links li{color:rgba(255,255,255,.72);font-size:13px;line-height:1.5}
 .f-links li:not(:has(a)){padding:7px 0}
+
+/* ── Telefon a WhatsApp v navigaci (jen desktop; na mobilu je sticky lišta) ── */
+.site-nav__icons{display:none;align-items:center;gap:6px;margin-left:auto}
+@media (min-width:901px){.site-nav__icons{display:flex}}
+.site-nav__icon{display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:999px;color:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.22);text-decoration:none;transition:color .2s,border-color .2s}
+.site-nav__icon svg{width:17px;height:17px;display:block}
+.site-nav__icon:hover,.site-nav__icon:focus{color:var(--gold);border-color:var(--gold)}
+
+/* ── Poznámka pod CTA v hero homepage (sjednocení s podstránkami) ── */
+.hero-note{margin-top:18px;font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.68);max-width:520px}
+.hero-note a{color:rgba(255,255,255,.88);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.28);padding-bottom:1px}
+.hero-note a:hover,.hero-note a:focus{color:var(--gold);border-bottom-color:var(--gold)}
