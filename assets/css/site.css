@@ -436,3 +436,8 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
 .hero-note{margin-top:18px;font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.68);max-width:520px}
 .hero-note a{color:rgba(255,255,255,.88);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.28);padding-bottom:1px}
 .hero-note a:hover,.hero-note a:focus{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ── Kontaktní blok na konverzních podstránkách ── */
+.cb--page{background-image:url('/images/studio-main-w1200.jpg')}
+@media (max-width:900px){.cb--page{background-image:url('/images/pilates-w900.jpg')}}
+.cb-form-note{font-size:12px;color:rgba(255,255,255,.6);line-height:1.5;margin-top:2px}
