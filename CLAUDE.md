@@ -5,7 +5,7 @@
 - Web: **fitpilates.cz**
 - Vlastník/lektor: **Štefan Bitto** (24+ let praxe, ACI Trenér fitness I. třídy, certifikovaný instruktor pilates)
 - Adresa: U Trati 886/52, 100 00 Praha 10 – Strašnice
-- Telefon: +420 604 925 249, email: stefanbitto@seznam.cz, IČO: 76121674
+- Telefon: +420 604 925 249, email: stefan@fitpilates.cz, IČO: 76121674
 
 ## Cílovka & positioning
 - **Premium concierge service** pro affluent CZ klientelu — manažeři/CEO/podnikatelé/lékaři 35–55

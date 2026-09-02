@@ -35,7 +35,7 @@ PSČ:            100 00
 Stát:           Česká republika
 Telefon:        +420 604 925 249
 WhatsApp:       +420 604 925 249
-E-mail:         stefanbitto@seznam.cz
+E-mail:         stefan@fitpilates.cz
 Web:            https://fitpilates.cz
 Instagram:      https://www.instagram.com/stefanbitto
 Facebook:       https://www.facebook.com/share/1Hs5UmhdH9/
@@ -115,7 +115,7 @@ LEKTOR
 PRAKTICKÉ INFORMACE
 Adresa: U Trati 886/52, 100 00 Praha 10 – Strašnice
 Telefon a WhatsApp: +420 604 925 249
-E-mail: stefanbitto@seznam.cz
+E-mail: stefan@fitpilates.cz
 Web: https://fitpilates.cz
 MHD: Tram Radošovická + Bus Korytná
 Parkování: zdarma v ulici
@@ -213,7 +213,7 @@ Pro KAŽDOU registraci postupuj stejně:
 1. ☐ Použij **přesně stejný název** „Fit Pilates" (NE „Fit Pilates Studio Praha 10", NE „FitPilates")
 2. ☐ Adresa **ZNAK PO ZNAKU stejná**: „U Trati 886/52, 100 00 Praha 10 - Strašnice"
 3. ☐ Telefon ve formátu **+420 604 925 249** (s mezerami!)
-4. ☐ E-mail **stefanbitto@seznam.cz**
+4. ☐ E-mail **stefan@fitpilates.cz**
 5. ☐ Web **https://fitpilates.cz** (s https, BEZ www)
 6. ☐ Kategorie: hlavní **Pilates studio**, sekundární Fitness/Sport
 7. ☐ Popis vyber podle limitu (Verze 1-5 výše)
@@ -268,7 +268,7 @@ Stejný NAP musí být na **každém** níže uvedeném místě. Audituj 1× za 
 | `+420-604-925-249` | `+420 604 925 249` |
 | `Praha 10` (bez Strašnice) | `Praha 10 - Strašnice` |
 | `https://www.fitpilates.cz` | `https://fitpilates.cz` (BEZ www) |
-| `info@fitpilates.cz` | `stefanbitto@seznam.cz` |
+| `info@fitpilates.cz` | `stefan@fitpilates.cz` |
 | `Fit Pilates Studio Praha 10` | `Fit Pilates` (krátké, čisté) |
 | `100 00 Praha 10` (bez ulice) | `U Trati 886/52, 100 00 Praha 10` |
 

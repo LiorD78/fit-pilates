@@ -412,7 +412,7 @@ něco, co bychom mohli zlepšit, dej mi vědět rovnou. — Štefan
 #### Neutrální recenze (3–4 ⭐) — uznej, popros o specifika
 ```
 Marie, moc děkuji za zpětnou vazbu. Pokud bys mi mohla
-napsat na stefanbitto@seznam.cz, co konkrétně bych mohl
+napsat na stefan@fitpilates.cz, co konkrétně bych mohl
 zlepšit, byl bych vděčný — záleží mi, aby každá lekce
 splnila to, co od ní klient čeká. — Štefan
 ```
@@ -426,7 +426,7 @@ splnila to, co od ní klient čeká. — Štefan
 ```
 Janě, mrzí mě, že jste nebyla spokojená. Beru každou
 zpětnou vazbu vážně. Pokud máte chvilku, ozvěte se prosím
-na +420 604 925 249 nebo stefanbitto@seznam.cz — chtěl bych
+na +420 604 925 249 nebo stefan@fitpilates.cz — chtěl bych
 pochopit, co se stalo, a pokud to půjde, věc napravit. — Štefan
 ```
 

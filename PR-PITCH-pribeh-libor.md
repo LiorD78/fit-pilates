@@ -225,7 +225,7 @@ Pro každého redaktora, který se ozve, mít připravené:
 
 4. **Kontakty:**
    - Libor: [tvůj telefon] / libor.dospel@gmail.com
-   - Štefan: +420 604 925 249 / stefanbitto@seznam.cz
+   - Štefan: +420 604 925 249 / stefan@fitpilates.cz
 
 ---
 
