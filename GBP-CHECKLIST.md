@@ -196,7 +196,7 @@ Klikni **"Přidat službu"** a pro každou napiš:
 - **Q&A sekce** — vyplň 7 nejčastějších otázek sám (Google to dovoluje):
   1. *Q: Jaké lekce nabízíte?* → A: Reformer pilates, funkční trénink, kondiční box.
   2. *Q: Mám zkušenost 0, je to pro mě?* → A: Ano, máme zkušební lekci 590 Kč pro začátečníky. Skupinové lekce mají max. 3 osoby pro individuální vedení.
-  3. *Q: Jak se objednám?* → A: Telefonicky +420 604 925 249, přes WhatsApp nebo e-mailem stefanbitto@seznam.cz.
+  3. *Q: Jak se objednám?* → A: Telefonicky +420 604 925 249, přes WhatsApp nebo e-mailem stefan@fitpilates.cz.
   4. *Q: Máte šatny a sprchy?* → A: Ano, plně vybavené.
   5. *Q: Kde přesně jste?* → A: U Trati 886/52, Praha 10 - Strašnice. Mapa: [link na GBP].
   6. *Q: Jak se ke studiu dostanu MHD?* → A: Tram Radošovická (linky 7, 22, 26) - 3 minuty pěšky. Bus Korytná. Z metra Strašnická 10 minut pěšky.
