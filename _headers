@@ -41,6 +41,27 @@
 /blog/*
   Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
 
+/pilates-na-strojich/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/osobni-trener-praha-10/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/bolest-zad-praha/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/restart-po-40/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/pribeh-libor/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/rezervace/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
+/dekujeme/*
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
+
 # ────────────────────────────────────────────────
 # Images — aggressive caching (1 year, immutable)
 # Files have hash or size suffix, so content never changes for a given URL
