@@ -43,6 +43,6 @@ jobs:
             https://fitpilates.cz/blog/co-je-reformer-pilates/
             https://fitpilates.cz/blog/pilates-pro-zacatecniky/
             https://fitpilates.cz/blog/pilates-apparatus-stroje/
-            https://fitpilates.cz/blog/reformer-pilates-praha/
+            https://fitpilates.cz/reformer-pilates-praha-10/
           ping-google-sitemap: 'true'
           fail-on-error: 'false'
