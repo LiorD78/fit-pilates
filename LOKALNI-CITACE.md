@@ -8,18 +8,27 @@
 
 ## ⭐ PRIORITA — registrovat v tomto pořadí
 
-| # | Site | Týden | Důležitost | Status |
-|---|------|-------|------------|--------|
-| 1 | Google Business Profile | 1 | ★★★★★ kritická | ⏳ |
-| 2 | **Firmy.cz** (Seznam) | 1 | ★★★★★ vysoká | ⏳ |
-| 3 | **Apple Business Connect** | 2 | ★★★★ rostoucí | ⏳ |
-| 4 | **Najisto.cz** | 2 | ★★★★ | ⏳ |
-| 5 | **Bing Places** | 3 | ★★★ | ⏳ |
-| 6 | Zlatestranky.cz | 3 | ★★★ | ⏳ |
-| 7 | Sluzby.cz | 4 | ★★ | ⏳ |
-| 8 | iZurnal.cz | 4 | ★★ | ⏳ |
-| 9 | SportCentral.cz | 5 | ★★ | ⏳ |
-| 10 | Hyperinzerce.cz | 5 | ★ | ⏳ |
+| # | Site | Důležitost | Status |
+|---|------|------------|--------|
+| 1 | Google Business Profile | ★★★★★ kritická | ✅ hotovo, ověřeno, 10 recenzí 5,0 |
+| 2 | **Firmy.cz** (Seznam) | ★★★★★ vysoká | ✅ hotovo, profil 2607410 |
+| 3 | **Apple Business Connect** | ★★★★ | ⏳ další na řadě |
+| 4 | **Bing Places** | ★★★ | ⏳ lze importovat z GBP |
+| 5 | SportCentral.cz | ★★ | ⏳ oborový, nízká priorita |
+
+### Vyřazeno z původního seznamu (revize 8. 9. 2026)
+
+Crew (GPT + Gemini + Mistral) posoudila zbytek jako mrtvé nebo marginální katalogy, kde správa profilu nevrátí investovaný čas:
+
+| Site | Důvod vyřazení | Shoda |
+|---|---|---|
+| Najisto.cz | bez prokazatelné návštěvnosti a přínosu pro lokální SEO | 2:1 |
+| Zlatestranky.cz | mrtvý web, žádná relevantní poptávka | 3:0 |
+| Sluzby.cz | obecný katalog, spamový charakter, cenově orientované poptávky | 3:0 |
+| iZurnal.cz | bez doložené návštěvnosti a indexace profilů | 3:0 |
+| Hyperinzerce.cz | inzertní web, ne firemní profil; snižuje vnímané pozicování | 3:0 |
+
+**Závěr:** dva kvalitní profily (Apple, Bing) mají větší hodnotu než osm zápisů v mrtvých katalozích. Mapy.cz se řeší automaticky přes Firmy.cz — nezakládat duplicitní záznam.
 
 ---
 
@@ -51,7 +60,7 @@ Kategorie:      Pilates studio (primární)
                 Sportovní klub / Studio
                 Boxerský trénink
 
-IČO:            ____________  (vyplň před registrací)
+IČO:            76121674
 DIČ:            ____________  (vyplň před registrací)
 ```
 
@@ -211,7 +220,7 @@ kettlebell Praha
 Pro KAŽDOU registraci postupuj stejně:
 
 1. ☐ Použij **přesně stejný název** „Fit Pilates" (NE „Fit Pilates Studio Praha 10", NE „FitPilates")
-2. ☐ Adresa **ZNAK PO ZNAKU stejná**: „U Trati 886/52, 100 00 Praha 10 - Strašnice"
+2. ☐ Adresa věcně shodná: „U Trati 886/52, 100 00 Praha 10 – Strašnice". Typ pomlčky ani pořadí částí neřeš — vyhledávače rozumí variantám. Nikdy adresu nelámej proti validovanému formátu dané mapové služby jen kvůli tomuto dokumentu.
 3. ☐ Telefon ve formátu **+420 604 925 249** (s mezerami!)
 4. ☐ E-mail **stefan@fitpilates.cz**
 5. ☐ Web **https://fitpilates.cz** (s https, BEZ www)
@@ -227,16 +236,11 @@ Pro KAŽDOU registraci postupuj stejně:
 
 | # | Site | Datum | URL profilu | Status |
 |---|------|-------|-------------|--------|
-| 1 | Google Business Profile | | | ⏳ |
-| 2 | Firmy.cz | | | ⏳ |
+| 1 | Google Business Profile | | | ✅ ověřeno |
+| 2 | Firmy.cz | | https://www.firmy.cz/detail/2607410-stefan-bitto-fit-pilates-studio-praha-strasnice.html | ✅ hotovo |
 | 3 | Apple Business Connect | | | ⏳ |
-| 4 | Najisto.cz | | | ⏳ |
-| 5 | Bing Places | | | ⏳ |
-| 6 | Zlatestranky.cz | | | ⏳ |
-| 7 | Sluzby.cz | | | ⏳ |
-| 8 | iZurnal.cz | | | ⏳ |
-| 9 | SportCentral.cz | | | ⏳ |
-| 10 | Hyperinzerce.cz | | | ⏳ |
+| 4 | Bing Places | | | ⏳ |
+| 5 | SportCentral.cz | | | ⏳ |
 
 ---
 
@@ -258,6 +262,25 @@ Stejný NAP musí být na **každém** níže uvedeném místě. Audituj 1× za 
 - ✅ Instagram bio (@stefanbitto)
 - ✅ Facebook About
 - ☐ LinkedIn (nepovinné, ale vhodné pro B2B)
+
+---
+
+## 🔁 DUPLICITY — vyřešit PŘED zakládáním nových profilů
+
+Jeden duplicitní nebo neověřený profil s jiným telefonem, kategorií nebo mapovým pinem škodí víc než deset nových zápisů v marginálních katalozích. Před každou další registrací prohledej:
+
+- ☐ „Fit Pilates"
+- ☐ „Štefan Bitto"
+- ☐ telefon `+420 604 925 249`
+- ☐ adresa `U Trati 886/52`
+- ☐ stará adresa `Dubnova 807/1, Praha – Háje` (sídlo podnikání, NE studio)
+- ☐ staré varianty názvu a staré weby
+
+**Známé riziko:** existuje starší profil typu „Osobní trenér Štefan Bitto, Praha-Háje". Sídlo podnikání je na jiné adrese než studio, takže duplicita s chybným mapovým pinem je reálná.
+
+**Hierarchie entit:** hlavní entita je **Fit Pilates** (studio), Štefan Bitto je osoba s ní spojená. Tuto hierarchii drž stejně na webu, GBP, Firmy.cz, sociálních sítích i v rezervačním systému.
+
+**Poznámka k názvu:** do názvu profilu se lokalita NEPŘIDÁVÁ. „Fit Pilates Studio Praha 10" nebo „Fit Pilates Strašnice" je keyword stuffing a u GBP riziko úpravy názvu či suspendace. Generickou značku neřeší jméno, ale konzistentní adresa, silné stránky pro Prahu 10 a Strašnice, strukturovaná data a recenze.
 
 ---
 
@@ -292,14 +315,26 @@ Po **60 dnech** od první registrace porovnej:
 
 ---
 
-## 🎯 Cíle (90 dnů od registrace)
+## 🎯 Cíle — revize 8. 9. 2026
 
-- **Top 10** na Google CZ pro „pilates Praha 10"
-- **Top 5** pro „pilates Strašnice"
-- **Top 3** pro brand „Fit Pilates"
-- **+50%** brand impressions v Search Console
-- **5+** GBP recenzí (5★ průměr)
+### Splněno z původního zadání
+- „pilates Praha 10": pozice **1,49** (cíl byl Top 10) — výrazně překonáno
+- GBP recenze: **10** při průměru **5,0** (cíl byl 5+) — splněno
+
+Pro „pilates Strašnice" a brand „Fit Pilates" nemáme data, splnění tedy nelze tvrdit.
+
+### Nové cíle na 90 dní (baseline: GSC 10. 8. – 6. 9. 2026)
+
+| # | Cíl | Baseline | Cílová hodnota |
+|---|-----|----------|----------------|
+| 1 | „pilates praha" — průměrná pozice | 7,3 | ≤ 5,0 při zachování ≥ 480 impresí / 28 dní |
+| 2 | „pilates praha" — CTR | 1,0 % | ≥ 2,0 % |
+| 3 | „reformer pilates praha" — průměrná pozice | 9,1 | ≤ 6,0 |
+| 4 | GBP recenze | 10 (5,0) | ≥ 18 při průměru ≥ 4,9 |
+| 5 | Firmy.cz — projevení zájmu / 30 dní | 22 (ze 420 zobrazení) | ≥ 30 (z ≥ 500 zobrazení) |
+
+Cíl 4 není o počtu hvězdiček, ale o osmi autentických recenzích od reálných klientů — ideálně se zmínkou o reformeru, individuálním vedení, Strašnicích nebo Štefanu Bittovi.
 
 ---
 
-*Připraveno: 26.4.2026 | Aktualizováno: 28.4.2026 (přidána silovka + box) | Související: GBP-CHECKLIST.md, GBP-POSTS-RECENZE.md, /pilates-praha-10/*
+*Připraveno: 26.4.2026 | Aktualizováno: 8.9.2026 (revize seznamu adresářů podle Crew, nové cíle podle GSC dat, sekce duplicit) | Související: GBP-CHECKLIST.md, GBP-POSTS-RECENZE.md, /pilates-praha-10/*
