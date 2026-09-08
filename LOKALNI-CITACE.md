@@ -178,7 +178,7 @@ kettlebell Praha
 
 ---
 
-## 📍 SPECIFICKÉ NÁVODY pro top 5 sites
+## 📍 SPECIFICKÉ NÁVODY pro aktivní seznam
 
 ### 1. Firmy.cz (Seznam) — KRITICKÉ pro CZ
 - URL registrace: https://www.firmy.cz/zaradit-firmu
@@ -195,23 +195,18 @@ kettlebell Praha
 - Popis: použij **Verzi 4 (1000 znaků)**
 - ⭐ **Tip:** Apple Maps se na iPhone používá víc než Google na iOS. Nezanedbávat.
 
-### 3. Najisto.cz
-- URL: https://www.najisto.cz/registrace
-- Limit popisu: ~500 znaků → použij **Verzi 3**
-- Kategorie: **Sport → Fitness, Pilates**
-- Bonus: lze přidat 5 fotek + odkazy na sociální sítě
-
-### 4. Bing Places (= Microsoft Bing + Yahoo + DuckDuckGo)
+### 3. Bing Places (= Microsoft Bing + Yahoo + DuckDuckGo)
 - URL: https://www.bingplaces.com/
 - Vyžaduje: Microsoft účet
 - Pokud máš GBP, **lze importovat** rovnou (úspora času)
 - Po importu: zkontroluj NAP, doplň fotky, popis
 - Důležitost: **roste** s ChatGPT/Bing Chat indexací
 
-### 5. Zlatestranky.cz
-- URL: https://www.zlatestranky.cz/zarazeni-firmy
-- Tradiční telefonní seznam, **starší klientela**
-- Limit popisu: ~250 znaků → použij **Verzi 2**
+### 4. SportCentral.cz
+- Oborový sportovní portál, nejnižší priorita — až po Apple a Bing
+- Limit popisu: ~500 znaků → použij **Verzi 3**
+- Kategorie: **Pilates**, sekundárně **Fitness / Osobní trenér**
+- Hodnota je v oborovém kontextu, ne v návštěvnosti
 
 ---
 
@@ -256,7 +251,7 @@ Stejný NAP musí být na **každém** níže uvedeném místě. Audituj 1× za 
 - ✅ /pilates-praha-10/ adresa + GPS
 
 ### GBP profil ✅
-### Všechny lokální adresáře (10× výše) ☐
+### Všechny lokální adresáře (5× výše) ☐
 
 ### Sociální sítě
 - ✅ Instagram bio (@stefanbitto)
