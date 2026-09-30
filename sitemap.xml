@@ -34,12 +34,22 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/blog/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://fitpilates.cz/images/hero.jpg</image:loc>
       <image:title>Blog Fit Pilates — průvodce reformer pilates a klasickým apparatem</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fitpilates.cz/blog/jak-cistit-podlozku-a-reformer/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://fitpilates.cz/images/gallery/gallery-21-stefan-feet-full.jpg</image:loc>
+      <image:title>Štefan Bitto na reformeru s podložkou — Fit Pilates Praha 10</image:title>
     </image:image>
   </url>
   <url>
@@ -58,7 +68,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/blog/co-je-reformer-pilates/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -242,7 +252,7 @@
   </url>
   <url>
     <loc>https://fitpilates.cz/studio/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
