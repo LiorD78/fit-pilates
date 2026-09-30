@@ -29,10 +29,10 @@
 - **Premium boutique vzhled** — vyhýbat se generickým SaaS prvkům, bento gridům, AI vzhledu
 - **Reálné fotky** (51 profesionálních z 23.9.2025) jsou klíčový asset — neměnit hero, neměnit dlaždice programů
 - **Allegro = název reformeru** (Balanced Body brand), NE disciplína. Důležité při psaní copy.
-- **CTA:** „Diagnostická konzultace 590 Kč" (nahradilo dřívější „Vstupní lekce")
+- **CTA:** „Vstupní lekce 590 Kč" (30. 9. 2026 sjednoceno napříč webem; na vstupní lekci si klient trénink vyzkouší a může proběhnout i diagnostika — názvy Diagnostická/Úvodní konzultace, Úvodní diagnostika, Zkušební lekce už nepoužívat)
 
 ## Ceník
-- Diagnostická konzultace / vstupní lekce: 590 Kč
+- Vstupní lekce: 590 Kč
 - Skupinová lekce (max 3 osoby): 790 Kč
 - Individuální lekce: 1 290 Kč
 - Balíček 10 lekcí skupinový: 6 990 Kč
