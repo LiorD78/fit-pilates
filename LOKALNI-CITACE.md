@@ -2,7 +2,7 @@
 
 > **Cíl:** NAP (Name, Address, Phone) konzistence napříč adresáři. Lokální citace = druhý nejsilnější ranking signál pro lokální Google SEO po GBP.
 > **Pravidlo:** **Identický NAP** všude. Každá odchylka snižuje trust.
-> **Updated:** 2026-04-28 (přidána silovka + box)
+> **Updated:** 2026-10-01 (texty sjednoceny s webem: „Vstupní lekce“, bez tvrzení o konkurenci a anglicismů)
 
 ---
 
@@ -71,13 +71,13 @@ DIČ:            ____________  (vyplň před registrací)
 ### Verze 1: 150 znaků (Twitter/krátký box)
 
 ```
-Pilates studio v Praze 10. Reformer pilates, silový trénink a kondiční box pod jednou střechou. Vede Štefan Bitto, ACI trenér od 2000.
+Privátní pilates studio v Praze 10. Reformer pilates, silový a funkční trénink a kondiční box. Vede Štefan Bitto, trenér od roku 2000.
 ```
 
 ### Verze 2: 250 znaků (Firmy.cz krátký, Najisto)
 
 ```
-Pilates studio v Praze 10 - Strašnice. Reformer pilates na Allegro reformerech (jeden s Tower) plus Cadillac, silový trénink a kondiční box pod jednou střechou. Vede Štefan Bitto, ACI trenér fitness I. třídy od roku 2000. Vstupní lekce 590 Kč.
+Pilates studio v Praze 10 – Strašnicích. Reformer pilates na strojích Balanced Body, silový a funkční trénink a kondiční box. Lekce 1:1 nebo max. 3 osoby. Vede Štefan Bitto, ACI trenér fitness I. třídy od roku 2000. Vstupní lekce 590 Kč.
 ```
 
 ### Verze 3: 500 znaků (běžný adresář)
@@ -89,7 +89,7 @@ Fit Pilates je studio v Praze 10 – Strašnice, kde najdete pilates, silový tr
 ### Verze 4: 1000 znaků (rozšířený adresář, GBP)
 
 ```
-Fit Pilates je studio v Praze 10 – Strašnice s ojedinělou kombinací tří disciplín pod jednou střechou: reformer pilates, silový trénink a kondiční box. Žádné jiné studio v Praze 10 tuto kombinaci s jedním lektorem nenabízí.
+Fit Pilates je privátní studio v Praze 10 – Strašnicích, které spojuje tři disciplíny pod jednou střechou: reformer pilates, silový a funkční trénink a kondiční box. Lekce 1:1 nebo v malé skupině max. 3 osob.
 
 Vybavení:
 • 3× Balanced Body Allegro reformer (jeden s přídavnou věží Tower)
@@ -101,22 +101,22 @@ Vede Štefan Bitto, ACI trenér fitness I. třídy od roku 2000. Osobní trenér
 
 Studio: U Trati 886/52, Praha 10 – Strašnice. MHD: Tram Radošovická, Bus Korytná. Parkování zdarma v ulici. Po–Pá 7:00–20:00, So–Ne dle dohody.
 
-Vstupní zkušební lekce 590 Kč (60 minut). Telefon a WhatsApp: +420 604 925 249.
+Vstupní lekce 590 Kč (60 minut). Telefon a WhatsApp: +420 604 925 249.
 ```
 
 ### Verze 5: 2000 znaků (dlouhá verze pro adresáře bez limitu)
 
 ```
-Fit Pilates je studio v Praze 10 – Strašnice. Hlavní výhodou je kombinace tří disciplín pod jednou střechou s jedním lektorem: reformer pilates, silový a funkční trénink, kondiční box. Tato kombinace je v Praze 10 ojedinělá – většina studií dělá jen jednu věc, my všechny tři.
+Fit Pilates je privátní studio v Praze 10 – Strašnicích. Spojuje tři disciplíny pod jednou střechou s jedním trenérem: reformer pilates, silový a funkční trénink a kondiční box. Lekce probíhají 1:1 nebo v malé skupině max. 3 osob.
 
 PILATES
 Cvičíme na třech profesionálních Balanced Body Allegro reformerech, z nichž jeden má přídavnou věž (Tower) pro pokročilé cvičení. Studio má také plný Cadillac (Trapeze Table) Balanced Body s chrómovaným Speed-Rail rámem – nejvšestrannější pilates stroj. Pilates je vhodný pro začátečníky, pokročilé, sportovce, lidi v rehabilitaci i postnatální klientky.
 
 SILOVÝ A FUNKČNÍ TRÉNINK
-Kompletní silová zóna: TuffStuff squat rack (USA), kompletní sada Jordan činek (UK profi standard), olympijská osa s kotouči, nastavitelná lavička, kettlebelly Escape, TRX závěsný systém, BOSU Elite. Trénink cílíme podle klienta – od základů techniky až po pokročilé compound exercises. Vhodné pro začátečníky, pokročilé, sportovce a klienty v rehabilitaci.
+Kompletní silová zóna: TuffStuff squat rack (USA), kompletní sada britských činek Jordan, olympijská osa s kotouči, nastavitelná lavička, kettlebelly Escape, TRX závěsný systém, BOSU Elite. Trénink stavíme podle klienta – od základů techniky až po náročné vícekloubové cviky. Vhodné pro začátečníky, pokročilé, sportovce a klienty v rehabilitaci.
 
 KONDIČNÍ BOX
-Profesionální vybavení: rukavice Windy a King (thajské brandy s 50letou tradicí), lapy Twins, boxerský pytel Everlast. Bez sparringu – žádný kontakt mezi cvičenci. Cvičíme techniku úderů, stínový box, práci na pytli a lapování s trenérem. Ideální kardio a stres relief pro lidi z kanceláře.
+Profesionální vybavení: rukavice thajských značek Windy a King, lapy Twins, boxerský pytel Everlast. Bez sparringu – žádný kontakt mezi cvičenci. Cvičíme techniku úderů, stínový box, práci na pytli a lapování s trenérem. Kardio a odreagování po dni v kanceláři.
 
 LEKTOR
 Štefan Bitto: ACI trenér fitness I. třídy od roku 2000. Osobní trenér od 2001 – 24+ let praxe. Certifikovaný instruktor pilates. Vede všechny lekce osobně.
