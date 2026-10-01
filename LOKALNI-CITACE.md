@@ -50,7 +50,7 @@ Instagram:      https://www.instagram.com/stefanbitto
 Facebook:       https://www.facebook.com/share/1Hs5UmhdH9/
 
 Otevírací doba: Po-Pá 7:00-20:00
-                So-Ne dle dohody (kontaktujte telefonicky/WhatsApp)
+                So 8:00-14:00, Ne zavřeno
 
 GPS:            50.0653696, 14.4951578
 
@@ -99,7 +99,7 @@ Vybavení:
 
 Vede Štefan Bitto, ACI trenér fitness I. třídy od roku 2000. Osobní trenér od 2001 – 24+ let praxe. Certifikovaný instruktor pilates. Specializace: silový a funkční trénink, kondiční box, pilates reformer.
 
-Studio: U Trati 886/52, Praha 10 – Strašnice. MHD: Tram Radošovická, Bus Korytná. Parkování zdarma v ulici. Po–Pá 7:00–20:00, So–Ne dle dohody.
+Studio: U Trati 886/52, Praha 10 – Strašnice. MHD: Tram Radošovická, Bus Korytná. Parkování zdarma v ulici. Po–Pá 7:00–20:00, So 8:00–14:00.
 
 Vstupní lekce 590 Kč (60 minut). Telefon a WhatsApp: +420 604 925 249.
 ```
@@ -128,7 +128,7 @@ E-mail: stefan@fitpilates.cz
 Web: https://fitpilates.cz
 MHD: Tram Radošovická + Bus Korytná
 Parkování: zdarma v ulici
-Otevřeno: Po–Pá 7:00–20:00, So–Ne dle dohody
+Otevřeno: Po–Pá 7:00–20:00, So 8:00–14:00, Ne zavřeno
 Vstupní lekce: 590 Kč (60 minut, individuální)
 ```
 
@@ -186,7 +186,7 @@ kettlebell Praha
 - Kategorie: **Sport a relaxace → Pilates studio**, secondary: **Sport a relaxace → Fitness centrum**
 - Popis: použij **Verzi 4 (1000 znaků)**
 - Fotky: nahrát všech 9 (Firmy.cz povoluje až 20 fotek)
-- Otevírací doba: vyplnit Po-Pá 7-20, So-Ne nechat **„Otevřeno na zavolání"** (Firmy.cz to umí)
+- Otevírací doba: Po-Pá 7-20, So 8-14, Ne zavřeno
 
 ### 2. Apple Business Connect (Apple Maps)
 - URL: https://businessconnect.apple.com
@@ -222,7 +222,7 @@ Pro KAŽDOU registraci postupuj stejně:
 6. ☐ Kategorie: hlavní **Pilates studio**, sekundární Fitness/Sport
 7. ☐ Popis vyber podle limitu (Verze 1-5 výše)
 8. ☐ Nahraj **logo + 5+ fotek** ze seznamu
-9. ☐ Otevírací doba Po-Pá 7-20, So-Ne podle možnosti adresáře
+9. ☐ Otevírací doba Po-Pá 7-20, So 8-14, Ne zavřeno
 10. ☐ Zaznamenej do tabulky níže: **datum + URL profilu**
 
 ---
