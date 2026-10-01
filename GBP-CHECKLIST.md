@@ -91,7 +91,7 @@ První zkušební lekce 590 Kč.
 📍 U Trati 886/52, Praha 10 - Strašnice
 🚊 Tram Radošovická / 🚌 Bus Korytná
 🅿️ Parkování zdarma v ulici
-🕐 Po-Pá 7:00-20:00, víkend dle dohody
+🕐 Po-Pá 7:00-20:00, So 8:00-14:00
 
 Rezervace: +420 604 925 249
 ```
@@ -201,7 +201,7 @@ Klikni **"Přidat službu"** a pro každou napiš:
   5. *Q: Kde přesně jste?* → A: U Trati 886/52, Praha 10 - Strašnice. Mapa: [link na GBP].
   6. *Q: Jak se ke studiu dostanu MHD?* → A: Tram Radošovická (linky 7, 22, 26) - 3 minuty pěšky. Bus Korytná. Z metra Strašnická 10 minut pěšky.
   7. *Q: Je u studia parkování?* → A: Ano, v ulici U Trati a okolních ulicích parkování zdarma. Není zde modrá ani fialová zóna.
-  8. *Q: Cvičíte i o víkendu?* → A: Víkendové lekce probíhají dle individuální dohody. Stačí zavolat na +420 604 925 249.
+  8. *Q: Cvičíte i o víkendu?* → A: Ano, v sobotu 8:00–14:00. V neděli je zavřeno. Rezervace online nebo na +420 604 925 249.
 
 ---
 
