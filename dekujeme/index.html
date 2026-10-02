@@ -58,6 +58,17 @@ img{max-width:100%;height:auto;display:block}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
 gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSHB184V2T"></script>
+<!-- Konverze: odeslaný kontaktní formulář z podstránek (Netlify POST → /dekujeme/). Přidáno 2.10.2026 -->
+<script>(function(){
+  try{
+    var r=document.referrer||'', from='';
+    if(r){ var u=new URL(r); if(!/(^|\.)fitpilates\.cz$/i.test(u.hostname)) return; from=u.pathname; } else return;
+    var k='fp-lead-'+from;
+    if(sessionStorage.getItem(k)) return; /* ochrana proti dvojímu započtení při obnovení stránky */
+    sessionStorage.setItem(k,'1');
+    gtag('event','generate_lead',{method:'kontaktni_formular',form_page:from});
+  }catch(e){}
+})();</script>
 </head>
 <body>
 <div id="fp-progress"></div>
