@@ -185,17 +185,17 @@
 
   /* ── Předvyplněná WhatsApp zpráva podle stránky ── */
   var WA_TEXTS = {
-    '/bolest-zad-praha/': 'Dobrý den, řeším bolesti zad ze sedavé práce a zajímá mě úvodní konzultace. Můžeme domluvit termín?',
-    '/restart-po-40/':    'Dobrý den, po delší pauze bych se rád(a) vrátil(a) k pohybu. Zajímá mě úvodní konzultace.',
-    '/pilates-na-strojich/': 'Dobrý den, zajímá mě pilates na strojích. Rád(a) bych domluvil(a) úvodní konzultaci.',
-    '/pilates-allegro/':  'Dobrý den, zajímá mě reformer pilates. Můžeme domluvit úvodní konzultaci?',
-    '/silovy-trenink/':   'Dobrý den, zajímá mě silový a funkční trénink. Můžeme domluvit úvodní konzultaci?',
-    '/kondicni-box/':     'Dobrý den, zajímá mě kondiční box. Můžeme domluvit úvodní konzultaci?',
-    '/osobni-trener-praha-10/': 'Dobrý den, hledám osobního trenéra v Praze 10. Zajímá mě úvodní konzultace.'
+    '/bolest-zad-praha/': 'Dobrý den, řeším bolesti zad ze sedavé práce a zajímá mě vstupní lekce za 590 Kč. Můžeme domluvit termín?',
+    '/restart-po-40/':    'Dobrý den, po delší pauze bych se rád(a) vrátil(a) k pohybu. Zajímá mě vstupní lekce za 590 Kč.',
+    '/pilates-na-strojich/': 'Dobrý den, zajímá mě pilates na strojích. Rád(a) bych domluvil(a) vstupní lekci za 590 Kč.',
+    '/pilates-allegro/':  'Dobrý den, zajímá mě reformer pilates. Můžeme domluvit vstupní lekci za 590 Kč?',
+    '/silovy-trenink/':   'Dobrý den, zajímá mě silový a funkční trénink. Můžeme domluvit vstupní lekci za 590 Kč?',
+    '/kondicni-box/':     'Dobrý den, zajímá mě kondiční box. Můžeme domluvit vstupní lekci za 590 Kč?',
+    '/osobni-trener-praha-10/': 'Dobrý den, hledám osobního trenéra v Praze 10. Zajímá mě vstupní lekce za 590 Kč.'
   };
   function waText(){
     return WA_TEXTS[location.pathname] ||
-      'Dobrý den, mám zájem o úvodní konzultaci ve Fit Pilates. Můžeme domluvit termín?';
+      'Dobrý den, mám zájem o vstupní lekci za 590 Kč ve Fit Pilates. Můžeme domluvit termín?';
   }
   function waHref(){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(waText()); }
 
@@ -232,7 +232,7 @@
     var bar = document.createElement('div');
     bar.className = 'fp-sticky';
     bar.innerHTML =
-      '<a class="fp-sticky__main" data-fp-place="sticky" href="' + BOOK + '" target="_blank" rel="noopener">Rezervovat konzultaci</a>' +
+      '<a class="fp-sticky__main" data-fp-place="sticky" href="' + BOOK + '" target="_blank" rel="noopener">Vstupní lekce 590 Kč</a>' +
       '<a class="fp-sticky__icon" data-fp-place="sticky" href="tel:' + TEL + '" aria-label="Zavolat Štefanovi">' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>' +
       '</a>' +
