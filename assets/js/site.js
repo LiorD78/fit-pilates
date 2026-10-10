@@ -155,7 +155,7 @@
   function buildBanner(){
     var saved=null; try{ saved=localStorage.getItem(KEY); }catch(_){}
     if(saved){ if(saved==='granted') applyGranted(); return; }
-    var css='.fp-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:560px;margin:0 auto;background:#0f1115;color:#f3f3f0;border:1px solid rgba(196,154,60,.45);border-radius:14px;padding:18px 20px;box-shadow:0 12px 44px rgba(0,0,0,.5);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.55}.fp-cc p{margin:0 0 12px}.fp-cc a{color:#c49a3c}.fp-cc__row{display:flex;gap:10px;flex-wrap:wrap}.fp-cc button{flex:1;min-width:130px;padding:11px 16px;border-radius:999px;border:0;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit}.fp-cc__ok{background:#c49a3c;color:#1a1a1a}.fp-cc__no{background:transparent;color:#f3f3f0;border:1px solid rgba(243,243,240,.35)}';
+    var css='.fp-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:560px;margin:0 auto;background:#0f1115;color:#f3f3f0;border:1px solid rgba(196,154,60,.45);border-radius:14px;padding:18px 20px;box-shadow:0 12px 44px rgba(0,0,0,.5);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.55}.fp-cc p{margin:0 0 12px}.fp-cc a{color:#c49a3c}.fp-cc__row{display:flex;gap:10px;flex-wrap:wrap}.fp-cc button{flex:1;min-width:130px;padding:11px 16px;border-radius:999px;border:0;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit}.fp-cc__ok{background:#c49a3c;color:#1a1a1a}.fp-cc__no{background:transparent;color:#f3f3f0;border:1px solid rgba(243,243,240,.35)}@media (max-width:600px){.fp-cc{left:8px;right:8px;padding:12px 14px;font-size:12.5px;line-height:1.45;border-radius:12px}.fp-cc p{margin:0 0 8px}.fp-cc__row{flex-wrap:nowrap;gap:8px}.fp-cc button{min-width:0;padding:9px 10px;font-size:13px}}';
     var st=document.createElement('style'); st.textContent=css; document.head.appendChild(st);
     var box=document.createElement('div'); box.className='fp-cc';
     box.setAttribute('role','dialog'); box.setAttribute('aria-label','Souhlas s cookies');
@@ -185,17 +185,17 @@
 
   /* ── Předvyplněná WhatsApp zpráva podle stránky ── */
   var WA_TEXTS = {
-    '/bolest-zad-praha/': 'Dobrý den, řeším bolesti zad ze sedavé práce a zajímá mě úvodní konzultace. Můžeme domluvit termín?',
-    '/restart-po-40/':    'Dobrý den, po delší pauze bych se rád(a) vrátil(a) k pohybu. Zajímá mě úvodní konzultace.',
-    '/pilates-na-strojich/': 'Dobrý den, zajímá mě pilates na strojích. Rád(a) bych domluvil(a) úvodní konzultaci.',
-    '/pilates-allegro/':  'Dobrý den, zajímá mě reformer pilates. Můžeme domluvit úvodní konzultaci?',
-    '/silovy-trenink/':   'Dobrý den, zajímá mě silový a funkční trénink. Můžeme domluvit úvodní konzultaci?',
-    '/kondicni-box/':     'Dobrý den, zajímá mě kondiční box. Můžeme domluvit úvodní konzultaci?',
-    '/osobni-trener-praha-10/': 'Dobrý den, hledám osobního trenéra v Praze 10. Zajímá mě úvodní konzultace.'
+    '/bolest-zad-praha/': 'Dobrý den, řeším bolesti zad ze sedavé práce a zajímá mě vstupní lekce za 590 Kč. Můžeme domluvit termín?',
+    '/restart-po-40/':    'Dobrý den, po delší pauze bych se rád(a) vrátil(a) k pohybu. Zajímá mě vstupní lekce za 590 Kč.',
+    '/pilates-na-strojich/': 'Dobrý den, zajímá mě pilates na strojích. Rád(a) bych domluvil(a) vstupní lekci za 590 Kč.',
+    '/pilates-allegro/':  'Dobrý den, zajímá mě reformer pilates. Můžeme domluvit vstupní lekci za 590 Kč?',
+    '/silovy-trenink/':   'Dobrý den, zajímá mě silový a funkční trénink. Můžeme domluvit vstupní lekci za 590 Kč?',
+    '/kondicni-box/':     'Dobrý den, zajímá mě kondiční box. Můžeme domluvit vstupní lekci za 590 Kč?',
+    '/osobni-trener-praha-10/': 'Dobrý den, hledám osobního trenéra v Praze 10. Zajímá mě vstupní lekce za 590 Kč.'
   };
   function waText(){
     return WA_TEXTS[location.pathname] ||
-      'Dobrý den, mám zájem o úvodní konzultaci ve Fit Pilates. Můžeme domluvit termín?';
+      'Dobrý den, mám zájem o vstupní lekci za 590 Kč ve Fit Pilates. Můžeme domluvit termín?';
   }
   function waHref(){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(waText()); }
 
@@ -232,7 +232,7 @@
     var bar = document.createElement('div');
     bar.className = 'fp-sticky';
     bar.innerHTML =
-      '<a class="fp-sticky__main" data-fp-place="sticky" href="' + BOOK + '" target="_blank" rel="noopener">Rezervovat konzultaci</a>' +
+      '<a class="fp-sticky__main" data-fp-place="sticky" href="' + BOOK + '" target="_blank" rel="noopener">Vstupní lekce 590 Kč</a>' +
       '<a class="fp-sticky__icon" data-fp-place="sticky" href="tel:' + TEL + '" aria-label="Zavolat Štefanovi">' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>' +
       '</a>' +

@@ -491,3 +491,10 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
 }
 /* Blog: články na šířku homepage (30. 9. 2026) — omezení výšky fotek, aby se na širokém sloupci nezvětšovaly do extrému */
 .content-prose figure img,.content-prose picture img{max-height:680px;object-fit:cover}
+
+/* ── 10.10.2026: mobilní konverze — kratší hero, tabulky bez přetékání ── */
+@media (max-width:600px){
+  .page-hero .lph-bc{display:none}
+  .page-hero-inner:has(.lph-acts) .meta{display:none}
+  .compare-table,.price-table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
