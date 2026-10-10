@@ -127,10 +127,24 @@
     if(window.__fpSklik) return; window.__fpSklik=true;
     /* TODO Sklik: až poběží kampaň, sem retargeting/měřící kód (c.seznam.cz/js/rc.js) */
   }
-  function applyGranted(){ gtag('consent','update',GRANT); loadSklik(); }
+  // Meta Pixel (dataset „Fit Pilates web“) — načte se jen po souhlasu s cookies
+  var META_PIXEL='1061835123516099';
+  function loadMeta(){
+    if(window.fbq) return;
+    var n=window.fbq=function(){ n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments); };
+    if(!window._fbq) window._fbq=n;
+    n.push=n; n.loaded=true; n.version='2.0'; n.queue=[];
+    var t=document.createElement('script'); t.async=true; t.src='https://connect.facebook.net/en_US/fbevents.js';
+    var f=document.getElementsByTagName('script')[0]; f.parentNode.insertBefore(t,f);
+    window.fbq('init',META_PIXEL); window.fbq('track','PageView');
+  }
+  // GA4 název události → standardní událost Mety
+  var META_MAP={booking_click:'Schedule',phone_click:'Contact',email_click:'Contact',whatsapp_click:'Contact',form_submit:'Lead'};
+  window.fpMeta=function(name){ if(window.fbq && META_MAP[name]) window.fbq('track',META_MAP[name]); };
+  function applyGranted(){ gtag('consent','update',GRANT); loadSklik(); loadMeta(); }
 
   // ─── Konverzní události (booking/phone/email) ───
-  function track(name, params){ gtag('event', name, params||{}); /* Sklik konverze slot */ }
+  function track(name, params){ gtag('event', name, params||{}); if(window.fpMeta) window.fpMeta(name); /* Sklik konverze slot */ }
   function initEvents(){
     document.addEventListener('click', function(e){
       var a=e.target && e.target.closest ? e.target.closest('a') : null;
@@ -181,7 +195,7 @@
   var BOOK  = 'https://fitpilates.isportsystem.cz/';
 
   function gtag(){ (window.dataLayer=window.dataLayer||[]).push(arguments); }
-  function track(name, params){ gtag('event', name, params||{}); }
+  function track(name, params){ gtag('event', name, params||{}); if(window.fpMeta) window.fpMeta(name); }
 
   /* ── Předvyplněná WhatsApp zpráva podle stránky ── */
   var WA_TEXTS = {
