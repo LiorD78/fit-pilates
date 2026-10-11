@@ -80,6 +80,7 @@ export default async (req: Request) => {
     vysvetlivky: {
       landing: "příchod na web z odkazu s kampaňovými parametry (gclid, fbclid, utm_*)",
       booking: "klik na rezervaci přes /go/rezervace; zdroj podle stránky, ze které klik přišel",
+      whatsapp: "klik na „Napsat na WhatsApp“ přes /go/whatsapp; zdroj podle stránky, ze které klik přišel",
       "web": "klik na rezervaci ze stránky bez kampaňových parametrů (organika, přímý vstup…)",
     },
     podle_zdroje: bySource,
