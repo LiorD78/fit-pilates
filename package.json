@@ -1,0 +1,8 @@
+{
+  "name": "fit-pilates",
+  "private": true,
+  "description": "Statický web fitpilates.cz. Závislost slouží jen Netlify Edge Functions (anonymní počítadlo kampaní) — web sám žádný build nemá.",
+  "dependencies": {
+    "@netlify/blobs": "^11.1.4"
+  }
+}

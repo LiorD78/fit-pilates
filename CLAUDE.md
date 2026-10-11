@@ -21,6 +21,11 @@
 - **1 global JS:** `assets/js/site.js`
 - **11 HTML stránek:** index.html + 9 podstránek + gdpr.html
 - **4 blog články** v /blog/
+- **Netlify Edge Functions** (`netlify/edge-functions/`, sdílený kód `netlify/lib/fp-attr.ts`) — jediná výjimka z „žádný npm“: `package.json` má závislost `@netlify/blobs` jen pro ně. Web samotný build nemá.
+  - `fp-landing.ts` — anonymně počítá příchody s kampaňovými parametry (gclid, fbclid, utm_*), bez cookies a IP
+  - `fp-go.ts` — `/go/rezervace` → 302 na fitpilates.isportsystem.cz + započte klik podle zdrojové stránky. **Všechny odkazy na rezervace vedou přes `/go/rezervace`**, ne přímo na iSport (výjimka: JSON-LD)
+  - `fp-stats.ts` — `GET /api/fp-stats?k=<FP_STATS_KEY>&days=30` → JSON souhrn (klíč je v env proměnných Netlify)
+  - `_redirects` drží záložní přesměrování `/go/rezervace` pro případ výpadku edge funkce
 - **Pre-build skript:** připravujeme v `scripts/build-partials.sh` pro injection `_partials/nav.html` a `_partials/footer.html` do markerů `<!-- NAV-START --><!-- NAV-END -->` a `<!-- FOOTER-START --><!-- FOOTER-END -->`
 
 ## Designové konvence

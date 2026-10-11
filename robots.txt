@@ -7,11 +7,14 @@ Allow: /
 Disallow: /*.md$
 Disallow: /admin/
 Disallow: /api/
+Disallow: /go/
 Disallow: /tmp/
 
 # ─── SEARCH ENGINES (explicit allow) ───
 User-agent: Googlebot
 Allow: /
+Disallow: /go/
+Disallow: /api/
 
 User-agent: Googlebot-Image
 Allow: /images/

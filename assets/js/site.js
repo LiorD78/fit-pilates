@@ -1,6 +1,6 @@
 /* Fit Pilates — site.js
  * Mobile burger menu, nav scroll state, smooth scroll
- * Last updated: 2026-04-29
+ * Last updated: 2026-10-11 (rezervace přes /go/rezervace, přenos kampaňových parametrů)
  */
 (function () {
   'use strict';
@@ -150,7 +150,7 @@
       var a=e.target && e.target.closest ? e.target.closest('a') : null;
       if(!a) return;
       var href=a.getAttribute('href')||'';
-      if(/reservio\.com|isportsystem\.cz/i.test(href)) track('booking_click',{link_url:href});
+      if(/reservio\.com|isportsystem\.cz|\/go\/rezervace/i.test(href)) track('booking_click',{link_url:href});
       else if(href.indexOf('tel:')===0) track('phone_click');
       else if(href.indexOf('mailto:')===0 || (a.classList&&a.classList.contains('fp-email'))) track('email_click');
     }, true);
@@ -192,7 +192,7 @@
   'use strict';
   var TEL   = '+420604925249';
   var WA    = '420604925249';
-  var BOOK  = 'https://fitpilates.isportsystem.cz/';
+  var BOOK  = '/go/rezervace'; /* přesměrování na iSport přes anonymní počítadlo (netlify/edge-functions/fp-go.ts) */
 
   function gtag(){ (window.dataLayer=window.dataLayer||[]).push(arguments); }
   function track(name, params){ gtag('event', name, params||{}); if(window.fpMeta) window.fpMeta(name); }
@@ -285,6 +285,88 @@
   }
 
   function init(){ initWaPrefill(); initExtraEvents(); initStickyWatcher(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
+/* ============================================================
+   Přenos kampaňových parametrů do interních odkazů + zdroj ve formuláři
+   Přidáno: 11.10.2026 — atribuce placených příchodů
+   Proč: návštěvník z reklamy často přijme cookies až na druhé stránce.
+   Bez parametrů v URL by GA4 takovou návštěvu přiřadil jako „fitpilates.cz /
+   referral“ a reklama by o ni přišla. Nic se neukládá do prohlížeče —
+   parametry se jen nesou v adrese interních odkazů.
+   ============================================================ */
+(function(){
+  'use strict';
+  var KEYS = ['gclid','gbraid','wbraid','fbclid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  var params;
+  try { params = new URLSearchParams(location.search); } catch(_) { return; }
+  var carry = [];
+  for (var i=0;i<KEYS.length;i++){
+    var v = params.get(KEYS[i]);
+    if (v) carry.push([KEYS[i], v.slice(0, 300)]);
+  }
+
+  /* ── Skrytý údaj „zdroj“ v poptávkovém formuláři (bez ID kliknutí) ── */
+  function sourceLabel(){
+    var parts = [];
+    var src = params.get('utm_source'), med = params.get('utm_medium'),
+        camp = params.get('utm_campaign'), cont = params.get('utm_content');
+    if (params.has('gclid') || params.has('gbraid') || params.has('wbraid')) parts.push('Google Ads');
+    if (src) parts.push(src + (med ? ' / ' + med : ''));
+    if (camp) parts.push('kampaň: ' + camp);
+    if (cont) parts.push('obsah: ' + cont);
+    if (!parts.length && params.has('fbclid')) parts.push('Facebook/Instagram (sdílený odkaz)');
+    if (!parts.length){
+      var ref = '';
+      try { ref = document.referrer ? new URL(document.referrer).hostname.replace(/^www\./,'') : ''; } catch(_){}
+      parts.push(ref && ref !== location.hostname.replace(/^www\./,'') ? 'odkaz z ' + ref : 'přímý vstup / web');
+    }
+    return parts.join(' · ').slice(0, 200);
+  }
+  function fillForm(){
+    var f = document.querySelector('#fp-form input[name="zdroj"]');
+    if (f && !f.value) f.value = sourceLabel();
+  }
+
+  if (!carry.length) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fillForm);
+    else fillForm();
+    return;
+  }
+
+  /* ── Doplnění parametrů do interních odkazů ── */
+  var SKIP = /^(#|mailto:|tel:|sms:|javascript:|data:)/i;
+  var FILE = /\.(pdf|jpe?g|png|webp|avif|gif|svg|mp4|zip|txt|xml|json)$/i;
+  function decorate(a){
+    if (!a || !a.getAttribute) return;
+    var href = a.getAttribute('href');
+    if (!href || SKIP.test(href)) return;
+    var u;
+    try { u = new URL(href, location.href); } catch(_) { return; }
+    if (u.origin !== location.origin) return;
+    if (FILE.test(u.pathname) || u.pathname.indexOf('/assets/') === 0 || u.pathname.indexOf('/images/') === 0) return;
+    if (u.pathname === location.pathname && u.search === location.search && u.hash) return; /* kotva na téže stránce */
+    var changed = false;
+    for (var i=0;i<carry.length;i++){
+      if (!u.searchParams.has(carry[i][0])) { u.searchParams.set(carry[i][0], carry[i][1]); changed = true; }
+    }
+    if (changed) a.setAttribute('href', u.pathname + u.search + u.hash);
+  }
+  function decorateAll(){
+    var links = document.querySelectorAll('a[href]');
+    for (var i=0;i<links.length;i++) decorate(links[i]);
+  }
+  /* i pro odkazy vložené později (sticky lišta, menu) — těsně před klikem */
+  function onPoint(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (a) decorate(a);
+  }
+  document.addEventListener('pointerdown', onPoint, true);
+  document.addEventListener('click', onPoint, true);
+
+  function init(){ fillForm(); decorateAll(); setTimeout(decorateAll, 1500); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
