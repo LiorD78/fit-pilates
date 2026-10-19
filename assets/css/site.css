@@ -498,3 +498,78 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
   .page-hero-inner:has(.lph-acts) .meta{display:none}
   .compare-table,.price-table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 }
+
+/* ===== Vstupní lekce — landing pro placený provoz (19. 10. 2026) ===== */
+.vl-hero{position:relative;background:var(--black);color:var(--white);padding:96px 20px 40px;overflow:hidden}
+.vl-hero::before{content:'';position:absolute;inset:0;background:url('/images/allegro-hero-w800.jpg') center 30%/cover no-repeat;opacity:.45}
+.vl-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,27,30,.55) 0%,rgba(26,27,30,.88) 55%,var(--black) 100%)}
+.vl-hero__inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;display:grid;gap:28px}
+.vl-eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-l);margin-bottom:12px}
+.vl-title{font-family:var(--font-serif);font-weight:600;font-size:clamp(34px,9vw,58px);line-height:1.05;margin-bottom:14px}
+.vl-title em{font-style:italic;font-weight:400;color:var(--gold-l)}
+.vl-sub{font-size:16px;line-height:1.6;color:rgba(255,255,255,.88);max-width:520px}
+.vl-sub strong{color:var(--white);font-weight:600}
+.vl-trust{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.vl-trust li{font-size:12px;padding:6px 12px;border:1px solid rgba(255,255,255,.25);border-radius:100px;color:rgba(255,255,255,.85)}
+.vl-card{background:var(--cream);color:var(--charcoal);border-radius:var(--radius-lg);padding:24px 20px;box-shadow:var(--shadow-lg);scroll-margin-top:80px}
+.vl-card__title{font-family:var(--font-serif);font-size:28px;font-weight:600;line-height:1.15;margin-bottom:6px}
+.vl-card__lead{font-size:14px;line-height:1.55;color:var(--grey);margin-bottom:16px}
+.vl-form{display:flex;flex-direction:column;gap:12px}
+.vl-field{display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:500;color:var(--charcoal)}
+.vl-field em{font-style:normal;font-weight:400;color:var(--lgrey)}
+.vl-field input,.vl-field select{width:100%;padding:13px 14px;font-size:16px;font-family:inherit;color:var(--charcoal);background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius-sm);outline:none;transition:border-color .2s}
+.vl-field input:focus,.vl-field select:focus{border-color:var(--gold)}
+.vl-submit{display:block;width:100%;text-align:center;background:var(--gold);color:var(--white);border:0;border-radius:var(--radius-sm);padding:16px 20px;font-family:inherit;font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s}
+.vl-submit:hover,.vl-submit:focus{background:var(--gold-l)}
+.vl-form__note{font-size:12px;line-height:1.55;color:var(--grey)}
+.vl-form__note a,.vl-card__alt a{color:var(--charcoal);text-decoration:underline;text-underline-offset:3px}
+.vl-card__alt{font-size:13px;color:var(--grey);margin-top:14px;text-align:center}
+.vl-section{padding:56px 20px}
+.vl-wrap{max-width:1000px;margin:0 auto}
+.vl-h2{font-family:var(--font-serif);font-size:clamp(28px,6vw,40px);font-weight:600;line-height:1.15;margin-bottom:22px}
+.vl-steps__list{list-style:none;counter-reset:vl;display:grid;gap:18px}
+.vl-steps__list li{counter-increment:vl;position:relative;padding-left:52px}
+.vl-steps__list li::before{content:counter(vl);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--charcoal);color:var(--gold-l);font-family:var(--font-serif);font-size:20px;display:flex;align-items:center;justify-content:center}
+.vl-steps__list strong{display:block;font-size:17px;margin-bottom:4px}
+.vl-steps__list p{color:var(--grey);font-size:15px;line-height:1.6}
+.vl-gallery{background:var(--cream)}
+.vl-gallery__grid{display:grid;gap:14px}
+.vl-gallery figure{margin:0}
+.vl-gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--radius-md)}
+.vl-gallery figcaption{font-size:13px;color:var(--grey);margin-top:6px}
+.vl-prices__list{display:grid;gap:0;border-top:1px solid var(--border)}
+.vl-prices__list>div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--border)}
+.vl-prices__list dt{font-size:15px}
+.vl-prices__list dd{font-weight:600;white-space:nowrap}
+.vl-muted{font-size:14px;color:var(--grey);margin-top:16px;line-height:1.6}
+.vl-faq{background:var(--cream)}
+.vl-final{background:var(--black);color:var(--white);text-align:center}
+.vl-final__inner p{color:rgba(255,255,255,.8);margin-bottom:20px}
+.vl-submit--link{display:inline-block;width:auto;padding:16px 32px}
+@media (min-width:901px){
+  .vl-hero{padding:130px 56px 72px}
+  .vl-hero::before{background-image:url('/images/allegro-hero-w1600.jpg');opacity:.55}
+  .vl-hero::after{background:linear-gradient(90deg,rgba(26,27,30,.92) 0%,rgba(26,27,30,.7) 50%,rgba(26,27,30,.35) 100%)}
+  .vl-hero__inner{grid-template-columns:1.1fr .9fr;align-items:center;gap:56px}
+  .vl-card{padding:32px 30px}
+  .vl-section{padding:80px 56px}
+  .vl-steps__list{grid-template-columns:repeat(3,1fr);gap:28px}
+  .vl-gallery__grid{grid-template-columns:repeat(3,1fr)}
+}
+/* Na této stránce je formulář přímo v úvodu — spodní lišta by ho jen dublovala */
+.vl-page .fp-sticky{display:none !important}
+.vl-page.has-sticky-cta{padding-bottom:0}
+
+/* ===== Úvod podstránek na mobilu: tlačítka hned pod nadpisem (19. 10. 2026)
+   Dřív byl úvod na výšku obrazovky a tlačítka vypadla pod ohyb — lidé z reklamy
+   odcházeli dřív, než je uviděli. ===== */
+@media (max-width:900px){
+  .page-hero{height:auto;min-height:0;padding-top:88px}
+  .page-hero-inner{display:flex;flex-direction:column;padding:0 20px 40px}
+  .page-hero-inner .lph-bc{display:none}
+  .page-hero-inner h1{order:1}
+  .page-hero-inner .lph-acts{order:2;margin-top:18px}
+  .page-hero-inner .lead{order:3;margin:22px 0 0}
+  .page-hero-inner .meta{order:4}
+}
+.vl-final .vl-h2{color:var(--white)}
