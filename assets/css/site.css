@@ -573,3 +573,20 @@ a.pill.gold:hover{background:rgba(196,154,60,.22);border-color:var(--gold-l);col
   .page-hero-inner .meta{order:4}
 }
 .vl-final .vl-h2{color:var(--white)}
+
+/* ===== Blok vstupní lekce uvnitř článků (19. 10. 2026)
+   Silné články (co je reformer, začátečníci, Praha) mají tisíce zobrazení,
+   ale čtenáře nikam neposílaly. Blok je odkáže na obchodní stránku a na formulář. ===== */
+.content-prose .fp-leadbox{margin:40px 0;padding:26px 24px;background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:var(--radius-sm)}
+.content-prose .fp-leadbox p{margin:0}
+.content-prose .fp-leadbox__eyebrow{font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold)}
+.content-prose .fp-leadbox__title{margin-top:6px !important;font-family:var(--font-serif);font-size:1.6rem;line-height:1.2;font-weight:600;color:var(--black)}
+.content-prose .fp-leadbox__text{margin-top:10px !important;color:var(--charcoal)}
+.content-prose .fp-leadbox__acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:18px}
+.content-prose .fp-leadbox__btn{display:inline-block;background:var(--gold);color:var(--white) !important;text-decoration:none !important;border-radius:999px;padding:13px 24px;font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;transition:background .2s}
+.content-prose .fp-leadbox__btn:hover{background:var(--gold-l)}
+.content-prose .fp-leadbox__note{font-size:var(--text-sm);color:var(--grey)}
+@media (max-width:600px){
+  .content-prose .fp-leadbox{padding:22px 18px}
+  .content-prose .fp-leadbox__btn{display:block;width:100%;text-align:center}
+}
