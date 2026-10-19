@@ -57,6 +57,7 @@ Majitel a jediný lektor studia. ACI Trenér fitness I. třídy od roku 2000, os
 - [Štefan Bitto](https://fitpilates.cz/o-stefanovi/): Profil lektora – kvalifikace a kariéra
 - [Studio](https://fitpilates.cz/studio/): Fotogalerie studia (reálné fotografie)
 - [Rezervace](https://fitpilates.cz/rezervace/): Online rezervace lekcí
+- [Ceník a podmínky](https://fitpilates.cz/podminky/): Ceny, rezervace, platba, storno 24 h předem, permanentky (platnost 4 měsíce), zrušení ze strany studia, pozdní příchod
 - [Příběh Libora Dospěla](https://fitpilates.cz/pribeh-libor/): Esej dlouholetého klienta – 20 let s jedním trenérem (stránka o klientovi, ne o lektorovi)
 
 ## Průvodci (blog)
@@ -89,7 +90,7 @@ Metodika se zaměřuje na hluboký stabilizační systém, korekci posturálníc
 Vstupní lekce trvá 60 minut: rozbor cílů a pohybové historie, podle potřeby diagnostika pohybového aparátu, vyzkoušení reformeru nebo dalších disciplín a návrh dlouhodobého plánu. Běžné lekce na ni navazují.
 
 **Jaká je politika rušení lekcí?**
-Lekci lze bezplatně zrušit 24 hodin předem.
+Lekci lze bezplatně zrušit 24 hodin předem. Při pozdějším zrušení se lekce účtuje (u permanentky odečte). Když lekci zruší studio, nabídne náhradní termín nebo vrátí platbu. Podrobnosti: https://fitpilates.cz/podminky/
 
 **Je studio diskrétní?**
 Ano. Studio je neveřejné, přístupné pouze objednaným klientům.
