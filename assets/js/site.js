@@ -137,9 +137,12 @@
     var t=document.createElement('script'); t.async=true; t.src='https://connect.facebook.net/en_US/fbevents.js';
     var f=document.getElementsByTagName('script')[0]; f.parentNode.insertBefore(t,f);
     window.fbq('init',META_PIXEL); window.fbq('track','PageView');
+    /* Lead se posílá až z /dekujeme/ (26.10.2026): při odeslání formuláře prohlížeč odchází
+       na děkovací stránku a událost Lead se často nestihla odeslat. */
+    if(window.fpPendingLead){ window.fbq('track','Lead',{content_name:window.fpPendingLead}); window.fpPendingLead=null; }
   }
   // GA4 název události → standardní událost Mety
-  var META_MAP={booking_click:'Schedule',phone_click:'Contact',email_click:'Contact',whatsapp_click:'Contact',form_submit:'Lead'};
+  var META_MAP={booking_click:'Schedule',phone_click:'Contact',email_click:'Contact',whatsapp_click:'Contact'};  /* form_submit → Lead se měří na /dekujeme/ */
   window.fpMeta=function(name){ if(window.fbq && META_MAP[name]) window.fbq('track',META_MAP[name]); };
   function applyGranted(){ gtag('consent','update',GRANT); loadSklik(); loadMeta(); }
 

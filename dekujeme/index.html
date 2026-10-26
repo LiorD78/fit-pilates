@@ -67,6 +67,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
     if(sessionStorage.getItem(k)) return; /* ochrana proti dvojímu započtení při obnovení stránky */
     sessionStorage.setItem(k,'1');
     gtag('event','generate_lead',{method:'kontaktni_formular',form_page:from});
+    window.fpPendingLead=from; /* Meta Lead – odešle site.js po načtení pixelu (jen se souhlasem s cookies) */
   }catch(e){}
 })();</script>
 </head>
@@ -190,6 +191,6 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
 <!-- FOOTER-END -->
 
 <!-- Mobile nav overlay + JS (společné pro všechny stránky) -->
-<script src="/assets/js/site.js?v=19102026-vstupni" defer></script>
+<script src="/assets/js/site.js?v=26102026-lead" defer></script>
 </body>
 </html>
