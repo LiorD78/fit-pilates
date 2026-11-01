@@ -39,9 +39,10 @@
 
 ## Ceník
 - Vstupní lekce: 590 Kč
-- Skupinová lekce (max 3 osoby): 790 Kč
+- Skupinový trénink (max 6 osob, bez strojů): 590 Kč — Po a Út 18:00, St a Čt 16:00, Pá 14:00
+- Skupinová lekce na reformeru (max 3 osoby): 790 Kč — Čt 19:00
 - Individuální lekce: 1 290 Kč
-- Balíček 10 lekcí skupinový: 6 990 Kč
+- Balíček 10 lekcí skupinový (reformer): 6 990 Kč
 - Balíček 10 lekcí individuální: 11 490 Kč
 
 ## Equipment (vše Balanced Body)
