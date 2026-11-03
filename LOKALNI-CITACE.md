@@ -13,7 +13,7 @@
 | 1 | Google Business Profile | ★★★★★ kritická | ✅ hotovo, ověřeno, 10 recenzí 5,0 |
 | 2 | **Firmy.cz** (Seznam) | ★★★★★ vysoká | ✅ hotovo, profil 2607410 |
 | 3 | **Apple Business Connect** | ★★★★ | ⏳ další na řadě |
-| 4 | **Bing Places** | ★★★ | ⏳ lze importovat z GBP |
+| 4 | **Bing Places** | ★★★ | ✅ hotovo, import z GBP (říjen 2026) |
 | 5 | SportCentral.cz | ★★ | ⏳ oborový, nízká priorita |
 
 ### Vyřazeno z původního seznamu (revize 8. 9. 2026)
