@@ -1,9 +1,10 @@
 # robots.txt for fitpilates.cz
-# Last updated: 2026-04-28
+# Last updated: 2026-11-05
 
 # ─── DEFAULT POLICY ───
 User-agent: *
 Allow: /
+Allow: /api/fp-stats
 Disallow: /*.md$
 Disallow: /admin/
 Disallow: /api/
