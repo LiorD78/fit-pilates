@@ -46,7 +46,9 @@
 <meta name="ICBM" content="50.0653696, 14.4951578">
 
 <!-- Performance: preload hero (responsive) -->
-<link rel="preload" as="image" href="images/hero-w800.jpg" imagesrcset="images/hero-w800.jpg 800w, images/hero-w1200.jpg 1200w, images/hero.jpg 1728w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" href="/images/hero-w800.webp" type="image/webp" media="(max-width: 800px)" fetchpriority="high">
+<link rel="preload" as="image" href="/images/hero-w1200.webp" type="image/webp" media="(min-width: 801px) and (max-width: 1200px)" fetchpriority="high">
+<link rel="preload" as="image" href="/images/hero.webp" type="image/webp" media="(min-width: 1201px)" fetchpriority="high">
 
 <!-- Fonts -->
 <link rel="preload" href="/assets/fonts/cormorant-garamond-normal-var-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -396,10 +398,10 @@ img{max-width:100%;height:auto;display:block}
 .site-nav__menu a{color:#fff;text-decoration:none;font-size:14px;letter-spacing:.02em;font-weight:500}
 .site-nav__menu a:hover{opacity:.75}
 .site-nav__overlay{display:none}
-.site-nav__overlay.is-open{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;position:fixed;inset:0;background:rgba(20,21,24,.97);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);z-index:999;padding:90px 24px 40px}
+.site-nav__overlay.is-open{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;position:fixed;inset:0;background:rgba(20,21,24,.97);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);z-index:999;padding:90px 24px 40px;--gold-ink:var(--gold);}
 .site-nav__overlay ul{list-style:none;display:flex;flex-direction:column;gap:18px;text-align:center}
 .site-nav__overlay a{color:#fff;text-decoration:none;font-size:22px;font-family:Cormorant Garamond,serif;letter-spacing:.02em}
-.site-nav__overlay-cta{display:inline-block;padding:14px 32px;background:#c49a3c;color:#fff !important;text-decoration:none;border-radius:999px;font-weight:600;font-size:15px;font-family:Inter,sans-serif !important;letter-spacing:.04em;text-transform:uppercase;margin-top:8px}
+.site-nav__overlay-cta{display:inline-block;padding:14px 32px;background:#c49a3c;color:#1a1b1e !important;text-decoration:none;border-radius:999px;font-weight:600;font-size:15px;font-family:Inter,sans-serif !important;letter-spacing:.04em;text-transform:uppercase;margin-top:8px}
 .site-nav__overlay-meta{color:rgba(255,255,255,.7);font-size:13px;text-align:center;line-height:1.7;margin-top:24px}
 .site-nav__overlay-meta a{color:rgba(255,255,255,.85);font-size:13px;font-family:Inter,sans-serif !important}
 @media (min-width:901px){
@@ -410,7 +412,7 @@ img{max-width:100%;height:auto;display:block}
   .site-nav__cta{padding:11px 22px !important;font-size:13px !important;letter-spacing:.06em !important;text-transform:uppercase}
 }
 </style>
-<link rel="stylesheet" href="/assets/css/site.css?v=15112026-fonts">
+<link rel="stylesheet" href="/assets/css/site.css?v=15112026-kontrast">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x2d94kqdkf");</script>
 <!-- Google Consent Mode v2 + GA4 (fitpilates) -->
@@ -437,7 +439,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
     <li><a href="/blog/" data-key="blog">Blog</a></li>
     <li><a href="/#cenik" data-key="cenik">Ceník</a></li>
   </ul>
-  <div class="site-nav__icons"><a class="site-nav__icon" href="tel:+420604925249" data-fp-place="nav" aria-label="Zavolat Štefanovi" title="Zavolat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a class="site-nav__icon" href="https://wa.me/420604925249" target="_blank" rel="noopener" data-fp-place="nav" aria-label="Napsat na WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg></a></div><a href="/go/rezervace" target="_blank" rel="noopener" class="site-nav__cta" data-key="rezervace" style="display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;background:#c49a3c;color:#fff;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:.01em;margin-left:auto;white-space:nowrap;line-height:1">Rezervovat</a>
+  <div class="site-nav__icons"><a class="site-nav__icon" href="tel:+420604925249" data-fp-place="nav" aria-label="Zavolat Štefanovi" title="Zavolat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a class="site-nav__icon" href="https://wa.me/420604925249" target="_blank" rel="noopener" data-fp-place="nav" aria-label="Napsat na WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg></a></div><a href="/go/rezervace" target="_blank" rel="noopener" class="site-nav__cta" data-key="rezervace" style="display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;background:#c49a3c;color:#1a1b1e;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:.01em;margin-left:auto;white-space:nowrap;line-height:1">Rezervovat</a>
   <button class="site-nav__burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="siteNavOverlay" style="display:block;background:transparent;border:0;cursor:pointer;padding:8px;width:40px;height:40px;flex-shrink:0">
     <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
     <span style="display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px"></span>
@@ -647,7 +649,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
       </picture>
     </div>
     <div class="trainer-content">
-      <div class="tag" style="color:var(--gold);">Váš lektor</div>
+      <div class="tag" style="color:var(--gold-ink);">Váš lektor</div>
       <h2 style="color:var(--white);margin-bottom:16px;"><em>Štefan Bitto</em></h2>
       <p class="lead" style="color:rgba(255,255,255,.55);margin-bottom:24px;">Certifikovaný instruktor pilates, osobní trenér a instruktor kondičního boxu v jedné osobě. To je přesně ten mix, na kterém Fit Pilates stojí.</p>
       <div class="trainer-feats">
@@ -720,7 +722,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
         </picture>
       </div>
     </div>
-    <p style="margin-top:20px;font-size:12px;color:var(--lgrey);text-align:right;">Šatny · Sprchy · Sociální zázemí · Klimatizace</p>
+    <p style="margin-top:20px;font-size:12px;color:var(--grey);text-align:right;">Šatny · Sprchy · Sociální zázemí · Klimatizace</p>
   </div>
 </div>
 
@@ -799,7 +801,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
         <a href="/go/rezervace" target="_blank" rel="noopener" class="btn-b">Rezervovat →</a>
       </div>
     </div>
-    <p style="text-align:center;font-size:12px;color:var(--lgrey);margin-top:20px;">Vstupní lekce 590 Kč · Bez závazků · Platba online nebo na místě</p>
+    <p style="text-align:center;font-size:12px;color:var(--grey);margin-top:20px;">Vstupní lekce 590 Kč · Bez závazků · Platba online nebo na místě</p>
   </div>
 </div>
 
@@ -810,14 +812,14 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
     <h2>Co říkají<br><em>naši klienti</em></h2>
   </div>
   <!-- Featured long-form testimonial: pribeh-libor flagship -->
-  <a href="/pribeh-libor/" class="rv" style="display:block;margin-top:40px;background:var(--black);color:var(--white);padding:40px 32px;border-radius:6px;text-decoration:none;border-left:4px solid var(--gold);transition:transform .25s ease,box-shadow .25s ease;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+  <a href="/pribeh-libor/" class="rv" style="display:block;margin-top:40px;background:var(--black);color:var(--white);padding:40px 32px;border-radius:6px;text-decoration:none;border-left:4px solid var(--gold);transition:transform .25s ease,box-shadow .25s ease;position:relative;overflow:hidden;--gold-ink:var(--gold);" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
     <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
       <div style="flex:1;min-width:280px;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">✦ Příběh dlouholetého klienta</div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold-ink);margin-bottom:14px;">✦ Příběh dlouholetého klienta</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,32px);font-weight:600;color:var(--white);margin:0 0 12px;line-height:1.2;">20 let s&nbsp;jedním trenérem.<br><em style="font-style:italic;color:rgba(255,255,255,.7);font-weight:300;">Esej Libora Dospěla.</em></h3>
         <p style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;margin:0;max-width:520px;">Podnikatel a majitel tří firem, Štefanův klient od&nbsp;roku&nbsp;2006. Čtyři tisíce lekcí. Proč udržitelný trénink není o&nbsp;fitness, ale o&nbsp;dlouhověkosti.</p>
       </div>
-      <div style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);white-space:nowrap;">Číst příběh <span style="font-size:16px;">→</span></div>
+      <div style="display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-ink);white-space:nowrap;">Číst příběh <span style="font-size:16px;">→</span></div>
     </div>
   </a>
 </div>
@@ -862,7 +864,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
 <section class="local-info" id="kde-jsme" style="padding: 80px 24px; background: var(--cream); max-width: 1280px; margin: 0 auto;">
   <div style="max-width: 1100px; margin: 0 auto;">
     <div class="rv" style="text-align:center; margin-bottom: 48px;">
-      <div class="tag" style="justify-content:center; color: var(--gold);">Kde nás najdete</div>
+      <div class="tag" style="justify-content:center; color: var(--gold-ink);">Kde nás najdete</div>
       <h2 class="cta-t cta-t--on-light" style="margin-top: 16px;">Pilates studio v srdci<br><em>Prahy 10</em></h2>
       <p style="margin-top: 16px; max-width: 640px; margin-left: auto; margin-right: auto; color: var(--charcoal); line-height: 1.6;">U Trati 886/52, Praha 10 – Strašnice. Klidná lokalita s výbornou dostupností MHD i autem. Sloužíme klientům z celé Prahy 10 i sousedních čtvrtí.</p>
     </div>
@@ -895,12 +897,12 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
 
         <div style="background: white; border-radius: 12px; padding: 24px; border-left: 3px solid var(--gold);">
           <h3 style="margin: 0 0 12px; font-size: 1.1rem; color: var(--black);"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15.5,14"/></svg> Otevírací doba</h3>
-          <p style="margin: 0; line-height: 1.6; color: var(--charcoal); font-size: .95rem;"><strong>Po–Pá:</strong> 7:00–20:00<br><strong>So:</strong> 8:00–14:00<br><strong>Ne:</strong> zavřeno<br><a href="tel:+420604925249" style="color: var(--gold);"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +420 604 925 249</a></p>
+          <p style="margin: 0; line-height: 1.6; color: var(--charcoal); font-size: .95rem;"><strong>Po–Pá:</strong> 7:00–20:00<br><strong>So:</strong> 8:00–14:00<br><strong>Ne:</strong> zavřeno<br><a href="tel:+420604925249" style="color: var(--gold-ink);"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +420 604 925 249</a></p>
         </div>
 
         <div style="background: white; border-radius: 12px; padding: 24px; border-left: 3px solid var(--gold);">
           <h3 style="margin: 0 0 12px; font-size: 1.1rem; color: var(--black);"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Sloužíme klientům z</h3>
-          <p style="margin: 0; line-height: 1.6; color: var(--charcoal); font-size: .95rem;">Strašnice · Vršovice · Vinohrady · Žižkov · Malešice · Záběhlice · celá <a href="/pilates-praha-10/" style="color: var(--gold);">Praha 10</a></p>
+          <p style="margin: 0; line-height: 1.6; color: var(--charcoal); font-size: .95rem;">Strašnice · Vršovice · Vinohrady · Žižkov · Malešice · Záběhlice · celá <a href="/pilates-praha-10/" style="color: var(--gold-ink);">Praha 10</a></p>
         </div>
       </div>
     </div>
@@ -944,7 +946,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
 
 <!-- CTA -->
 <div class="cta-strip hex-bg">
-  <div class="tag rv" style="justify-content:center;color:var(--gold);">Začněte dnes</div>
+  <div class="tag rv" style="justify-content:center;color:var(--gold-ink);">Začněte dnes</div>
   <h2 class="cta-t rv">Vstupní lekce<br>za <em>590 Kč</em></h2>
   <p class="cta-sub rv">Přijďte si vyzkoušet pilates, fitness nebo box. Bez závazků. S lektorem, který se vám plně věnuje.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="rv">
