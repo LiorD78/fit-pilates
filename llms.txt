@@ -75,12 +75,11 @@ Tento web podporuje plnou indexaci jazykovými modely (ChatGPT, Perplexity, Gemi
 
 ## Klíčové stránky
 
-- [Hlavní stránka](https://fitpilates.cz/): Přehled studia, programů a ceník
-- [Reformer pilates Praha 10](https://fitpilates.cz/reformer-pilates-praha-10/): Individuální lekce 1:1 i skupinové lekce na reformeru (max. 3 osoby) ve Strašnicích
+- [Reformer pilates Praha 10 – hlavní stránka](https://fitpilates.cz/): Privátní studio ve Strašnicích, programy, ceník, doprava a parkování
+- [Skupinové lekce na reformeru](https://fitpilates.cz/reformer-pilates-praha-10/): Skupina nejvýš 3 lidí na reformerech Balanced Body ve Strašnicích, 790 Kč
 - [Individuální reformer pilates Praha](https://fitpilates.cz/individualni-reformer-pilates-praha/): Privátní lekce 1:1, 60 minut, 1 290 Kč, celý apparatus
 - [Pilates na strojích](https://fitpilates.cz/pilates-na-strojich/): Kompletní apparatus Balanced Body – Reformer, Cadillac, Ladder Barrel, Wunda Chair
 - [Allegro reformer](https://fitpilates.cz/pilates-allegro/): Allegro reformery Balanced Body a Tower modul
-- [Pilates Praha 10](https://fitpilates.cz/pilates-praha-10/): Lokální stránka – doprava, parkování, okolí
 - [Osobní trenér Praha 10](https://fitpilates.cz/osobni-trener-praha-10/): Privátní osobní trénink 1:1
 - [Silový a funkční trénink](https://fitpilates.cz/silovy-trenink/): Popis, vybavení, FAQ
 - [Kondiční box](https://fitpilates.cz/kondicni-box/): Popis, vybavení, FAQ
