@@ -40,6 +40,8 @@
   <!-- Fonts -->
       <link rel="preload" href="/assets/fonts/cormorant-garamond-normal-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-normal-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-normal-var-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-normal-var-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Schema.org: CollectionPage with Blog -->
   <script type="application/ld+json">
@@ -180,13 +182,12 @@ img{max-width:100%;height:auto;display:block}
     .blog-cta .btn { display: inline-block; padding: 14px 32px; background: var(--gold); color: var(--charcoal); text-decoration: none; border-radius: 6px; font-weight: 500; transition: opacity .2s; }
     .blog-cta .btn:hover { opacity: .85; }
   </style>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x2d94kqdkf");</script>
 <!-- Google Consent Mode v2 + GA4 (fitpilates) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
 gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSHB184V2T"></script>
+<!-- Clarity + GA4 se načítají až po načtení stránky nebo při první interakci (rychlejší LCP) -->
+<script>(function(w,d){w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var done=0;function go(){if(done)return;done=1;var c=d.createElement('script');c.async=1;c.src='https://www.clarity.ms/tag/x2d94kqdkf';d.head.appendChild(c);var g=d.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtag/js?id=G-NSHB184V2T';d.head.appendChild(g);}function later(){if('requestIdleCallback' in w){w.requestIdleCallback(go,{timeout:3000})}else{setTimeout(go,1500)}}if(d.readyState==='complete'){later()}else{w.addEventListener('load',later)}['pointerdown','keydown','touchstart','scroll'].forEach(function(e){w.addEventListener(e,go,{once:true,passive:true})});})(window,document);</script>
 </head>
 <body>
 

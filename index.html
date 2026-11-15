@@ -53,6 +53,8 @@
 <!-- Fonts -->
 <link rel="preload" href="/assets/fonts/cormorant-garamond-normal-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-normal-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-normal-var-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-normal-var-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- Schema.org JSON-LD: HealthClub (Local Business) -->
 <script type="application/ld+json">
@@ -413,13 +415,12 @@ img{max-width:100%;height:auto;display:block}
 }
 </style>
 <link rel="stylesheet" href="/assets/css/site.css?v=15112026-kontrast">
-<!-- Microsoft Clarity -->
-<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x2d94kqdkf");</script>
 <!-- Google Consent Mode v2 + GA4 (fitpilates) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
 gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSHB184V2T"></script>
+<!-- Clarity + GA4 se načítají až po načtení stránky nebo při první interakci (rychlejší LCP) -->
+<script>(function(w,d){w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var done=0;function go(){if(done)return;done=1;var c=d.createElement('script');c.async=1;c.src='https://www.clarity.ms/tag/x2d94kqdkf';d.head.appendChild(c);var g=d.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtag/js?id=G-NSHB184V2T';d.head.appendChild(g);}function later(){if('requestIdleCallback' in w){w.requestIdleCallback(go,{timeout:3000})}else{setTimeout(go,1500)}}if(d.readyState==='complete'){later()}else{w.addEventListener('load',later)}['pointerdown','keydown','touchstart','scroll'].forEach(function(e){w.addEventListener(e,go,{once:true,passive:true})});})(window,document);</script>
 </head>
 <body>
 <div id="fp-progress"></div>
@@ -576,7 +577,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
       <a href="/pilates-na-strojich/" class="prog" style="text-decoration:none;color:inherit;display:block;">
         <div class="prog-bar"></div>
         <span class="prog-num">01</span>
-        <img src="images/pilates-w600.jpg" srcset="images/pilates-w600.jpg 600w, images/pilates-w900.jpg 900w, images/pilates.jpg 1400w" sizes="(max-width:768px) 100vw, 33vw" alt="Reformer pilates na Allegro reformerech v Praze 10 — Fit Pilates" class="prog-img" loading="lazy" decoding="async" width="1400" height="859">
+        <picture style="display:block"><source type="image/webp" srcset="images/pilates-w600.webp 600w, images/pilates-w900.webp 900w, images/pilates.webp 1400w" sizes="(max-width:900px) calc(100vw - 120px), 360px"><img src="images/pilates-w600.jpg" srcset="images/pilates-w600.jpg 600w, images/pilates-w900.jpg 900w, images/pilates.jpg 1400w" sizes="(max-width:900px) calc(100vw - 120px), 360px" alt="Reformer pilates na Allegro reformerech v Praze 10 — Fit Pilates" class="prog-img" loading="lazy" decoding="async" width="1400" height="859"></picture>
         <div class="prog-name">Pilates na strojích</div>
         <div class="prog-en">Klasické stroje</div>
         <p class="prog-desc">Precizní cvičení na kompletních klasických pilates strojích Balanced Body — tři reformery Allegro (jeden s věží), Cadillac, Ladder Barrel a Wunda Chair. Posilujete střed těla, zlepšujete držení a vyrovnáváte svalové dysbalance. Každý pohyb má svůj smysl.</p>
@@ -587,7 +588,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
       <a href="/silovy-trenink/" class="prog" style="text-decoration:none;color:inherit;display:block;">
         <div class="prog-bar"></div>
         <span class="prog-num">02</span>
-        <img src="images/fitness-w600.jpg" srcset="images/fitness-w600.jpg 600w, images/fitness-w900.jpg 900w, images/fitness.jpg 1200w" sizes="(max-width:768px) 100vw, 33vw" alt="Silový a funkční trénink s reformerem v Praze 10" class="prog-img" loading="lazy" decoding="async" width="1200" height="1800">
+        <picture style="display:block"><source type="image/webp" srcset="images/fitness-w600.webp 600w, images/fitness-w900.webp 900w, images/fitness.webp 1200w" sizes="(max-width:900px) calc(100vw - 120px), 360px"><img src="images/fitness-w600.jpg" srcset="images/fitness-w600.jpg 600w, images/fitness-w900.jpg 900w, images/fitness.jpg 1200w" sizes="(max-width:900px) calc(100vw - 120px), 360px" alt="Silový a funkční trénink s reformerem v Praze 10" class="prog-img" loading="lazy" decoding="async" width="1200" height="1800"></picture>
         <div class="prog-name">Funkční trénink</div>
         <div class="prog-en">Síla a kondice</div>
         <p class="prog-desc">Kompletní silová a funkční zóna – závaží Jordan, kettlebelly, TRX závěsný systém, TuffStuff FX stroj, bench, squat rack a BOSU Elite. Budujete skutečnou fyzickou kondici.</p>
@@ -598,7 +599,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
       <a href="/kondicni-box/" class="prog" style="text-decoration:none;color:inherit;display:block;">
         <div class="prog-bar"></div>
         <span class="prog-num">03</span>
-        <img src="images/boxing-studio-w600.jpg" srcset="images/boxing-studio-w600.jpg 600w, images/boxing-studio-w900.jpg 900w, images/boxing-studio.jpg 1200w" sizes="(max-width:768px) 100vw, 33vw" alt="Kondiční box Praha 10 — Everlast vybavení, bez sparringu" class="prog-img" loading="lazy" decoding="async" width="1200" height="800">
+        <picture style="display:block"><source type="image/webp" srcset="images/boxing-studio-w600.webp 600w, images/boxing-studio-w900.webp 900w, images/boxing-studio.webp 1200w" sizes="(max-width:900px) calc(100vw - 120px), 360px"><img src="images/boxing-studio-w600.jpg" srcset="images/boxing-studio-w600.jpg 600w, images/boxing-studio-w900.jpg 900w, images/boxing-studio.jpg 1200w" sizes="(max-width:900px) calc(100vw - 120px), 360px" alt="Kondiční box Praha 10 — Everlast vybavení, bez sparringu" class="prog-img" loading="lazy" decoding="async" width="1200" height="800"></picture>
         <div class="prog-name">Kondiční box</div>
         <div class="prog-en">Box bez sparringu</div>
         <p class="prog-desc">Základy techniky, stínový box, práce na pytli a lapování s trenérem. Bez kontaktu – s plným nasazením. Rozvíjíte koordinaci, kondici a rychlost. A mimochodem výborný způsob, jak nechat stres v šatně.</p>
@@ -617,14 +618,15 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
     <p class="lead" style="margin-top:12px;">Neprodáváme jen lekce. Vytváříme vaši osobní cestu k výsledku.</p>
   </div>
   <div class="fw-grid">
-    <div class="fw rv" style="background-image:url('images/fw-back-1.jpg?v=2')"><div class="fw-t">Bolí mě záda z kanceláře</div><p class="fw-d"><a href="/blog/co-je-reformer-pilates/" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);text-underline-offset:3px;">Reformer pilates</a> cílí na hluboké stabilizátory páteře. Uvolníte zkrácené svaly a pracujete na lepším držení těla. První změny řada klientů cítí po několika lekcích.</p></div>
-    <div class="fw rv d1" style="background-image:url('images/fw-back-2.jpg?v=2');background-position:center top"><div class="fw-t">Chci být fyzicky výkonnější</div><p class="fw-d">Funkční trénink kombinovaný s pilates je cesta k reálné výkonnosti. Síla, rychlost, koordinace – vše pod jednou střechou.</p></div>
-    <div class="fw rv d2" style="background-image:url('images/fw-back-3.jpg?v=2')"><div class="fw-t">Uvolnit stres, načerpat energii</div><p class="fw-d">Kondiční box je výborný způsob, jak se odreagovat. Přidejte pilates a odcházíte nabití – tělem i myslí.</p></div>
-    <div class="fw rv" style="background-image:url('images/fw-back-4.jpg?v=2')"><div class="fw-t">Chci tvarovat postavu elegantně</div><p class="fw-d">Pilates zpevňuje tělo bez nárazové zátěže kloubů. Cílem je pevná a funkčně silná postava.</p></div>
-    <div class="fw rv d1" style="background-image:url('images/fw-back-5.jpg?v=2')"><div class="fw-t">Těhotenství nebo po porodu</div><p class="fw-d">Upravené lekce pro těhotné ženy a maminky. Šetrné cvičení pod odborným vedením, vždy po konzultaci s lékařem.</p></div>
-    <div class="fw rv d2" style="background-image:url('images/fw-back-6.jpg?v=2')"><div class="fw-t">Začínám úplně od nuly</div><p class="fw-d">Vstupní lekce je navržena pro absolutní začátečníky. Lektor je s vámi celou dobu. Bez strachu a bez spěchu. <a href="/blog/pilates-pro-zacatecniky/" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);text-underline-offset:3px;">Průvodce pro začátečníky →</a></p></div>
+    <div class="fw rv" data-bg="/images/fw-back-1"><div class="fw-t">Bolí mě záda z kanceláře</div><p class="fw-d"><a href="/blog/co-je-reformer-pilates/" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);text-underline-offset:3px;">Reformer pilates</a> cílí na hluboké stabilizátory páteře. Uvolníte zkrácené svaly a pracujete na lepším držení těla. První změny řada klientů cítí po několika lekcích.</p></div>
+    <div class="fw rv d1" data-bg="/images/fw-back-2" style="background-position:center top"><div class="fw-t">Chci být fyzicky výkonnější</div><p class="fw-d">Funkční trénink kombinovaný s pilates je cesta k reálné výkonnosti. Síla, rychlost, koordinace – vše pod jednou střechou.</p></div>
+    <div class="fw rv d2" data-bg="/images/fw-back-3"><div class="fw-t">Uvolnit stres, načerpat energii</div><p class="fw-d">Kondiční box je výborný způsob, jak se odreagovat. Přidejte pilates a odcházíte nabití – tělem i myslí.</p></div>
+    <div class="fw rv" data-bg="/images/fw-back-4"><div class="fw-t">Chci tvarovat postavu elegantně</div><p class="fw-d">Pilates zpevňuje tělo bez nárazové zátěže kloubů. Cílem je pevná a funkčně silná postava.</p></div>
+    <div class="fw rv d1" data-bg="/images/fw-back-5"><div class="fw-t">Těhotenství nebo po porodu</div><p class="fw-d">Upravené lekce pro těhotné ženy a maminky. Šetrné cvičení pod odborným vedením, vždy po konzultaci s lékařem.</p></div>
+    <div class="fw rv d2" data-bg="/images/fw-back-6"><div class="fw-t">Začínám úplně od nuly</div><p class="fw-d">Vstupní lekce je navržena pro absolutní začátečníky. Lektor je s vámi celou dobu. Bez strachu a bez spěchu. <a href="/blog/pilates-pro-zacatecniky/" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);text-underline-offset:3px;">Průvodce pro začátečníky →</a></p></div>
   </div>
 </div>
+<script>(function(){var els=document.querySelectorAll('.fw[data-bg]');function show(el){var b=el.getAttribute('data-bg');el.removeAttribute('data-bg');el.style.backgroundImage="url('"+b+".jpg?v=2')";el.style.backgroundImage="image-set(url('"+b+".webp?v=2') type('image/webp'),url('"+b+".jpg?v=2') type('image/jpeg'))";}if(!('IntersectionObserver' in window)){els.forEach(show);return;}var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);show(e.target);}});},{rootMargin:'600px 0px'});els.forEach(function(el){io.observe(el);});})();</script>
 
 <!-- MILESTONES -->
 <div class="ms-bg hex-bg">
