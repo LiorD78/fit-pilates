@@ -51,7 +51,9 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"></noscript>
 
 <!-- Schema.org JSON-LD: HealthClub (Local Business) -->
 <script type="application/ld+json">
@@ -411,7 +413,7 @@ img{max-width:100%;height:auto;display:block}
   .site-nav__cta{padding:11px 22px !important;font-size:13px !important;letter-spacing:.06em !important;text-transform:uppercase}
 }
 </style>
-<link rel="stylesheet" href="/assets/css/site.css?v=20102026-podminky">
+<link rel="stylesheet" href="/assets/css/site.css?v=15112026-perf">
 <!-- Microsoft Clarity -->
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x2d94kqdkf");</script>
 <!-- Google Consent Mode v2 + GA4 (fitpilates) -->
@@ -844,7 +846,7 @@ gtag('js',new Date());gtag('config','G-NSHB184V2T');</script>
       <input type="text" name="jmeno" placeholder="Vaše jméno" autocomplete="name" required>
       <input type="email" name="email" placeholder="E-mailová adresa" autocomplete="email" required>
       <input type="tel" name="telefon" placeholder="Telefon (ozveme se rychleji)" autocomplete="tel">
-      <select name="zajem">
+      <select name="zajem" aria-label="Zájem o program">
         <option value="" disabled selected>Zájem o... (vyberte program)</option>
         <option>Vstupní lekce</option>
         <option>Pilates na strojích / Reformer</option>
