@@ -61,7 +61,7 @@ I když není ověřený, vyplň profil naplno — Google to schvaluje rychleji 
 |---|---|
 | Po | 7:00 — 20:00 |
 | Út | 7:00 — 20:00 |
-| St | 7:00 — 20:00 |
+| St | 7:00 — 18:00 |
 | Čt | 7:00 — 20:00 |
 | Pá | 7:00 — 20:00 |
 | So | **9:00 — 18:00** (poznámka v profilu: "dle individuální dohody") |
@@ -91,7 +91,7 @@ První zkušební lekce 590 Kč.
 📍 U Trati 886/52, Praha 10 - Strašnice
 🚊 Tram Radošovická / 🚌 Bus Korytná
 🅿️ Parkování zdarma v ulici
-🕐 Po-Pá 7:00-20:00, So 8:00-14:00
+🕐 Po-Pá 7:00-20:00 (St do 18:00), So 8:00-14:00
 
 Rezervace: +420 604 925 249
 ```
